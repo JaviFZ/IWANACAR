@@ -3,5 +3,10 @@
     padding: 0px;
     box-sizing: border-box;
     max-width: 390px;
-    max-height: 844;
+   
+    
+}
+
+a{
+    text-decoration: none;
 }

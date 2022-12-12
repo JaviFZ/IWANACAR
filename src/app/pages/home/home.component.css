@@ -1,0 +1,87 @@
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #1B3C2E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.divLogo{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.img{
+    width: 75%;
+    height: 70%;
+    z-index: 99;
+    
+}
+
+.title{
+    background-color: #BBD792;
+    color: #012918;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: -18%;
+    padding-bottom: 1%;
+    z-index: 9;
+    font-size: 7vh;
+    
+}
+
+
+
+.divText{
+    /* border: 1px solid white; */
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    
+}
+.text{
+    color: #fffaef;
+    width: 90vw;
+    font-size: 2.7vh;
+}
+
+
+.buttons{
+    /* border: 1px solid white; */
+    width: 100vw;
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.buscar{
+    width: 80%;
+    height: 9vh;
+    border-radius: 20px;
+    background-color: #0e9a5f;
+    border: none;
+    color: #fffaef;
+    font-size: x-large;
+}
+a{
+    margin-top: 4%;
+    color: #fffaef;
+}
