@@ -1,0 +1,86 @@
+@media (max-width: 330px){
+    .footer__bar1{
+        padding: 0 15px !important;
+}
+.boton{
+    height: 60px !important;
+    width: 60px !important;
+}
+.footer__bar1{
+    height: 50px !important;
+}
+.footer__bar{
+    height: 100px !important;
+}
+.boton__vector2 {
+    height: 60% !important;
+}
+}
+.footer__bar{
+    width: 100%;
+    align-items: end;
+    display: flex;
+    height: 125px;
+    background-color: #d9d9d903;
+    backdrop-filter: blur(3px);
+    filter: drop-shadow(4px);
+    border-radius: 20px 20px 0px 0px;
+
+
+}
+
+
+.footer__bar1{
+    height: 70px;
+    background-color: #BBD792;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: -1px -1px 7px 1px rgb(0 0 0 / 40%);
+    padding: 0 30px;
+    width: 100%;
+}
+
+.boton{
+    border: none;
+    border-radius: 70px;
+    height: 80px;
+    width: 80px;
+    bottom: 30px;
+    position: relative;
+    background-color: #012918;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+}
+
+.boton:hover {
+    background-color: #0E9A5F;
+    box-shadow: 0px 15px 20px #012918a4;
+    color: #BBD792;
+    transform: translateY(-7px);
+  }
+  
+  .boton:active {
+    transform: translateY(-1px);
+  }
+
+.boton__vector2{
+    color: white;
+}
+.footer{
+    display: flex;
+    height: 500px;
+}
+
+.boton__vector{
+    height: 85%;
+    width: 75%;
+    color: white;
+}
+
+.boton__vector:hover {
+    color: #BBD792;
+  }
+  .boton__vector2:hover {
+    color: #BBD792;
+  }
