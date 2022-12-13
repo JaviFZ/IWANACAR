@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CrearViaje1Component } from './components/crear-viaje1/crear-viaje1.component';
+import { CrearViaje2Component } from './components/crear-viaje2/crear-viaje2.component';
+import { CrearViaje3Component } from './components/crear-viaje3/crear-viaje3.component';
+import { CrearViaje4Component } from './components/crear-viaje4/crear-viaje4.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
 import { AnadirCocheComponent } from './pages/anadir-coche/anadir-coche.component';
 import { BuscarViajeComponent } from './pages/buscar-viaje/buscar-viaje.component';
 import { ChatsAbiertosComponent } from './pages/chats-abiertos/chats-abiertos.component';
@@ -41,6 +49,14 @@ const routes: Routes = [
   {path: "solicitarViaje", component:SolicitarViajeComponent},
   {path: "viajePublicado", component:ViajePublicadoComponent},
   {path: "viajesPublicados", component:ViajesPublicadosComponent},
+  {path: "crearViaje1", component:CrearViaje1Component},
+  {path: "crearViaje2", component:CrearViaje2Component},
+  {path: "crearViaje3", component:CrearViaje3Component},
+  {path: "crearViaje4", component:CrearViaje4Component},
+  {path: "footer", component:FooterComponent},
+  {path: "header", component:HeaderComponent},
+  {path: "mapa", component:MapaComponent},
+  {path: "tarjetaViaje", component:TarjetaViajeComponent},
 
 ];
 
