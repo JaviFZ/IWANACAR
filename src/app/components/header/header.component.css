@@ -43,3 +43,7 @@
   .bar span.bottom {
     bottom: 0;
   }
+
+  .footer{
+    display: flex;
+}
