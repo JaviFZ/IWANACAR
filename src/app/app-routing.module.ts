@@ -1,5 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CrearViaje1Component } from './components/crear-viaje1/crear-viaje1.component';
+import { CrearViaje2Component } from './components/crear-viaje2/crear-viaje2.component';
+import { CrearViaje3Component } from './components/crear-viaje3/crear-viaje3.component';
+import { CrearViaje4Component } from './components/crear-viaje4/crear-viaje4.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
 <<<<<<< HEAD
 =======
 import { CrearViaje1Component } from './components/crear-viaje1/crear-viaje1.component';
@@ -31,28 +39,6 @@ import { SolicitarViajeComponent } from './pages/solicitar-viaje/solicitar-viaje
 import { ViajePublicadoComponent } from './pages/viaje-publicado/viaje-publicado.component';
 import { ViajesPublicadosComponent } from './pages/viajes-publicados/viajes-publicados.component';
 
-<<<<<<< HEAD
-const routes: Routes = [{path: "login", component:LoginComponent},
-{path: "anadirCoche", component:AnadirCocheComponent},
-{path: "buscarViaje", component:BuscarViajeComponent},
-{path: "ChatsAbiertos", component:ChatsAbiertosComponent},
-{path: "contacto", component:ContactoComponent},
-{path: "crearViaje", component:CrearViajeComponent},
-{path: "editarPerfil", component:EditarPerfilComponent},
-{path: "historicoChats", component:HistoricoChatsComponent},
-{path: "home", component:HomeComponent},
-{path: "login", component:LoginComponent},
-{path: "menuHamburguesa", component:MenuHamburguesaComponent},
-{path: "misCoches", component:MisCochesComponent},
-{path: "perfil", component:PerfilComponent},
-{path: "publicarViaje", component:PublicarViajeComponent},
-{path: "registro", component:RegistroComponent},
-{path: "resultadosBusqueda", component:ResultadosBusquedaComponent},
-{path: "sobreNosotros", component:SobreNosotrosComponent},
-{path: "solicitarViaje", component:SolicitarViajeComponent},
-{path: "viajePublicado", component:ViajePublicadoComponent},
-{path: "viajesPublicados", component:ViajesPublicadosComponent}];
-=======
 const routes: Routes = [
   {path: "login", component:LoginComponent},
   {path: "anadirCoche", component:AnadirCocheComponent},
@@ -84,7 +70,6 @@ const routes: Routes = [
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
 
 ];
->>>>>>> 3b00a2c6374f3fc765131a3d227b5f1697677092
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

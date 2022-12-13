@@ -1,13 +1,10 @@
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     max-width: 390px;
-<<<<<<< HEAD
-=======
-   
-    
->>>>>>> 3b00a2c6374f3fc765131a3d227b5f1697677092
+    max-height: 844;
 }
 
 a{
@@ -19,5 +16,5 @@ h1{
 }
 
 p{
-    font-family: 'Montserrat', sans-serif;    
+    font-family: 'Montserrat', sans-serif;
 }
