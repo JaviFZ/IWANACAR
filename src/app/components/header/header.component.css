@@ -1,0 +1,45 @@
+
+.head{
+  width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #BBD792;
+    height: 110px;
+}
+.logo{
+    height: 90px;
+}
+
+/* burguer */
+
+  .bar {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: #012918;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 17px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
