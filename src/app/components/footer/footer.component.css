@@ -67,10 +67,6 @@
 .boton__vector2{
     color: white;
 }
-.footer{
-    display: flex;
-    height: 500px;
-}
 
 .boton__vector{
     height: 85%;
@@ -83,4 +79,9 @@
   }
   .boton__vector2:hover {
     color: #BBD792;
+  }
+
+  .footer{
+    position: sticky;
+    bottom: 0;
   }
