@@ -8,17 +8,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
-<<<<<<< HEAD
-=======
-import { CrearViaje1Component } from './components/crear-viaje1/crear-viaje1.component';
-import { CrearViaje2Component } from './components/crear-viaje2/crear-viaje2.component';
-import { CrearViaje3Component } from './components/crear-viaje3/crear-viaje3.component';
-import { CrearViaje4Component } from './components/crear-viaje4/crear-viaje4.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MapaComponent } from './components/mapa/mapa.component';
-import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
->>>>>>> 3b00a2c6374f3fc765131a3d227b5f1697677092
 import { AnadirCocheComponent } from './pages/anadir-coche/anadir-coche.component';
 import { BuscarViajeComponent } from './pages/buscar-viaje/buscar-viaje.component';
 import { ChatsAbiertosComponent } from './pages/chats-abiertos/chats-abiertos.component';
