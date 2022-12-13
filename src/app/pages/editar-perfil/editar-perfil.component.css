@@ -1,0 +1,98 @@
+.atras {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: center;
+    align-items: center;
+    background: #1B3C2E;
+    width: 100%;
+    height: 110px;
+    cursor: pointer;
+
+}
+
+.img {
+    margin-left: 16px;
+}
+
+body {
+    background: #1B3C2E;
+
+}
+
+.flex-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+    background: #1B3C2E;
+    width: auto;
+    height: 734px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+    background: #BBD792;
+    width: 368px;
+    height: 657px;
+
+    margin-top: 38.5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 0px 20px 20px 20px;
+
+}
+
+.parte-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+    /* border: solid 2px red; */
+
+    height: 159px;
+    width: 368px;
+
+
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: start;
+    border: solid 2px yellow;
+
+    margin-top: 27px;
+    margin-left: 12px;
+
+    gap: 30px;
+
+    height: 159px;
+    width: 244px;
+}
+
+.huevo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* border: solid 2px blue; */
+    margin-top: 27px;
+
+    height: 159px;
+    width: 124px;
+}
+
+.huevo-form {
+    height: 118px;
+    width: 97px
+}
