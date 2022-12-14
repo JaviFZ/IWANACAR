@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./resultados-busqueda.component.css']
 })
 export class ResultadosBusquedaComponent {
-
 }
