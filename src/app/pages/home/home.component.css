@@ -27,6 +27,7 @@ body{
     
 }
 
+
 .title{
     background-color: #BBD792;
     color: #012918;
@@ -38,7 +39,8 @@ body{
     margin-top: -18%;
     padding-bottom: 1%;
     z-index: 9;
-    font-size: 7vh;
+    font-size: 6vh;
+
     
 }
 
@@ -80,8 +82,10 @@ body{
     border: none;
     color: #fffaef;
     font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
 }
 a{
     margin-top: 4%;
     color: #fffaef;
+    font-family: 'Montserrat', sans-serif;
 }
