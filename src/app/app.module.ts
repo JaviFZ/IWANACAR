@@ -31,6 +31,7 @@ import { HistoricoChatsComponent } from './pages/historico-chats/historico-chats
 import { ChatsAbiertosComponent } from './pages/chats-abiertos/chats-abiertos.component';
 import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     HistoricoChatsComponent,
     ChatsAbiertosComponent,
     SobreNosotrosComponent,
-    ContactoComponent
+    ContactoComponent,
+    MenuBurguerComponent
   ],
   imports: [
     BrowserModule,
