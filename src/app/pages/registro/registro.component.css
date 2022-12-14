@@ -13,6 +13,7 @@ body{
     margin-left: 8vw;
     margin-top: 2vh;
     margin-bottom: -3vh;
+    z-index: 9999;
 }
 .divLogo{
     width: 100vw;
