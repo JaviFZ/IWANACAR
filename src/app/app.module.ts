@@ -63,8 +63,7 @@ import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.com
     HistoricoChatsComponent,
     ChatsAbiertosComponent,
     SobreNosotrosComponent,
-    ContactoComponent,
-    MenuBurguerComponent
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
