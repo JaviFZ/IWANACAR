@@ -1,0 +1,166 @@
+main{
+    background-color: #fffaef;
+    padding: 30px;
+}
+
+.mapa{
+    transition: all 0.3s ease 0s;
+    margin: 30px 0;
+    padding: 10px;
+    background: rgba(187, 215, 146, 0.58);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+    height: 180px;
+}
+
+@media (max-width: 330px){
+    .footer__bar1{
+        padding: 0 15px !important;
+}
+.precio{
+    width: 50px !important;
+    height: 30px !important;
+}
+.hora{
+    top: 11% !important;
+}
+
+.cuadro {
+    height: 205px !important;
+}
+.perfil{
+    width: 70px !important;
+    height: 80px !important;
+}
+}
+
+section{
+    transition: all 0.3s ease 0s;
+    /* margin: 30px; */
+    padding: 10px;
+    background: rgba(187, 215, 146, 0.58);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+}
+.cuadro{
+    position: relative;
+    height: 180px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.hora{
+    position: absolute;
+    right: 8%;
+    top: 7%;
+}
+.coche{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-weight: bold;
+}
+
+.destino{
+    margin-left: 20px;
+    border-bottom: 1px dashed #3A8F43;
+}
+.precio{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    right: 25%;
+    bottom: 5%;
+    background: #BBD792;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viaje{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.pasajeros{
+    display: flex;
+    align-items: flex-end;
+}
+.imagen{
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 27px;
+    right: 7%;
+    bottom: 8%;
+}
+.imagen2{
+    position: absolute;
+    left: -7%;
+    top: -17%;
+}
+
+.titulo{
+    box-sizing: border-box;
+    position: absolute;
+    width: 275px;
+    left: 5%;
+    top: 3%;
+    background: #FFFAEF;
+    border-bottom: 2px solid #0E9A5F;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    padding: 2%;
+}
+.perfil{
+    border: solid 2px #BBD792;
+    width: 80px;
+    height: 90px;
+    transition: all 0.3s ease 0s;
+    border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
+}
+.perfil:hover {
+    border-color: #0E9A5F;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transform: scale(1.05) ;
+   }
+
+   section:hover {
+    border: solid 2px #0E9A5F;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transform: scale(1.05) ;
+   }
+.buttons{
+    /* border: 1px solid white; */
+    /* width: 100vw; */
+    height: 27vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.buscar{
+    width: 100%;
+    height: 9vh;
+    border-radius: 20px;
+    background-color: #0e9a5f;
+    border: none;
+    color: #fffaef;
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    margin-top: 4%;
+    color: #fffaef;
+    font-family: 'Montserrat', sans-serif;
+}
