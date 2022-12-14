@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    margin: 20px;
+    width: 353px;
+    height: 216px;
+    padding: 20px;
+    background: rgba(187, 215, 146, 0.58);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+}
+.cuadro{
+    position: relative;
+    width: 320px;
+    height: 180px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.hora{
+    position: absolute;
+    right: 8%;
+    top: 7%;
+}
+.fecha{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+.destino{
+    margin-left: 20px;
+    border-bottom: 1px dashed #3A8F43;
+}
+.precio{
+    position: absolute;
+    width: 58px;
+    height: 41px;
+    left: 192px;
+    top: 132px;
+    background: #BBD792;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pasajeros{
+    position: absolute;
+    width: 11px;
+    height: 19px;
+    left: 301px;
+    top: 150px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+.imagen{
+    position: absolute;
+    width: 30px;
+    height: 27px;
+    left: 271px;
+    top: 139px;
+}
+.imagen2{
+position: absolute;
+left: -10%;
+top: -20%;
+width: 80px;
+height: 83px;
+border-top-right-radius: 100% 120%;
+border-top-left-radius: 100% 120%;
+border-bottom-right-radius: 70px;
+border-bottom-left-radius: 70px;
+background: radial-gradient(ellipse at 30% 30% 0% 42% 70% 100%);
+background-color: white;
+}
+
+.titulo{
+    box-sizing: border-box;
+    position: absolute;
+    width: 150px;
+    height: 24px;
+    left: 25%;
+    top: -6%;
+    background: #FFFAEF;
+    border-bottom: 2px solid #0E9A5F;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.perfil{
+    width: 80px;
+    height: 83px;
+    border-top-right-radius: 100% 120%;
+border-top-left-radius: 100% 120%;
+border-bottom-right-radius: 70px;
+border-bottom-left-radius: 70px;
+}
