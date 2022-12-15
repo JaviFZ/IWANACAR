@@ -1,0 +1,68 @@
+.body {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    background: #0E9A5F;
+}
+
+.flex-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background: #0E9A5F;
+}
+
+.teclas {
+
+    display: flex;
+    flex-direction: row;
+    justify-content:flex start;
+    align-items: center;
+
+    background: #0E9A5F;
+    height: 98px;
+    width: 100vh;
+    color: white;
+
+    font-size: x-large;
+
+    gap: 25%;
+
+
+
+
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex start;
+    align-items: flex start;
+    text-align: start;
+    filter: invert(100%);
+
+    /* border: solid 5px #0E9A5F;;  */
+
+
+
+
+    height: 50px;
+    width: 50px;
+
+}
+
+.text{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+
+}

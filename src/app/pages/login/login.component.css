@@ -1,6 +1,6 @@
 
-body{
-    width: 100vh;
+.conteiner{
+    /* width: 100vh; */
     height: 100vh;
     background-color: #1B3C2E;
     display: flex;
@@ -77,7 +77,7 @@ body{
 .textFoot{
     color: #fffaef;
 }
-a{
+.registrate{
     color: #bbd792
 }
 
