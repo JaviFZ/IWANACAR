@@ -64,6 +64,10 @@
     border: solid 1px #0E9A5F;;
     margin: 20px;
 }
+.mapa img{
+    width: 350px;
+    height: 126px;
+}
 
 .boton{
     margin-top: 10px;

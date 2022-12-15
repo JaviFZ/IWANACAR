@@ -3,5 +3,8 @@
     height: 212px;
     border: 1px solid black;
     margin: 20px;
-
+}
+.mapa img{
+    width: 351px;
+    height: 210px;
 }
