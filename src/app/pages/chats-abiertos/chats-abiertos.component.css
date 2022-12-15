@@ -1,0 +1,142 @@
+.container{
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    gap:30px;
+    flex-direction: column;
+    background-color: #FFFAEF;
+    background-image: url("../../../assets/img/logo.png");
+    background-blend-mode: luminosity;
+    background-size: cover;
+}
+
+
+
+
+
+.chats{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.hora{
+    display: flex;
+    justify-content: flex-end;
+}
+.mensaje{
+    width: 90%;
+    padding: 15px;
+    color: #FFFAEF;
+    background-color: #3a8f43db;
+    border-radius: 0px 20px 20px 20px;
+
+   }
+
+   .mensaje2{
+    padding: 15px;
+    width: 90%;
+    color: #FFFAEF;
+    align-self: flex-end;
+    background-color: #012918db;
+    border-radius: 20px 0px 20px 20px;
+
+   }
+
+   .perfil{
+    border: solid 2px #3a8f43;
+    width: 110px;
+    height: 120px;
+    display: flex;
+    transition: all 0.3s ease 0s;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%
+}
+
+.titulo{
+    box-sizing: border-box;
+    background: #bbd792;
+    border-bottom: 2px solid #0E9A5F;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.textArea{
+display: flex;
+}
+.send{
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    bottom: 5%;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #0e9a5f;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(0.3rem, 0);
+   }
+   

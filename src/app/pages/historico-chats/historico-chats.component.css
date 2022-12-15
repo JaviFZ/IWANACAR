@@ -1,5 +1,9 @@
 .container{
     height: 100vh;
+    padding: 30px;
+    display: flex;
+    gap:30px;
+    flex-direction: column;
     background-color: #FFFAEF;
     background-image: url("../../../assets/img/logo.png");
     background-blend-mode: luminosity;
