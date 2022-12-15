@@ -7,10 +7,6 @@ import { BuscarViajeComponent } from 'src/app/pages/buscar-viaje/buscar-viaje.co
   styleUrls: ['./tarjeta-viaje.component.css']
 })
 export class TarjetaViajeComponent {
-<<<<<<< HEAD
-  
-  constructor(){}
-=======
   public tarjeta_viaje:any;
   constructor(){
     this.tarjeta_viaje = {
@@ -25,5 +21,4 @@ export class TarjetaViajeComponent {
       valoracion:3
     }
   }
->>>>>>> pablo-funcionalidades
 }

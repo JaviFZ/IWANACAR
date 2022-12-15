@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { Router } from '@angular/router';
->>>>>>> pablo-funcionalidades
 import { Viaje } from 'src/app/models/viaje';
 
 @Component({
@@ -12,11 +9,7 @@ import { Viaje } from 'src/app/models/viaje';
 })
 export class BuscarViajeComponent {
   public viaje:Viaje;
-<<<<<<< HEAD
-  constructor(){
-=======
   constructor(public router:Router){
->>>>>>> pablo-funcionalidades
     this.viaje = new Viaje();
   }
   buscarViaje(origen:string,destino:string,radioBusqueda:number,fecha:Date,pasajeros:number){
@@ -26,10 +19,7 @@ export class BuscarViajeComponent {
     this.viaje.fecha = fecha;
     this.viaje.pasajeros = pasajeros;
     console.log(this.viaje)
-<<<<<<< HEAD
-=======
     this.router.navigateByUrl('/resultadosBusqueda');
->>>>>>> pablo-funcionalidades
   }
 }
 
