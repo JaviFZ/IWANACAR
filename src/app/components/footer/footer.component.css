@@ -18,7 +18,7 @@
 }
 .footer__bar{
     width: 100%;
-    align-items: end;
+    align-items: flex end;
     display: flex;
     height: 125px;
     background-color: #d9d9d903;

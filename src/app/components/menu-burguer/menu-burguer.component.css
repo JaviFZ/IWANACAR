@@ -18,7 +18,7 @@
 
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content:flex start;
     align-items: center;
 
     background: #0E9A5F;
@@ -39,8 +39,8 @@
 .icons{
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: start;
+    justify-content: flex start;
+    align-items: flex start;
     text-align: start;
     filter: invert(100%);
 
