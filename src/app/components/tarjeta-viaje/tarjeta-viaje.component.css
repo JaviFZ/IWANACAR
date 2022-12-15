@@ -20,6 +20,7 @@
 }
 
 section{
+    margin: 30px 20px 20px 20px;
     transition: all 0.3s ease 0s;
     padding: 10px;
     background: rgba(187, 215, 146, 0.58);

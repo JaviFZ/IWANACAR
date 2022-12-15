@@ -39,6 +39,7 @@ body{
     }
     
     .input{
+        padding-left: 5%;
         margin: 20px;
         height: 5vh;
         margin-top: 0%;

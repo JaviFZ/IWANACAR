@@ -2,34 +2,31 @@
 <section>
     <div class="cuadro">
         <div class="titulo">
-            <p>Gabriel</p>
+            <p>{{tarjeta_viaje.nombre}}</p>
         </div>
         <div class="imagen2">
-            <img class="perfil" src="https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg" alt="">
+            <img class="perfil" src="{{tarjeta_viaje.foto}}" alt="">
         </div>
         <div class="viaje">
-        <p class="destino">Calle Hermanos Rodriguez Nº34</p>
-        <p class="destino">Calle Hermanos Rodriguez Nº34</p>
+        <p class="destino">{{tarjeta_viaje.origen}}</p>
+        <p class="destino">{{tarjeta_viaje.destino}}</p>
     </div>
         <div class="hora">
-            <p>07:45</p>
+            <p>{{tarjeta_viaje.hora}}</p>
         </div>
         <div class="fecha">
-            <p>15/12/2022</p>
+            <p>{{tarjeta_viaje.fecha}}</p>
         </div>
         <div class="precio">
-            <p>5€</p>
+            <p>{{tarjeta_viaje.precio}}€</p>
         </div>
         <div class="imagen">
             <img src="../../../assets/img/iguana 13.png" alt="">
             <div class="pasajeros">
-                <p>3</p>
+                <p>{{tarjeta_viaje.pasajeros}}</p>
             </div>
         </div>
 
     </div>
         
 </section>
-
-
-<router-outlet>
