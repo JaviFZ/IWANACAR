@@ -3,28 +3,28 @@
     <section>
         <div class="cuadro">
             <div class="titulo">
-                <p>14/12/2022</p><p>7:15h</p>
+                <p>{{tarjetaResumen.fecha}}</p><p>{{tarjetaResumen.hora}}</p>
             </div>
             <!-- <div class="imagen2">
                 <img class="perfil" src="https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg" alt="">
             </div> -->
             <div class="viaje">
-            <p class="destino">Calle Hermanos Rodriguez Nº34</p>
-            <p class="destino">Calle Hermanos Rodriguez Nº34</p>
+            <p class="destino">{{tarjetaResumen.calle1}}</p>
+            <p class="destino">{{tarjetaResumen.calle2}}</p>
         </div>
             <!-- <div class="hora">
                 <p>07:45</p>
             </div> -->
             <div class="coche">
-                <p>Coche1</p>
+                <p>{{tarjetaResumen.coche}}</p>
             </div>
             <div class="precio">
-                <p>5€</p>
+                <p>{{tarjetaResumen.precio}}</p>
             </div>
             <div class="imagen">
                 <img src="../../../assets/img/iguana 13.png" alt="">
                 <div class="pasajeros">
-                    <p>3</p>
+                    <p>{{tarjetaResumen.pasajeros}}</p>
                 </div>
             </div>
     
@@ -32,10 +32,10 @@
             
     </section>
     <div class="mapa">
-        
+        <img src="../../../assets/img/mapa.jpg">
     </div>
     <div class="buttons">   
-        <button class="buscar" routerLink="crearViaje">Publicar viaje</button>
+        <button class="publicar" routerLink="/viajePublicado">Publicar viaje</button>
         <a routerLink="login">Salir</a>
 
     </div>
