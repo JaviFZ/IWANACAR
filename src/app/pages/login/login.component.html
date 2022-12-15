@@ -7,11 +7,11 @@
         <h1>Sign Up</h1>
         <div class="divInputs">
             <p class="textoInput">Correo</p>
-            <input type="text" class="input">
+            <input type="text" class="input" #correo>
             <p class="textoInput">Contraseña</p>
-            <input type="password" class="input">
+            <input type="password" class="input" #password>
         </div>
-        <button routerLink="buscarViaje" class="login">Login</button>
+        <button on-click=userValidate(correo.value,password.value) class="login">Login</button>
         
     </div>
 
