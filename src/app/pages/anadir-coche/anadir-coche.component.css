@@ -1,24 +1,24 @@
-body{
+body {
     margin-bottom: 80px;
     padding: 30px;
 }
 
-.titulo{
+.titulo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
-/* 
+    /* 
     border: solid 2px blue; */
 
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: xx-large;
 
-    margin-top: 1%;
+    margin-top: 0.5%;
 }
 
-.formulario{
+.formulario {
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -31,33 +31,24 @@ body{
     border-radius: 0px 20px 20px 20px;
 
     width: auto;
+    height: auto;
 
-    padding-bottom:30px;
-    margin-top: 3%;
+    margin-top: 4%;
 
-    gap: 25px;
+    gap: 5px;
 
 
 
 }
 
-/* .input-group{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: start;
-
-} */
-
-.input{
+.input {
     background: #FFFFFE;
     border: 2px solid #0E9A5F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 1%;
 
-  width: 100%;
+    width: 100%;
     height: 40px;
 
     color: #0E9A5F;
@@ -72,12 +63,12 @@ body{
 
 
     height: 40px;
-width: 100%;
+    width: 100%;
     color: #0E9A5F;
 
 }
 
-.label{
+.label {
     font-size: large;
     font-family: 'Montserrat', sans-serif;
     color: #012918;
@@ -97,7 +88,7 @@ width: 100%;
 
 } */
 
-.boton-perfil{
+.boton-perfil {
     background: #0E9A5F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
@@ -109,17 +100,15 @@ width: 100%;
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
 
-    color:white
-
-
-
+    color: white
 }
-.input-group{
+
+.input-group {
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
-
 }
