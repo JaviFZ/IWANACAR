@@ -1,0 +1,83 @@
+.nav{
+    padding: 30px;
+    height: 110px;
+    background-color: #1B3C2E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+gap: 30px
+}
+.titulo__contacto{
+    color: bisque;
+    font-size:50px;
+    font-weight: lighter;
+    display: flex;
+    font-weight: lighter;
+    align-items: center;
+}
+
+.container{
+    background-color: #1B3C2E;
+}
+.iguana{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.logo{
+    position: relative;
+    top:50px;
+    width: 60%;
+}
+
+.titulo{
+    height: 100px;
+    background-color: #BBD792;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.iwanacar{
+    font-family: 'Zen Dots';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center; 
+}
+.redes{
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    background: rgb(187 215 146);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0px 20px 20px 20px;
+}
+.contacto{
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.redes__container{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.red__social{
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo2{
+    justify-content: center;
+
+    display: flex;
+    align-items: center;
+}
