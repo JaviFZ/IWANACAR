@@ -1,0 +1,28 @@
+.container{
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    gap:30px;
+    flex-direction: column;
+    background-color: #FFFAEF;
+    background-image: url("../../../assets/img/logo_transparent.png");
+    background-blend-mode: luminosity;
+    background-size: cover;
+}
+
+
+.chat{
+    background-color: #BBD792;
+    border-radius: 0 20px 20px 20px ;
+}
+.img__container{
+   
+    height: 80px;
+    width: 90px;
+   border-radius:  50% 50% 50% 50% / 70% 70% 30% 30%;
+}
+.img{
+    height: 80px;
+    width: 90px;
+   border-radius:  50% 50% 50% 50% / 70% 70% 30% 30%;
+}

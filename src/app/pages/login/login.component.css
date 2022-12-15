@@ -1,5 +1,5 @@
 
-body{
+.conteiner{
     width: 100vh;
     height: 100vh;
     background-color: #1B3C2E;
@@ -77,7 +77,7 @@ body{
 .textFoot{
     color: #fffaef;
 }
-a{
+.registrate{
     color: #bbd792
 }
 
