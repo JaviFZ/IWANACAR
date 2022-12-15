@@ -5,10 +5,12 @@
     gap:30px;
     flex-direction: column;
     background-color: #FFFAEF;
-    background-image: url("../../../assets/img/logo.png");
+    background-image: url("../../../assets/img/logo_transparent.png");
     background-blend-mode: luminosity;
     background-size: cover;
 }
+
+
 .chat{
     background-color: #BBD792;
     border-radius: 0 20px 20px 20px ;
