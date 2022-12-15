@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tarjeta-viaje.component.css']
 })
 export class TarjetaViajeComponent {
-
+  
+  constructor(){}
 }

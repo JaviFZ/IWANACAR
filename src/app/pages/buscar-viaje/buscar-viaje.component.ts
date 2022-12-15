@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Viaje } from 'src/app/models/viaje';
 
 @Component({
   selector: 'app-buscar-viaje',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./buscar-viaje.component.css']
 })
 export class BuscarViajeComponent {
-
+  public viaje:Viaje;
+  constructor(){
+    this.viaje = new Viaje();
+  }
+  buscarViaje(origen:string,destino:string,radioBusqueda:number,fecha:Date,pasajeros:number){
+    this.viaje.origen = origen;
+    this.viaje.destino = destino;
+    this.viaje.radio_busqueda = radioBusqueda;
+    this.viaje.fecha = fecha;
+    this.viaje.pasajeros = pasajeros;
+    console.log(this.viaje)
+  }
 }
 
