@@ -1,1 +1,28 @@
-<p>solicitar-viaje works!</p>
+<app-header></app-header>
+<app-tarjeta-viaje></app-tarjeta-viaje>
+<section class="tarjeta2">
+    <div class="iconos1">
+        <div><img class="ic1" src="../../../assets/img/coche1.png" alt=""><br>{{coche.marca}} {{coche.modelo}}</div>
+        <div><img class="ic1" src="../../../assets/img/color-fill-svgrepo-com 1.png" alt=""><br> {{coche.color}}</div>
+        <div><img class="ic1" src="../../../assets/img/license-plate-number-svgrepo-com.png" alt=""><br> {{coche.matricula}}
+        </div>
+        <div><img class="ic1" src="../../../assets/img/deposito.png" alt=""><br>{{coche.combustible}}</div>
+    </div>
+    <div class="barra"></div>
+
+    <div class="iconos2">
+        <div *ngIF="preferencias.mascotas == true; else isFalse"><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div>
+        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.paradas == true;else isFalse"><img class="ic2" src="../../../assets/img/ubi.png" alt=""></div>
+        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.fumar == true;else isFalse"><img class="ic2" src="../../../assets/img/musica.png" alt=""></div>
+        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.tiempoMax == true;else isFalse"><img class="ic3" src="../../../assets/img/no-fumar.png" alt=""></div>
+        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+    </div>
+</section>
+<section class="mapa">
+
+</section>
+<button class="boton" (click)="solicitarViaje()">solicitar viaje</button>
+<app-footer></app-footer>

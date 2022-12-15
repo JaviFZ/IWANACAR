@@ -7,6 +7,7 @@ import { CrearViaje4Component } from './components/crear-viaje4/crear-viaje4.com
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MapaComponent } from './components/mapa/mapa.component';
+import { TarjetaChatComponent } from './components/tarjeta-chat/tarjeta-chat.component';
 import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
 import { AnadirCocheComponent } from './pages/anadir-coche/anadir-coche.component';
 import { BuscarViajeComponent } from './pages/buscar-viaje/buscar-viaje.component';
@@ -29,6 +30,7 @@ import { ViajePublicadoComponent } from './pages/viaje-publicado/viaje-publicado
 import { ViajesPublicadosComponent } from './pages/viajes-publicados/viajes-publicados.component';
 
 const routes: Routes = [
+  
   {path: "login", component:LoginComponent},
   {path: "anadirCoche", component:AnadirCocheComponent},
   {path: "buscarViaje", component:BuscarViajeComponent},
@@ -38,10 +40,11 @@ const routes: Routes = [
   {path: "editarPerfil", component:EditarPerfilComponent},
   {path: "historicoChats", component:HistoricoChatsComponent},
   {path: "home", component:HomeComponent},
+  {path: "", pathMatch: "full", redirectTo: "home"},
   {path: "login", component:LoginComponent},
   {path: "menuHamburguesa", component:MenuHamburguesaComponent},
   {path: "misCoches", component:MisCochesComponent},
-  {path: "perfil", component:PerfilComponent},
+  {path:'perfil', component:PerfilComponent},
   {path: "publicarViaje", component:PublicarViajeComponent},
   {path: "registro", component:RegistroComponent},
   {path: "resultadosBusqueda", component:ResultadosBusquedaComponent},
@@ -57,6 +60,7 @@ const routes: Routes = [
   {path: "header", component:HeaderComponent},
   {path: "mapa", component:MapaComponent},
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
+  {path: "tarjetaChat", component:TarjetaChatComponent}
 
 ];
 

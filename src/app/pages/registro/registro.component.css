@@ -13,6 +13,7 @@ body{
     margin-left: 8vw;
     margin-top: 2vh;
     margin-bottom: -3vh;
+    z-index: 9999;
 }
 .divLogo{
     width: 100vw;
@@ -31,8 +32,9 @@ body{
     background-color: #bbd792;
     border-radius: 20px;
     width: 92vw;
-    height: 75vh;
+    height: auto;
     margin-top: -6vh;
+    padding-top: 6vh;
     /* margin-left: 30px;
     margin-right: 30px; */
     display: flex;
@@ -45,7 +47,8 @@ body{
     /* border: 1px solid black; */
     /* margin-bottom: 4vh; */
     width: 80vw;
-    height: 60vh;
+    height: auto;
+    margin-bottom: 3vh;
     display: flex;
     flex-direction: column;
 }

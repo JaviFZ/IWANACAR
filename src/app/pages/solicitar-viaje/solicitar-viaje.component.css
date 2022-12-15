@@ -1,0 +1,82 @@
+.tarjeta2 {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex start;
+    align-items: flex start;
+    border: solid 5px #0E9A5F;
+    width: 348px;
+    height: 150px;
+    border: 1px solid #1E9A60;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.iconos1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+
+    width: 348px;
+
+    font-size: x-small;
+
+}
+
+.ic1 {
+    height: 100%;
+    width: 80%;
+}
+
+.barra {
+    background: #0E9A5F;
+    height: 0.5px;
+    width: 100%;
+}
+
+.iconos2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px; 
+    width: 348px;
+    font-size: small;
+
+}
+
+.ic2 {
+    height: 100%;
+    width: 80%;
+}
+
+.ic3 {
+    Width: 35px;
+    Height: 44px;
+} 
+
+.mapa{
+    width: 352px;
+    height: 128px;
+    border: solid 1px #0E9A5F;;
+    margin: 20px;
+}
+
+.boton{
+    margin-top: 10px;
+    position: absolute;
+    color:white;
+    width: 352px;
+    height: 67px;
+    left: 20px;
+    top: 664px;
+    background: #0E9A5F;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+}
