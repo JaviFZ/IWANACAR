@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./mis-coches.component.css']
 })
 export class MisCochesComponent {
+  public coche: any;
+  constructor() {
+    this.coche = {
+      nombre: 'Mi lovely car',
+      marca: 'Seat',
+      modelo: 'Ibiza',
+      color: 'Azul',
+      matricula: '8536CWC',
+      combustible: 'Gasolina',
+      radio: true,
+      aire: true,
+      fumar: false,
+      mascotas: true,
+      desvios: true,
+      tiempo: '20min',
+
+
+    };
+  }
 
 }
