@@ -1,5 +1,5 @@
 
-.return{
+/* .return{
     border-bottom: 2px solid #0e9a5f;
     color: #BBD792;
     height: 110px;
@@ -10,12 +10,13 @@
     align-items: center;
     justify-content: space-between;
     font-size: xx-large;
-}
+} */
 
 main{
     background-color: #012918;
     height: 100vh;
     padding-top: 10px;
+   
 }
 .divLogo{
     /* border: 1px solid white; */
@@ -23,15 +24,21 @@ main{
     height: 23vh;
     display: flex;
     flex-direction: column;
-    
+    z-index: 9;
     align-items: center;
 
 }
-
-.img{
-    width: 130px;
-    height: 130px;
+.atras{
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: -5%;
     z-index: 99;
+}
+.img{
+    width: 35%;
+    /* height: 130px; */
+    z-index: 99;
+    
     
 }
 
@@ -61,7 +68,7 @@ main{
     padding: 20px;
     margin: 30px;
     margin-top: 50px;
-    
+    font-weight: bold;
     border: 2px solid #0e9a5f;
     border-top-left-radius: 0;
     border-top-right-radius: 20px;
