@@ -1,18 +1,8 @@
-/* body{
-    background-color: #FFFAEF;
-    display: flex;
-    flex-direction: column;
-    width: 390px;
-}
-.formulario{
-    width: 100%;
-} */
 body{
     background-color: #FFFAEF;
     font-family: 'Montserrat', sans-serif;
     width: 390px;
     height: 734px;
-    margin-top: 110px;
     padding-top: 10%;
     }
     .formulario{
