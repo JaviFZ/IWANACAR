@@ -1,9 +1,11 @@
 <div class="head">
+    <!-- creamos un ngIF para que solo se muestre el menuBurguer cuando el obserbable este en true, para ello usamos async, que es un pipe de angular (|) que lo que hace es "suscribirse" al obserbable indicado-->
+    <app-menu-burguer class="menu" *ngIf="(menuAbierto | async)==true"></app-menu-burguer>
     <div class="container__logo">
 <img src="assets/img/logo.png" alt="" class="logo">
 </div>
-<label for="check" class="bar" routerLink="/menuHamburguesa">
-    <input id="check" type="checkbox">
+<label for="check" class="bar">
+    <input id="check" type="checkbox" (change)="onMenuClic()">
 <span class="top"></span>
 <span class="middle"></span>
 <span class="bottom"></span>

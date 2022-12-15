@@ -7,10 +7,9 @@
 .flex-container1 {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
+    gap: 10px;
     width: 100%;
+    padding: 15px;
     background: #0E9A5F;
 }
 
@@ -22,12 +21,8 @@
     align-items: center;
 
     background: #0E9A5F;
-    height: 98px;
-    width: 100vh;
     color: white;
-
     font-size: x-large;
-
     gap: 25%;
 
 
