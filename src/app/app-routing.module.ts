@@ -40,6 +40,8 @@ const routes: Routes = [
   {path: "editarPerfil", component:EditarPerfilComponent},
   {path: "historicoChats", component:HistoricoChatsComponent},
   {path: "home", component:HomeComponent},
+  {path: "", pathMatch: "full", redirectTo: "home"},
+  {path: "login", component:LoginComponent},
   {path: "menuHamburguesa", component:MenuHamburguesaComponent},
   {path: "misCoches", component:MisCochesComponent},
   {path:'perfil', component:PerfilComponent},
