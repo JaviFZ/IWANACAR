@@ -1,1 +1,31 @@
-<p>registro works!</p>
+<body>
+    <div routerLink="/login"class="divFlecha">
+        <img   src="../../../assets/img/Vector.png">
+    </div>
+    <div class="divLogo">
+        <img src="../../../assets/img/iguanacar_v1.png" class="img" alt="logoIguana">
+    </div>
+    <div class="divFormulario">
+        
+        <div class="divInputs">
+            <p class="textoInput">Nombre</p>
+            <input type="text" class="input"  #nombre required>
+            <p class="textoInput">Apellidos</p>
+            <input type="text" class="input"  #apellidos required>
+            <p class="textoInput">Fecha de nacimiento</p>
+            <input type="text" class="input"  #fechaNac required>
+            <p class="textoInput">Email</p>
+            <input type="text" class="input"  #email required>
+            <p class="textoInput">Contraseña</p>
+            <input type="password" class="input"  #password required>
+            <p class="textoInput">Repita la contraseña</p>
+            <input type="password" class="input"  #password2 required>
+
+        </div>
+        <button class="registrarse" on-click=registrar(nombre.value,apellidos.value,fechaNac.value,email.value,password.value,password2.value)>Registrarse</button>
+        
+    </div>
+
+   
+</body>
+
