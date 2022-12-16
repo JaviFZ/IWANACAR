@@ -1,6 +1,6 @@
 .container{
-    height: 100vh;
-    padding: 10px 30px;
+
+
     display: flex;
     gap:30px;
     flex-direction: column;
@@ -28,10 +28,12 @@
 
 
 .chats{
+    padding: 0 30px;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
-    gap:20px
+    gap:20px;
+    padding-bottom: 150px;
 }
 .hora{
     display: flex;
@@ -56,16 +58,37 @@
 
    }
 
-   .perfil{
+.heder{
+    position: sticky;
+    top: 0;
+}
+.atras{
+    position: sticky;
+    top: 110px; 
+}
+
+   /* .perfil{
     border: solid 2px #3a8f43;
-    width: 110px;
-    height: 120px;
+    width: 90px;
+    height: 110px;
     display: flex;
     transition: all 0.3s ease 0s;
     border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%
+} */
+
+.perfil {
+    border: solid 2px #3a8f43;
+    width: 90px;
+    height: 110px;
+    display: flex;
+    transition: all 0.3s ease 0s;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
 }
 
+
 .titulo{
+    position: relative;
+    top: 20px;
     box-sizing: border-box;
     background: #bbd792;
     border-bottom: 2px solid #0E9A5F;
@@ -74,14 +97,44 @@
     justify-content: center;
     align-items: center;
     padding: 3%;
+    /*     box-shadow: 2px 3px 7px 1px rgb(0 0 0 / 40%); */
 }
 
 .user{
     display: flex;
+    position: sticky;
+    display: flex;
+    position: sticky;
+    top: 170px;
+    padding-top: 10px;
     flex-direction: column;
-    gap: 15px;
+    border-radius: 20px;
+    border-bottom: solid 2px #0e9a5f;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     align-items: center;
+
+    /* box-shadow: 2px 3px 7px 1px rgb(0 0 0 / 40%); */
 }
+
+
+.user {
+    display: flex;
+    position: sticky;
+    display: flex;
+    position: sticky;
+    top: 170px;
+    padding: 10px;
+    flex-direction: row-reverse;
+    gap: 15px;
+    border-radius: 20px;
+    border-bottom: solid 2px #0e9a5f;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    align-items: flex-start;
+}
+
+
 
 
 
@@ -91,20 +144,29 @@
     border-radius: 10px;
     border: 1px solid #0e9a5f;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    resize: none;
+    outline: none;
+    overflow: auto;
+    padding: 20px;
 }
 
 .send{
-
-
-    
+    width: 100%;
+    background-color: #d9d9d903;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    filter: drop-shadow(4px);
+    border-radius: 20px 20px 0px 0px;
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 5%;
-    width: 85%;
+    bottom: 0;
+    padding: 30px;
+    width: 100%;
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    box-shadow: -1px -1px 7px 1px rgb(0 0 0 / 40%);
 }
 
 button {

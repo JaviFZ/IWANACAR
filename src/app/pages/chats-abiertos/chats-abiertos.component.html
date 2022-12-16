@@ -1,32 +1,28 @@
-<app-header></app-header>
-<button class="atras">
-    <img class="img" src="../../../assets/img/Vector.png">
+<app-header class="heder"></app-header>
+<button class="atras" >
+    <img class="img" src="../../../assets/img/Vector.png" routerLink="/historicoChats">
 </button>
 
-<main class="container">
+<main class="container" >
 
 <div class="user">
 <div class="imagen">
-        <img class="perfil" src="https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg" alt="">
+        <img class="perfil" src="{{chat.foto}}" alt="">
     </div>
     <div class="titulo">
-        <p>Maria del Carmen Casquillo Serrin</p>
+        <p>{{chat.nombre}}</p>
     </div>
 </div>
 <div class="chats">
-    <div class="mensaje">
-        <p class="text"> Hola, ¿a qué hora sales mañana?</p>
-        <p class="hora">22:31</p>
-    </div>
-    <div class="mensaje2">
-        <p class=""> buenos dias, saldre a las 6 AM</p>
-        <p class="hora">22:37</p>
+    <div *ngFor="let mensaje of chat.mensajes" [class.mensaje]="!mensaje.propio" [class.mensaje2]="mensaje.propio">
+        <p class="text"> {{mensaje.texto}}</p>
+        <p class="hora">{{mensaje.fecha}}</p>
     </div>
 </div>
 <div class="send">
-<textarea name="" id="" class="textArea" ></textarea>
+<textarea name="" id="" class="textArea" #mensaje wrap="on" cols="30" rows="1"></textarea>
 
-<button class="learn-more">
+<button class="learn-more" on-click=nuevoMensaje(mensaje.value)>
     <span class="circle" aria-hidden="true">
     <span class="icon arrow"></span>
     </span>
