@@ -1,6 +1,7 @@
 import { Coche } from "./coche";
 
 export class Usuario {
+    public foto:string;
     public email:string;
     public nomnre:string;
     public apellido:string;
