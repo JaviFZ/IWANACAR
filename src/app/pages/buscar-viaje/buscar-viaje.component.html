@@ -2,23 +2,23 @@
 <body>
     <div class="formulario">
             <p class="textoInput" for="">Origen</p>
-            <input type="text" class="input" name="origen">
+            <input type="text" class="input" name="origen" #inputOrigen>
             <p class="textoInput" for="">Destino</p>
-            <input type="text" class="input" name="destino">
+            <input type="text" class="input" name="destino" #inputDestino>
             <p class="textoInput" for="">Radio de busqueda (m)</p>
-            <input type="number" class="input" name="radio_busqueda">
+            <input type="number" class="input" name="radio_busqueda" #inputRadioBusqueda>
         <div class="grupo">
             <div class="div">
                 <p class="textoInput" for="">Fecha</p>
-                <input type="date" class="input2" name="fecha">
+                <input type="date" class="input2" name="fecha" #inputFecha>
             </div>
             <div class="div">
                 <p class="textoInput" for="">Pasajeros</p>
-                <input type="number" class="input2" name="pasajeros">
+                <input type="number" class="input2" name="pasajeros" #inputPasajeros>
             </div>
         </div>
         <div>
-            <button routerLink="resultadosBusqueda">BUSCAR VIAJE</button>
+            <button routerLink="/resultadosBusqueda" (click)="buscarViaje(inputOrigen.value,inputDestino.value,inputRadioBusqueda.value,inputFecha.value,inputPasajeros.value)">BUSCAR VIAJE</button>
         </div>
     </div>
     </body>

@@ -1,1 +1,47 @@
-<p>mis-coches works!</p>
+<app-header></app-header>
+<body>
+    <div class="titulo">
+        <p>Mis Coches</p>
+    </div>
+
+
+    <div class="tarjeta">
+        <div class="cruz">
+            <img class="ci" src="../../../assets/img/cruzeta.png">
+            <div class="title">
+                <p>{{coche.nombre}}</p>
+            </div>
+        </div>
+
+        <div class="padre-modulos">
+            <div class="modulo1">
+                <div>• Marca : {{coche.marca}}</div>
+                <div>• Modelo : {{coche.modelo}}</div>
+                <div>• Matricula : {{coche.matricula}}</div>
+                <div>• Combustible : {{coche.combustible}}</div>
+                <div>• Mascotas : {{coche.mascotas}}</div>
+                <div>• Tiempo : {{coche.tiempo}}</div>
+            </div>
+
+            <div class="modulo1">
+                <div>• Color : {{coche.color}}</div>
+                <div>• Radio : {{coche.radio}}</div>
+                <div>• A/C : {{coche.aire}}</div>
+                <div>• Fumar : {{coche.fumar}}</div>
+                <div>• Desvios : {{coche.desvios}}</div>
+  
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="padre-boton">
+        <button class="boton-perfil" routerLink="/anadirCoche">Añadir un Coche</button>
+    </div>
+
+</body>
+
+<app-footer></app-footer>
