@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./crear-viaje.component.css']
 })
 export class CrearViajeComponent {
+  paginaActual: number;
+    constructor(){
+      this.paginaActual = 1;
+    }
+    public paginaSig(){
+      this.paginaActual = this.paginaActual + 1;
+    }
+    public paginaAnt(){
+      this.paginaActual = this.paginaActual - 1;
+      if(this.paginaActual == 0){
+        this.paginaActual = 1;
+      }
+    }
 
 }
