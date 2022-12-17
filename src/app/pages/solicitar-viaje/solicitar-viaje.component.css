@@ -4,7 +4,6 @@
     justify-content:flex start;
     align-items: flex start;
     border: solid 5px #0E9A5F;
-    width: 348px;
     height: 150px;
     border: 1px solid #1E9A60;
     border-radius: 20px;
@@ -18,9 +17,6 @@
     align-items: center;
     text-align: center;
     margin-top: 10px;
-
-    width: 348px;
-
     font-size: x-small;
 
 }
@@ -43,7 +39,6 @@
     align-items: center;
     text-align: center;
     margin-top: 10px; 
-    width: 348px;
     font-size: small;
 
 }
@@ -59,23 +54,30 @@
 } 
 
 .mapa{
-    width: 352px;
     height: 128px;
     border: solid 1px #0E9A5F;;
     margin: 20px;
+    border-radius: 20px;
 }
 .mapa img{
-    width: 350px;
+    width: 100%;
     height: 126px;
+    border-radius: 20px;
+}
+
+.caja_boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .boton{
     margin-top: 10px;
     position: absolute;
     color:white;
-    width: 352px;
+    width: 95%;
     height: 67px;
-    left: 20px;
     top: 664px;
     background: #0E9A5F;
     border-radius: 20px;
