@@ -3,24 +3,24 @@
         
     <div class="divInputs">
         <p class="textoInput">¿Recogidas de camino?</p>
-        <select placeholder="Elige vehículo" name="elige vehículo"class="input">
-            <option >No</option>
-            <option >Sí</option>
+        <select (change)="cambiarInput($event)"   name="elige vehículo"class="input">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
         </select>
-        <p class="textoInput">Punto de recogida</p>
-        <input type="text" class="input">
+        <p *ngIf="opcion === 'si'"  class="textoInput">Punto de recogida</p>
+        <input *ngIf="opcion === 'si'"  type="text" class="input">
         
     </div>
     
     
 </div>
-<div class="divButtons">
-    <button  routerLink="crearViaje2" class="buttonDcha">
+<!-- <div class="divButtons">
+    <button  routerLink="/crearViaje3" class="buttonDcha">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
-    <button  routerLink="crearViaje4" class="buttonDcha">
+    <button  routerLink="/publicarViaje" class="buttonDcha">
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
     
-</div>
+</div> -->
 

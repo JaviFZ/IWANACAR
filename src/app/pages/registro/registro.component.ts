@@ -14,15 +14,19 @@ export class RegistroComponent {
       this.nuevoUsuario = [];
     }
     public registrar(nombre:string, apellidos:string, fechaNac:string, email:string, password:string, password2:string){
-      if(password === password2){
-        this.nuevoUsuario.push(nombre, apellidos, fechaNac, email, password);
-        this.router.navigateByUrl('/login');
-        console.log(this.nuevoUsuario);
+      if(nombre=="" || apellidos=="" || fechaNac == "" || email == "" || password== ""){
+        console.log("faltan campos por rellenar");
+        
+      }
+      else if(password != password2){
+       console.log("Las contraseñas no coinciden");
         
       }
       else{
-        console.log("Las contraseñas no coinciden");
         
+         this.nuevoUsuario.push(nombre, apellidos, fechaNac, email, password);
+        this.router.navigateByUrl('/login');
+        console.log(this.nuevoUsuario);
       }
     }
 }

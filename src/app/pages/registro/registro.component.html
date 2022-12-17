@@ -5,26 +5,26 @@
     <div class="divLogo">
         <img src="../../../assets/img/iguanacar_v1.png" class="img" alt="logoIguana">
     </div>
-    <div class="divFormulario">
+    <form class="divFormulario">
         
         <div class="divInputs">
             <p class="textoInput">Nombre</p>
-            <input type="text" class="input"  #nombre required>
+            <input required="" type="text" class="input"  #nombre >
             <p class="textoInput">Apellidos</p>
-            <input type="text" class="input"  #apellidos required>
+            <input required="" type="text" class="input"  #apellidos >
             <p class="textoInput">Fecha de nacimiento</p>
-            <input type="text" class="input"  #fechaNac required>
+            <input required="" type="text" class="input"  #fechaNac >
             <p class="textoInput">Email</p>
-            <input type="text" class="input"  #email required>
+            <input required="" type="text" class="input"  #email >
             <p class="textoInput">Contraseña</p>
-            <input type="password" class="input"  #password required>
+            <input required="" type="password" class="input"  #password >
             <p class="textoInput">Repita la contraseña</p>
-            <input type="password" class="input"  #password2 required>
+            <input required="" type="password" class="input"  #password2 >
 
         </div>
         <button class="registrarse" on-click=registrar(nombre.value,apellidos.value,fechaNac.value,email.value,password.value,password2.value)>Registrarse</button>
         
-    </div>
+    </form>
 
    
 </body>
