@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./crear-viaje4.component.css']
 })
 export class CrearViaje4Component {
-
+  opcion : String;
+  constructor(){
+    this.opcion = "no";
+  }
+  public cambiarInput($event){
+    if(this.opcion === "no"){
+      this.opcion = "si";
+    } else {
+      this.opcion = "no";
+    }
+  }
 }

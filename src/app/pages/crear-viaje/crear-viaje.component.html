@@ -3,11 +3,29 @@
     <app-header></app-header>
 
     <main>      
-        <app-crear-viaje1></app-crear-viaje1>
-        <app-crear-viaje2></app-crear-viaje2>
-        <app-crear-viaje3></app-crear-viaje3>
-        <app-crear-viaje4></app-crear-viaje4>
+        <app-crear-viaje1 *ngIf="paginaActual === 1"></app-crear-viaje1>
+        <app-crear-viaje2 *ngIf="paginaActual === 2"></app-crear-viaje2>
+        <app-crear-viaje3 *ngIf="paginaActual === 3"></app-crear-viaje3>
+        <app-crear-viaje4 *ngIf="paginaActual === 4"></app-crear-viaje4>
     </main>
+    <div class="divButtons">
+        <button  on-click="paginaAnt()" class="buttonIzq" >
+            <img src="../../../assets/img/flechaIZQ.png" >
+        </button>
+        <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 1">
+            <img src="../../../assets/img/flechaDCHA.png" >
+        </button>
+        <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 2">
+            <img src="../../../assets/img/flechaDCHA.png" >
+        </button>
+        <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 3">
+            <img src="../../../assets/img/flechaDCHA.png" >
+        </button>
+        <button  routerLink="/publicarViaje" class="buttonDcha" *ngIf="paginaActual === 4">
+            <img src="../../../assets/img/flechaDCHA.png" >
+        </button>
+        
+    </div>
     
     <div class="footer">
         <app-footer></app-footer>

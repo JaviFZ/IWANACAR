@@ -3,14 +3,14 @@
         
     <div class="divInputs">
         <p class="textoInput">¿Es viaje habitual?</p>
-        <select name="viajeHabitual"class="input">
-            <option >No</option>
-            <option >Sí</option>
+        <select (change)="cambiarInput($event)" name="viajeHabitual"class="input">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
         </select>
-        <p class="textoInput">Fecha</p>
-        <input type="date" class="input" placeholder="DD/MM/AAA">
-        <p class="textoInput">Dia de la semana</p>
-        <select name="diaSemana"class="input">
+        <p  *ngIf="opcion === 'no'" class="textoInput">Fecha</p>
+        <input *ngIf="opcion === 'no'" type="date" class="input" placeholder="DD/MM/AAA">
+        <p *ngIf="opcion === 'si'" class="textoInput">Dia de la semana</p>
+        <select *ngIf="opcion === 'si'" name="diaSemana"class="input">
             <option >Lunes</option>
             <option >Martes</option>
             <option >Miercoles</option>
@@ -25,7 +25,7 @@
     
     
 </div>
-<div class="divButtons">
+<!-- <div class="divButtons">
     <button  routerLink="/crearViaje1" class="buttonDcha">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
@@ -33,4 +33,4 @@
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
     
-</div>
+</div> -->
