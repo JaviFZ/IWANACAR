@@ -3,41 +3,33 @@
     <div class="titulo">
         <p>Mis Coches</p>
     </div>
-
-
-    <div class="tarjeta">
+    <section class="tarjeta" *ngFor="let car of coche;let i= index">
         <div class="cruz">
-            <img class="ci" src="../../../assets/img/cruzeta.png">
+            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCar(index)">
             <div class="title">
-                <p>{{coche.nombre}}</p>
+                <h1>{{car.nombre}}</h1>
             </div>
         </div>
-
         <div class="padre-modulos">
-            <div class="modulo1">
-                <div>• Marca : {{coche.marca}}</div>
-                <div>• Modelo : {{coche.modelo}}</div>
-                <div>• Matricula : {{coche.matricula}}</div>
-                <div>• Combustible : {{coche.combustible}}</div>
-                <div>• Mascotas : {{coche.mascotas}}</div>
-                <div>• Tiempo : {{coche.tiempo}}</div>
-            </div>
-
-            <div class="modulo1">
-                <div>• Color : {{coche.color}}</div>
-                <div>• Radio : {{coche.radio}}</div>
-                <div>• A/C : {{coche.aire}}</div>
-                <div>• Fumar : {{coche.fumar}}</div>
-                <div>• Desvios : {{coche.desvios}}</div>
-  
-            </div>
+            <section class="modulo1">
+                <div><h3><b>•Marca: </b></h3> <p>{{car.marca}}</p></div>
+                <div><h3><b>•Modelo: </b></h3> <p>{{car.modelo}}</p></div>
+                <div><h3><b>•Matricula: </b></h3> <p>{{car.matricula}}</p></div>
+                <div><h3><b>•Combustible: </b></h3> <p>{{car.combustible}}</p></div>
+                <div><h3><b>•Color: </b></h3> <p>{{car.color}}</p></div>
+            </section>
+            <div class="barra"></div>
+            <section class="modulo2">
+                <div *ngIf="car.mascotas == true"><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div>
+                <div *ngIf="car.mascotas == false"><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div>
+                <div *ngIf="car.desvios == true"><img class="ic2" src="../../../assets/img/musica.png" alt=""></div>
+                <div *ngIf="car.desvios == false"><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div>
+                <div *ngIf="car.fumar == true"><img class="ic2" class="ic3" src="../../../assets/img/no-fumar.png" alt=""></div>
+                <div *ngIf="car.fumar == false"><img class="ic2" src="../../../assets/img/no-fumar.png" alt=""></div>
+                <div><img class="ic2" src="../../../assets/img/reloj2.png" alt="">{{car.tiempoMax}}</div>
+            </section>
         </div>
-    </div>
-
-
-
-    
-
+    </section>
     <div class="padre-boton">
         <button class="boton-perfil" routerLink="/anadirCoche">Añadir un Coche</button>
     </div>

@@ -61,7 +61,6 @@ const routes: Routes = [
   {path: "mapa", component:MapaComponent},
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
   {path: "tarjetaChat", component:TarjetaChatComponent}
-
 ];
 
 @NgModule({
