@@ -1,15 +1,19 @@
 .container{
-    height: 100vh;
     padding: 30px;
-    display: flex;
+    /* display: flex;
     gap:30px;
     flex-direction: column;
     background-color: #FFFAEF;
     background-image: url("../../../assets/img/logo_transparent.png");
     background-blend-mode: luminosity;
     background-size: cover;
-    padding-bottom: 140px;
-
+    padding-bottom: 140px;  */
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    background-color: #FFFAEF;
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 130px;
 }
 
 
@@ -56,7 +60,7 @@ section{
 .perfil{
     border: solid 2px #3a8f43;
     width: 80px;
-    height: 100px;
+    height: 90px;
     display: flex;
     transition: all 0.3s ease 0s;
     border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%

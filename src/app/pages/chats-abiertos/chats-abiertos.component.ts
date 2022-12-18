@@ -27,3 +27,4 @@ public nuevoMensaje(mensaje:string){
   this.chat.mensajes.push({texto: mensaje, fecha:"06:07", propio:true});
 }
 }
+  
