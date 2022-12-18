@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BuscarViajeComponent } from 'src/app/pages/buscar-viaje/buscar-viaje.component';
+
 
 @Component({
   selector: 'app-tarjeta-viaje',

@@ -16,11 +16,17 @@ gap: 30px
     font-weight: lighter;
     align-items: center;
 }
+main{
+    background-color: #012918;
+    height: auto;
+    padding-top: 10px;
+   
+}
 
 .container{
     background-color: #1B3C2E;
 }
-.iguana{
+/* .iguana{
     width: 100%;
     display: flex;
     align-items: center;
@@ -39,38 +45,80 @@ gap: 30px
     display: flex;
     align-items: flex-end;
     justify-content: center;
+} */
+.divLogo{
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 23vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 9;
+    align-items: center;
+
+}
+.atras{
+    margin-left: 7%;
+    margin-top: 5%;
+    margin-bottom: -8%;
+    z-index: 99;
+}
+.img{
+    height: 70%;
+    /* height: 130px; */
+    z-index: 99;
+    
+    
+}
+
+
+.title{
+    background-color: #BBD792;
+    color: #012918;
+    height: 75%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: -7%;
+    padding-bottom: 1%;
+    z-index: 9;
+    font-size: 5vh;
+
+    
 }
 .iwanacar{
     font-family: 'Zen Dots';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 20%;
     line-height: 48px;
     text-align: center; 
 }
 .redes{
+    border: 2px solid #0e9a5f;
     transition: all 0.3s ease 0s;
-    padding: 10px;
+    padding: 4%;
     background: rgb(187 215 146);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 0px 20px 20px 20px;
+    /* display: grid; */
 }
 .contacto{
     padding: 30px;
     display: flex;
-    gap: 20px;
+    gap: 2vh;
     flex-direction: column;
 }
 .redes__container{
     display: flex;
-    gap: 20px;
+    gap: 2vh;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .red__social{
-    padding: 10px;
-    gap: 10px;
+    padding: 4%;
+    gap: 1vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,4 +128,12 @@ gap: 30px
 
     display: flex;
     align-items: center;
+    font-size: larger;
+    color: #fffaef;
+    font-weight: bolder;
+    padding-bottom: 5%;
+    padding-top: 3%;
+}
+.direccion{
+    padding-bottom: 2%;
 }
