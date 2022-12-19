@@ -184,16 +184,16 @@
     align-items: flex-start;
     gap: 15px;
 }
-.hora1{
+/* .hora1{
     /* position: absolute;
     right: 8%;
-   top: 7%; */
+   top: 7%; 
 } 
 .fecha1{
-    /* position: absolute;
+     position: absolute;
     left: 5%;
-    bottom: 5%; */
-}
+    bottom: 5%; 
+} */
 
 .destino1{
     margin-left: 20px;
