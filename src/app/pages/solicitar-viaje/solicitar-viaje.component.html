@@ -3,22 +3,21 @@
 <app-tarjeta-viaje></app-tarjeta-viaje>
 <section class="tarjeta2">
     <div class="iconos1">
-        <div><img class="ic1" src="../../../assets/img/coche1.png" alt=""><br>{{coche.marca}} {{coche.modelo}}</div>
-        <div><img class="ic1" src="../../../assets/img/color-fill-svgrepo-com 1.png" alt=""><br> {{coche.color}}</div>
-        <div><img class="ic1" src="../../../assets/img/license-plate-number-svgrepo-com.png" alt=""><br> {{coche.matricula}}
-        </div>
-        <div><img class="ic1" src="../../../assets/img/deposito.png" alt=""><br>{{coche.combustible}}</div>
+        <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">{{coche.marca}} {{coche.modelo}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos"> {{coche.color}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/license-plate-number-svgrepo-com.png" alt=""><br> <p class="infoLogos">{{coche.matricula}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">{{coche.combustible}}</p></div>
     </div>
     <div class="barra"></div>
 
     <div class="iconos2">
         <div *ngIf="preferencias.mascotas == true; else isFalse"><img class="ic3" src="../../../assets/img/Group 8.png" alt=""></div>
-        <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.paradas == true;else isFals"><img class="ic3" src="../../../assets/img/ubi.png" alt=""></div>
-        <ng-template #isFals><div><img class="ic3" src="../../../assets/img/ubi.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.fumar == true;else False"><img class="ic3" src="../../../assets/img/smoke-svgrepo-com (1).png" alt=""></div>
-        <ng-template #False><div><img class="ic3" src="../../../assets/img/no-fumar.png" alt=""></div></ng-template>
-        <div ><img class="ic3" src="../../../assets/img/reloj2.png" alt="">{{preferencias.tiempoMax}}</div>
+        <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/no_mascotas.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.paradas == true;else isFals"><img class="ic3" src="../../../assets/img/paradas.png" alt=""></div>
+        <ng-template #isFals><div><img class="ic3" src="../../../assets/img/no_paradas.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.fumar == true;else False"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
+        <ng-template #False><div><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div></ng-template>
+        <div ><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{preferencias.tiempoMax}}</p></div>
     </div>
 </section>
 <section class="mapa">
