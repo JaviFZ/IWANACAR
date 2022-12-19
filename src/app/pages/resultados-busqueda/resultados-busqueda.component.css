@@ -1,10 +1,24 @@
 .mapa{
-    width: 353px;
-    height: 212px;
-    border: 1px solid black;
-    margin: 20px;
+    padding: 30px;
+
 }
 .mapa img{
-    width: 351px;
     height: 210px;
+    width: 100%;
+
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.body{
+    background: #FFFAEF;
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 130px;
 }

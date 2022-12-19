@@ -4,7 +4,20 @@
     height: 100vh;
     width: 100vw;
     background-color: #fffaef;
+
+
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 90px;
+    background-size: cover;
 }
+
+.flecha{
+  color: #fffaef;
+
+}
+
+
+
 
 
 main{
@@ -33,6 +46,10 @@ main{
   border-radius: 100%;
   border: none;
   background-color: #0e9a5f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .buttonIzq{
   width: 24%;
@@ -40,6 +57,11 @@ main{
   border-radius: 100%;
   border: none;
   background-color: #0e9a5f;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer{

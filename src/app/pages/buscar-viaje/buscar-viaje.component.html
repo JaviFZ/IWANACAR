@@ -1,5 +1,5 @@
-<app-header></app-header>
-<body>
+<app-header class="header"></app-header>
+<main class="body">
     <div class="formulario">
             <p class="textoInput" for="">Origen</p>
             <input type="text" class="input" name="origen" #inputOrigen>
@@ -21,5 +21,5 @@
             <button routerLink="/resultadosBusqueda" (click)="buscarViaje(inputOrigen.value,inputDestino.value,inputRadioBusqueda.value,inputFecha.value,inputPasajeros.value)">BUSCAR VIAJE</button>
         </div>
     </div>
-    </body>
+</main>
     <app-footer></app-footer>

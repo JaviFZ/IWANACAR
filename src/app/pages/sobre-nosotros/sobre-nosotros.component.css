@@ -11,6 +11,14 @@
     justify-content: space-between;
     font-size: xx-large;
 } */
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+
 
 main{
     background-color: #012918;

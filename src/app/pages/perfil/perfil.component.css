@@ -2,9 +2,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: #FFFAEF;
     padding: 0 20px;
-    padding-bottom: 150px;
+    padding-bottom: 130px;
+    
 }
-
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
 
 .atras {
     display: flex;

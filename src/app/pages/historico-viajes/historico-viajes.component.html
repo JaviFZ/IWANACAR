@@ -1,1 +1,77 @@
-<p>historico-viajes works!</p>
+<app-header class="header"></app-header>
+<main class="body">
+    <div class="botones">
+        <button class="boton1" routerLink="/historicoViajes">
+<p class="texto">historico Viajes</p>
+        </button>
+        <button class="boton" routerLink="/viajesPublicados">
+            <p class="texto">viajes publicados</p>
+                    </button>
+    </div>
+    <div class="tarjetasviajes">
+        <div class="section">
+        <div class="cuadro">
+            <div class="titulo">
+                <p>{{tarjeta_viaje.nombre}}</p>
+            </div>
+            <div class="imagen2">
+                <img class="perfil" src="{{tarjeta_viaje.foto}}" alt="">
+            </div>
+            <div class="viaje">
+            <p class="destino">{{tarjeta_viaje.origen}}</p>
+            <p class="destino">{{tarjeta_viaje.destino}}</p>
+        </div>
+            <div class="hora">
+                <p>{{tarjeta_viaje.hora}}</p>
+            </div>
+            <div class="fecha">
+                <p>{{tarjeta_viaje.fecha}}</p>
+            </div>
+            <div class="precio">
+                <p>{{tarjeta_viaje.precio}}€</p>
+            </div>
+            <div class="imagen">
+                <img src="../../../assets/img/iguana 13.png" alt="">
+                <div class="pasajeros">
+                    <p>{{tarjeta_viaje.pasajeros}}</p>
+                </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="tarjetasviajes">
+        <div class="section2">
+        <div class="cuadro">
+            <div class="titulo">
+                <p>{{tarjeta_viaje.nombre}}</p>
+            </div>
+            <div class="imagen2">
+                <img class="perfil" src="{{tarjeta_viaje.foto}}" alt="">
+            </div>
+            <div class="viaje">
+            <p class="destino">{{tarjeta_viaje.origen}}</p>
+            <p class="destino">{{tarjeta_viaje.destino}}</p>
+        </div>
+            <div class="hora">
+                <p>{{tarjeta_viaje.hora}}</p>
+            </div>
+            <div class="fecha">
+                <p>{{tarjeta_viaje.fecha}}</p>
+            </div>
+            <div class="precio">
+                <p>{{tarjeta_viaje.precio}}€</p>
+            </div>
+            <div class="imagen">
+                <img src="../../../assets/img/iguana 13.png" alt="">
+                <div class="pasajeros">
+                    <p>{{tarjeta_viaje.pasajeros}}</p>
+                </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

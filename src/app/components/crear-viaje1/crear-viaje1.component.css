@@ -12,6 +12,12 @@
     flex-direction: column;
     align-items: center;
     justify-content:flex-end;
+
+
+
+    border: 1px solid #0E9A5F;
+    background: rgba(187, 215, 146, 0.58);
+    backdrop-filter: blur(10px);
 }
 
 .divInputs{

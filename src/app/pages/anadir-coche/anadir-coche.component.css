@@ -1,4 +1,11 @@
-body {
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.body {
     padding: 30px;
     display: flex;
     gap: 30px;
@@ -24,26 +31,19 @@ body {
 }
 
 .formulario {
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: start;
-
     background: rgba(187, 215, 146, 0.58);
     border: 1px solid #0E9A5F;
     border-radius: 0px 20px 20px 20px;
-
     width: auto;
     height: auto;
-
-    margin-top: 4%;
-
-    gap: 5px;
-
-
-
+    gap: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .input {
@@ -81,17 +81,11 @@ body {
 
 }
 
-/* .padre-boton{
+.padre-boton{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    border: solid 2px red;
-
-
-
-
-} */
+    padding: 20px 0px;
+}
 
 .boton-perfil {
     background: #0E9A5F;
@@ -99,21 +93,15 @@ body {
     border-radius: 20px;
     height: 46px;
     width: 223px;
-
-
-
+    border: none;
     font-size: larger;
     font-family: 'Montserrat', sans-serif;
-
     color: white
 }
 
 .input-group {
+    padding: 5px;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: start;
+
 }
