@@ -224,24 +224,16 @@
 }
 .imagen1{
     display: flex;
-    position: absolute;
-    width: 30px;
-    height: 27px;
-    right: 7%;
-    bottom: 8%;
+
 }
-.imagen21{
+/* .imagen21{
     position: absolute;
     left: -7%;
     top: -17%;
-}
+} */
 
 .titulo1{
     box-sizing: border-box;
-    position: absolute;
-    width: 150px;
-    left: 25%;
-    top: -3%;
     background: #FFFAEF;
     border-bottom: 2px solid #0E9A5F;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -253,8 +245,7 @@
 }
 .perfil1{
     border: solid 2px #BBD792;
-    width: 80px;
-    height: 90px;
+
     transition: all 0.3s ease 0s;
     border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
 }
