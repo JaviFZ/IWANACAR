@@ -21,7 +21,7 @@ export class SolicitarViajeComponent {
       mascotas:true,
       paradas:false,
       fumar:true,
-      tiempoMax:true
+      tiempoMax:"20min"
     }
   }
   solicitarViaje(){

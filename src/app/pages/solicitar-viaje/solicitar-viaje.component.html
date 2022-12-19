@@ -12,14 +12,13 @@
     <div class="barra"></div>
 
     <div class="iconos2">
-        <div *ngIF="preferencias.mascotas == true; else isFalse"><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div>
-        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.paradas == true;else isFalse"><img class="ic2" src="../../../assets/img/ubi.png" alt=""></div>
-        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.fumar == true;else isFalse"><img class="ic2" src="../../../assets/img/musica.png" alt=""></div>
-        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.tiempoMax == true;else isFalse"><img class="ic3" src="../../../assets/img/no-fumar.png" alt=""></div>
-        <ng-template #isFalse><div><img class="ic2" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.mascotas == true; else isFalse"><img class="ic3" src="../../../assets/img/Group 8.png" alt=""></div>
+        <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/paw-svgrepo-com.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.paradas == true;else isFals"><img class="ic3" src="../../../assets/img/ubi.png" alt=""></div>
+        <ng-template #isFals><div><img class="ic3" src="../../../assets/img/ubi.png" alt=""></div></ng-template>
+        <div *ngIf="preferencias.fumar == true;else False"><img class="ic3" src="../../../assets/img/smoke-svgrepo-com (1).png" alt=""></div>
+        <ng-template #False><div><img class="ic3" src="../../../assets/img/no-fumar.png" alt=""></div></ng-template>
+        <div ><img class="ic3" src="../../../assets/img/reloj2.png" alt="">{{preferencias.tiempoMax}}</div>
     </div>
 </section>
 <section class="mapa">
