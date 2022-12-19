@@ -40,3 +40,5 @@ public ValidateCar (marca, modelo, matricula, color, combustible, fumar, mascota
 }
 
 }
+
+//hacer que todos los campos sean obligatorios

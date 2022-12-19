@@ -31,7 +31,6 @@
 }
 
 .formulario {
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -44,6 +43,7 @@
     height: auto;
     gap: 20px;
     backdrop-filter: blur(10px);
+    padding-top: 15px;
 }
 
 .input {
@@ -77,31 +77,37 @@
     font-size: large;
     font-family: 'Montserrat', sans-serif;
     color: #012918;
-    text-shadow: black 1PX 1PX 1PX;
+    /* text-shadow: black 1PX 1PX 1PX; */
+    font-weight: bolder;
 
 }
 
 .padre-boton{
     display: flex;
     justify-content: center;
-    padding: 20px 0px;
+    /* padding: 20px 0px; */
+    width: 100%;
 }
 
 .boton-perfil {
     background: #0E9A5F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    height: 46px;
-    width: 223px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: none;
+
+    height: 8vh;
+    width: 100%;
     border: none;
-    font-size: larger;
+    font-size: x-large;
     font-family: 'Montserrat', sans-serif;
     color: white
 }
 
 .input-group {
-    padding: 5px;
+    padding: 0px 20px;
     height: auto;
     width: 100%;
+
 
 }
