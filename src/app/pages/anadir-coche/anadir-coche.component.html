@@ -1,38 +1,38 @@
-<app-header></app-header>
-<body>
+<app-header class="header"></app-header>
+<main class="body">
     <div class="titulo">
         <p>Añadir Coche</p>
     </div>
 
     <div class="formulario">
-
+        
         <div class="input-group">
-            <label class="label">Coches</label><br>
-            <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+            <label class="label">Marca</label><br>
+            <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input1>
             <div></div>
         </div>
 
         <div class="input-group">
             <label class="label">Modelo</label><br>
-            <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+            <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input2>
             <div></div>
         </div>
 
         <div class="input-group">
             <label class="label">Matricula</label><br>
-            <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+            <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input3>
             <div></div>
         </div>
 
         <div class="input-group">
             <label class="label">Color</label><br>
-            <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+            <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input4>
             <div></div>
         </div>
 
         <div class="input-group">
             <label class="label">Combustible</label><br>
-            <select name="combustible" id="combustible" class="input2">
+            <select name="combustible" id="combustible" class="input2" #input5>
                 <option value="">Diesel</option>
                 <option value="">Gasolina</option>
                 <option value="">Hibrido</option>
@@ -44,7 +44,7 @@
 
         <div class="input-group">
             <label class="label">¿Se permite Fumar?</label><br>
-            <select name="aire" id="aire" class="input2">
+            <select name="aire" id="aire" class="input2" #input6>
                 <option value="">Si</option>
                 <option value="">No</option>
             </select>
@@ -52,7 +52,7 @@
 
         <div class="input-group">
             <label class="label">¿Admite Mascotas?</label><br>
-            <select name="aire" id="aire" class="input2">
+            <select name="aire" id="aire" class="input2" #input7>
                 <option value="">Si</option>
                 <option value="">No</option>
             </select>
@@ -60,7 +60,7 @@
 
         <div class="input-group">
             <label class="label">¿Realiza desvios?</label><br>
-            <select name="aire" id="aire" class="input2">
+            <select name="aire" id="aire" class="input2" #input8>
                 <option value="">Si</option>
                 <option value="">No</option>
             </select>
@@ -68,7 +68,7 @@
 
         <div class="input-group">
             <label class="label">Tiempo máximo de espera</label><br>
-            <select name="aire" id="aire" class="input2">
+            <select name="aire" id="aire" class="input2" #input9>
                 <option value="">5min</option>
                 <option value="">10min</option>
                 <option value="">15min</option>
@@ -76,14 +76,14 @@
             </select>
         </div>
 
-        <div class="padre-boton">
-            <button class="boton-perfil">Añadir Coche</button>
-        </div>
+        <!-- <div class="padre-boton"> -->
+            <button on-click="ValidateCar(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value,input8.value,input9.value)" class="boton-perfil">Añadir Coche</button>
+        <!-- </div> -->
 
 
 
 
     </div>
-</body>
+</main>
 
 <app-footer></app-footer>

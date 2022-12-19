@@ -1,6 +1,18 @@
-body {
-    margin-bottom: 80px;
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+
+.body {
     padding: 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    background-color: #FFFAEF;
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 130px;
 }
 
 .titulo {
@@ -19,26 +31,20 @@ body {
 }
 
 .formulario {
-    padding: 10px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: start;
-
     background: rgba(187, 215, 146, 0.58);
     border: 1px solid #0E9A5F;
     border-radius: 0px 20px 20px 20px;
-
     width: auto;
     height: auto;
-
-    margin-top: 4%;
-
-    gap: 5px;
-
-
-
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    padding-top: 15px;
 }
 
 .input {
@@ -76,39 +82,32 @@ body {
 
 }
 
-/* .padre-boton{
+.padre-boton{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    border: solid 2px red;
-
-
-
-
-} */
+    /* padding: 20px 0px; */
+    width: 100%;
+}
 
 .boton-perfil {
     background: #0E9A5F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    height: 46px;
-    width: 223px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: none;
 
-
-
-    font-size: larger;
+    height: 8vh;
+    width: 100%;
+    border: none;
+    font-size: x-large;
     font-family: 'Montserrat', sans-serif;
-
     color: white
 }
 
 .input-group {
+    padding: 0px 20px;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: start;
+
+
 }
