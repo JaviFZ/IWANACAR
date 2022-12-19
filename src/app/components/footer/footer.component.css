@@ -18,13 +18,13 @@
 }
 .footer__bar{
     width: 100%;
-    align-items: end;
     display: flex;
     height: 125px;
     background-color: #d9d9d903;
     backdrop-filter: blur(3px);
     filter: drop-shadow(4px);
     border-radius: 20px 20px 0px 0px;
+    align-items: flex-end;
 
 
 }
@@ -82,6 +82,7 @@
   }
 
   .footer{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     bottom: 0;
   }

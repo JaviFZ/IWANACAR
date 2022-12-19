@@ -1,1 +1,22 @@
-<p>login works!</p>
+<main class="conteiner">
+    <div class="divLogo">
+        <img src="../../../assets/img/iguanacar_v1.png" class="img" alt="logoIguana" routerLink="/home">
+    </div>
+    <div class="divFormulario">
+        
+        <h1>Sign Up</h1>
+        <div class="divInputs">
+            <p class="textoInput">Correo</p>
+            <input type="text" class="input" #correo>
+            <p class="textoInput">Contraseña</p>
+            <input type="password" class="input" #password>
+        </div>
+        <button on-click=userValidate(correo.value,password.value) class="login">Login</button>
+        
+    </div>
+
+    <div class="footer">
+        <p class="textFoot">¿Todavía no tienes cuenta?</p>
+        <p class="registrate" routerLink="/registro">Regístrate</p>
+    </div>
+</main>

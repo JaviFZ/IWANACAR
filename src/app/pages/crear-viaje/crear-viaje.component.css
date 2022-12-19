@@ -1,0 +1,81 @@
+
+.contenedor{
+   /* border: 2px solid red; */
+    height: 100vh;
+    width: 100vw;
+    background-color: #fffaef;
+
+
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 90px;
+    background-size: cover;
+}
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.flecha{
+  color: #fffaef;
+
+}
+
+
+
+
+
+main{
+    width: 100%;
+    padding: 30px;
+   /* border:  2px solid green; */
+}
+
+.divButtons{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 10vh;
+  margin-top: 3vh;
+  display: flex;
+  
+  justify-content:space-between ;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+
+}
+
+.buttonDcha{
+  width: 24%;
+  height: 100%;
+  border-radius: 100%;
+  border: none;
+  background-color: #0e9a5f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonIzq{
+  width: 24%;
+  height: 100%;
+  border-radius: 100%;
+  border: none;
+  background-color: #0e9a5f;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer{
+  /* border: 2px solid blanchedalmond; */
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+
+

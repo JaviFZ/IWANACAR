@@ -1,0 +1,64 @@
+.divFormulario{
+    /* background-color:  rgba(187, 215, 146, 0.58); */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: auto;
+    height: auto;
+    /* margin-top: 2vh; */
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+
+
+    border: 1px solid #0E9A5F;
+    background: rgba(187, 215, 146, 0.58);
+    backdrop-filter: blur(10px);
+}
+
+.divInputs{
+    /* border: 1px solid black; */
+    /* margin-bottom: 4vh; */
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.textoInput{
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+}
+
+.input{
+    width: 80vw;
+    height: 5vh;
+    margin-top: 0%;
+    border-radius: 10px;
+    border: 1px solid #0e9a5f;
+}
+
+
+.divButtons{
+    /* border: 1px solid red; */
+    width: 85vw;
+    height: 10vh;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 30px; */
+
+}
+
+.buttonDcha{
+    width: 24%;
+    height: 100%;
+    border-radius: 100%;
+    border: none;
+    background-color: #0e9a5f;
+}

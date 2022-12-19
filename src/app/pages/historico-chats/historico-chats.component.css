@@ -1,22 +1,92 @@
 .container{
-    height: 100vh;
+    padding: 30px;
+    /* display: flex;
+    gap:30px;
+    flex-direction: column;
     background-color: #FFFAEF;
-    background-image: url("../../../assets/img/logo.png");
+    background-image: url("../../../assets/img/logo_transparent.png");
     background-blend-mode: luminosity;
     background-size: cover;
+    padding-bottom: 140px;  */
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    background-color: #FFFAEF;
+    background-image: url("../../../assets/img/logo_transparent.png");
+    padding-bottom: 130px;
 }
-.chat{
-    background-color: #BBD792;
-    border-radius: 0 20px 20px 20px ;
+
+
+section{
+    transition: all 0.3s ease 0s;
+    padding: 10px;
+    background: rgb(187 215 146);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 0px 20px 20px 20px;
 }
-.img__container{
+
+
+.fecha{
+    display: flex;
+    padding-top: 15px;
+    justify-content: flex-end;
+}
+
+.destino{
+    display: flex;
+    font: menu;
+    border-bottom: 1px dashed #3A8F43;
+    font-size: small;
+}
+
+.viaje{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+
+
+.titulo{
+    box-sizing: border-box;
+    background: #FFFAEF;
+    border-bottom: 2px solid #0E9A5F;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+.perfil{
+    border: solid 2px #3a8f43;
+    width: 80px;
+    height: 90px;
+    display: flex;
+    transition: all 0.3s ease 0s;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%
+}
+.perfil:hover {
+    border-color: #0E9A5F;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transform: scale(1.05) ;
+   }
+
+   section:hover {
+    border: solid 2px #0E9A5F;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    transform: scale(1.05) ;
+   }
+   .contenido{
+    display: flex;
+    padding: 10px 0px;
+    gap: 10px;
+    justify-content: space-around;
+   }
    
-    height: 80px;
-    width: 90px;
-   border-radius:  50% 50% 50% 50% / 70% 70% 30% 30%;
-}
-.img{
-    height: 80px;
-    width: 90px;
-   border-radius:  50% 50% 50% 50% / 70% 70% 30% 30%;
-}
+   .mensaje{
+    padding: 10px;
+    color: #FFFAEF;
+    background-color: #3a8f43bf;
+    border-radius: 0px 20px 20px 20px;
+
+   }

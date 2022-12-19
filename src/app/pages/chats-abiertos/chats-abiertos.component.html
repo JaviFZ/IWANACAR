@@ -1,1 +1,42 @@
-<p>chats-abiertos works!</p>
+<app-header class="heder"></app-header>
+<div class="cuerpo">
+<div class="atras" >
+    <svg width="80" height="80" viewBox="13 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"  routerLink="/historicoChats" class="flecha">
+        <path d="M31.2307 41.4492L17.6892 27.9077C16.0899 26.3085 16.0899 23.6916 17.6892 22.0923L31.2307 8.55078" stroke="#BBD792" stroke-width="4.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="titulo">
+            <p>{{chat.nombre}}</p>
+        </div>
+        <div class="imagen">
+            <img class="perfil" src="{{chat.foto}}" alt="" routerLink="/perfil">
+        </div>
+    </div>
+
+<main class="container" >
+
+<!-- <div class="user">
+<div class="imagen">
+        <img class="perfil" src="{{chat.foto}}" alt="">
+    </div>
+    <div class="titulo">
+        <p>{{chat.nombre}}</p>
+    </div>
+</div> -->
+<div class="chats" id="chats">
+    <div *ngFor="let mensaje of chat.mensajes" [class.mensaje]="!mensaje.propio" [class.mensaje2]="mensaje.propio">
+        <p class="text"> {{mensaje.texto}}</p>
+        <p class="hora">{{mensaje.fecha}}</p>
+    </div>
+</div>
+<div class="send">
+<textarea name="" id="" class="textArea" #mensaje wrap="on" cols="30" rows="1" (keyup.enter)="nuevoMensaje(mensaje.value)"></textarea>
+
+<button class="learn-more" on-click=nuevoMensaje(mensaje.value)>
+    <span class="circle" aria-hidden="true">
+    <span class="icon arrow"></span>
+    </span>
+  </button>
+</div>
+
+</main>
+</div>

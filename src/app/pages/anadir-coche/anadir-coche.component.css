@@ -31,7 +31,6 @@
 }
 
 .formulario {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -78,7 +77,8 @@
     font-size: large;
     font-family: 'Montserrat', sans-serif;
     color: #012918;
-    text-shadow: black 1PX 1PX 1PX;
+    /* text-shadow: black 1PX 1PX 1PX; */
+    font-weight: bolder;
 
 }
 

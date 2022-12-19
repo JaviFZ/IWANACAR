@@ -16,6 +16,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CrearViajeComponent } from './pages/crear-viaje/crear-viaje.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { HistoricoChatsComponent } from './pages/historico-chats/historico-chats.component';
+import { HistoricoViajesComponent } from './pages/historico-viajes/historico-viajes.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MenuHamburguesaComponent } from './pages/menu-hamburguesa/menu-hamburguesa.component';
@@ -30,7 +31,8 @@ import { ViajePublicadoComponent } from './pages/viaje-publicado/viaje-publicado
 import { ViajesPublicadosComponent } from './pages/viajes-publicados/viajes-publicados.component';
 
 const routes: Routes = [
-  
+  {path: "viajesPublicados", component:ViajesPublicadosComponent},
+  {path: "historicoViajes", component:HistoricoViajesComponent},
   {path: "login", component:LoginComponent},
   {path: "anadirCoche", component:AnadirCocheComponent},
   {path: "buscarViaje", component:BuscarViajeComponent},
@@ -40,10 +42,11 @@ const routes: Routes = [
   {path: "editarPerfil", component:EditarPerfilComponent},
   {path: "historicoChats", component:HistoricoChatsComponent},
   {path: "home", component:HomeComponent},
+  {path: "", pathMatch: "full", redirectTo: "home"},
   {path: "login", component:LoginComponent},
   {path: "menuHamburguesa", component:MenuHamburguesaComponent},
   {path: "misCoches", component:MisCochesComponent},
-  {path: "perfil", component:PerfilComponent},
+  {path:'perfil', component:PerfilComponent},
   {path: "publicarViaje", component:PublicarViajeComponent},
   {path: "registro", component:RegistroComponent},
   {path: "resultadosBusqueda", component:ResultadosBusquedaComponent},
@@ -60,7 +63,6 @@ const routes: Routes = [
   {path: "mapa", component:MapaComponent},
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
   {path: "tarjetaChat", component:TarjetaChatComponent}
-
 ];
 
 @NgModule({
