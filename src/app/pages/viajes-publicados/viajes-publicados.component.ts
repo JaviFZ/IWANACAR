@@ -9,9 +9,9 @@ export class ViajesPublicadosComponent {
   public tarjeta_viaje:any;
   constructor(){
     this.tarjeta_viaje = {
-      foto:"https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg",
-      nombre:"Pedro",
-      origen:"Alcalá",
+      foto:"assets/img/logo.png",
+      nombre:"user",
+      origen:"calle alcala n9",
       destino:"Universidad Ponticifica de Comillas",
       fecha:"12/12/2022",
       hora:"07:30",
