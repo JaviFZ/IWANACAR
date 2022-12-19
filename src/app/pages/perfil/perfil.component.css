@@ -35,6 +35,7 @@ body {
 }
 
 .flex-container1 {
+    padding-top: 3%;
     display: flex;
     flex-direction: column;
     justify-content: center;

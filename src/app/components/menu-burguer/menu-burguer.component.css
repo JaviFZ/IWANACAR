@@ -39,14 +39,15 @@
     align-items: flex start;
     text-align: start;
     filter: invert(100%);
+    margin-bottom: 5%;
 
     /* border: solid 5px #0E9A5F;;  */
 
 
+    filter: initial;
 
-
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
 
 }
 
