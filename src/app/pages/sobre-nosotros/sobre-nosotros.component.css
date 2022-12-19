@@ -138,16 +138,26 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 9vh;
 }
 
 .nombre{
+    margin-top: 15%;
     font-size: larger;
     color: black;
 }
 .profesion{
     font-weight: normal;
+    margin-top: 7%;
 }
 a{
 color: #012918;
 text-decoration:underline;
+display: flex;
+height: 20%;
+margin-top: 12%;
 }
+/* .Linkedin{
+    height: 10%;
+
+} */
