@@ -1,7 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: #FFFAEF;
-    padding: 0 20px;
+    padding: 20px;
     padding-bottom: 130px;
     
 }
@@ -31,7 +31,17 @@ body {
 }
 
 .img {
-    padding-left: 5%;
+    padding: 5%;
+    height: 40px;
+    position: relative;
+    bottom: 20px;
+
+}
+
+.img2 {
+    height: 40px;
+    position: relative;
+    padding: 5%;
 }
 
 .flex-container1 {
@@ -41,22 +51,20 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
-    /* border: solid 4px #0E9A5F; */
-    margin-top: 2%;
-    padding-left: 12vh;
+    margin: 0%;
+    padding-bottom: 2vh;
 
 }
 
 .input {
     background: rgba(187, 215, 146, 0.58);
     border-bottom: 2px solid #0E9A5F;
-    color: black;
     text-align: center;
-    width: 206px;
-    height: 24px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
     border-radius: 50px;
-
 }
 
 input::placeholder {
@@ -138,6 +146,8 @@ input::placeholder {
 }
 
 .tarjeta2 {
+    font-weight: bold;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex start;
@@ -157,19 +167,26 @@ input::placeholder {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    /* border: solid 5px #0E9A5F; */
     margin-top: 10px;
-
-
-
     font-size: x-small;
+    height: 50%;
 
 }
 
 .ic1 {
-    height: 100%;
-    width: 80%;
+    height: 5vh;
+    /* width: 80%; */
 }
+
+.ic2 {
+    height: 100%;
+    width: 30px;
+}
+
+.ic3 {
+    Width: 35px;
+    Height: 44px;
+} 
 
 .barra {
     display: flex;
@@ -185,25 +202,12 @@ input::placeholder {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    /* border: solid 5px #0E9A5F; */
-    margin-top: 10px;
-
-
-
+    margin-top: 10px; 
     font-size: small;
 
 }
 
-.ic2 {
-    height: 100%;
-    width: 80%;
-}
 
-.ic3 {
-    Width: 35px;
-    Height: 44px;
-
-}
 
 .flex-container4 {
     display: flex;

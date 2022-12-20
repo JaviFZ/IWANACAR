@@ -6,15 +6,26 @@
 }
 
 .body{
+    padding-top: 20px;
         background: #FFFAEF;
-        background-image: url("../../../assets/img/logo_transparent.png");
+        /* background-image: url("../../../assets/img/logo_transparent.png"); */
         padding-bottom: 130px;
 
 }
-.tarjeta2 {
-    background: #FFFAEF;
-    backdrop-filter: blur(10px);
 
+/* .tarjeta{
+    background: #bbd792c4;
+    border-radius: 20px;
+    margin: 10px;
+    padding-top: 10px;
+    backdrop-filter: blur(10px);
+    border: solid 1px #1e9a60;
+} */
+.tarjeta2 {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    background: white;
+    /* backdrop-filter: blur(10px); */
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content:flex start;
@@ -34,12 +45,13 @@
     text-align: center;
     margin-top: 10px;
     font-size: x-small;
+    height: 50%;
 
 }
 
 .ic1 {
-    height: 100%;
-    width: 80%;
+    height: 5vh;
+    /* width: 80%; */
 }
 
 .barra {
@@ -70,14 +82,13 @@
 } 
 
 .mapa{
-    height: 128px;
-    border: solid 1px #0E9A5F;;
+
     margin: 20px;
     border-radius: 20px;
 }
 .mapa img{
     width: 100%;
-    height: 126px;
+    height: 180px;
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
