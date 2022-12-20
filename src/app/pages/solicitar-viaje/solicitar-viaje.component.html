@@ -1,11 +1,12 @@
 <app-header class="header"></app-header>
 <main class="body">
+
 <app-tarjeta-viaje></app-tarjeta-viaje>
 <section class="tarjeta2">
     <div class="iconos1">
         <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">{{coche.marca}} {{coche.modelo}}</p></div>
         <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos"> {{coche.color}}</p></div>
-        <div><img class="ic1" src="../../../assets/img/license-plate-number-svgrepo-com.png" alt=""><br> <p class="infoLogos">{{coche.matricula}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br> <p class="infoLogos">{{coche.matricula}}</p></div>
         <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">{{coche.combustible}}</p></div>
     </div>
     <div class="barra"></div>
@@ -26,5 +27,6 @@
 <div class="caja_boton">
     <button class="boton" (click)="solicitarViaje()">solicitar viaje</button>
 </div>
+
 </main>
 <app-footer></app-footer>

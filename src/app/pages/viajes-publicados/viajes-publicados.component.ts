@@ -9,7 +9,7 @@ export class ViajesPublicadosComponent {
   public tarjeta_viaje:any;
   constructor(){
     this.tarjeta_viaje = {
-      foto:"assets/img/logo.png",
+      foto:"assets/img/iguana.png",
       nombre:"user",
       origen:"calle alcala n9",
       destino:"Universidad Ponticifica de Comillas",

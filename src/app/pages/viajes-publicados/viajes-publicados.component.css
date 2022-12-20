@@ -242,6 +242,7 @@
 }
 
 .inferior{
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     padding: 10px;
