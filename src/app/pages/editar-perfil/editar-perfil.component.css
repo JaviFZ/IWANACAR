@@ -48,6 +48,8 @@ body {
     background: #1B3C2E;
     width: 100%;
     height: auto;
+
+        padding: 0px 30px;
 }
 
 .formulario {
@@ -57,14 +59,13 @@ body {
     text-align: start;
     align-items: flex start;
     background: #BBD792;
-    width: 368px;
+    /* width: 368px; */
     height: auto;
 
     margin-top: 38.5px;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 0px 20px 20px 20px;
+
 
 }
 
@@ -78,8 +79,8 @@ body {
     margin-bottom:5px;
    
 
-    height: 180px;
-    width: 368px;
+    height: 100%;
+    width: 100%;
 
 
 }
@@ -91,14 +92,9 @@ body {
     text-align: start;
     align-items: flex start;
     /* border: solid 2px yellow; */
-
     margin-top: 27px;
-    margin-left: 12px;
-
-    /* gap: 30px; */
-
-    height: 159px;
-    width: 244px;
+    width: 200%;
+    gap :10px
 }
 
 .huevo {
@@ -108,15 +104,22 @@ body {
     text-align: center;
     align-items: center;
     /* border: solid 2px blue; */
-    margin-top: 27px;
+    margin-top: 80px;
 
-    height: 159px;
-    width: 124px;
+    padding: 0px 20px;
+
+    height: 100%;
+    width: 100%;
 }
 
 .huevo-form {
-    height: 118px;
-    width: 97px
+    border: solid 2px #3a8f43;
+    width: 90px;
+    height: 100px;
+    display: flex;
+    transition: all 0.3s ease 0s;
+    border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
+    margin-top: -2vh;
 }
 
 .input {
@@ -125,8 +128,8 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    width: 232px;
-    height: 40px;
+    width: 100%;
+    height: 6vh;
 
     color: #0E9A5F;
 
@@ -141,13 +144,12 @@ body {
     align-items: flex start;
     /* border: solid 2px yellow; */
 
-    width: 368px;
+
     height: auto;
     gap: 20px;
 
     margin-top: 10px;
-    margin-left: 12px;
-    margin-right: 12px;
+
 
 }
 
@@ -157,8 +159,8 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    width: 340px;
-    height: 40px;
+    width: 100%;
+    height: 6vh;
 
     color: #0E9A5F;
 
@@ -170,8 +172,8 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
-    width: 340px;
-    height: 78px;
+    width: 100%;
+    height: 12vh;
 
     color: #0E9A5F;
 
@@ -194,12 +196,15 @@ body {
 .boton-perfil{
     background: #0E9A5F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    height: 46px;
-    width: 223px;
-    font-size: larger;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    height: 8vh;
+    width: 100%;
+    border: none;
+    font-size: x-large;
     font-family: 'Montserrat', sans-serif;
-    color:white
+    color: white
 
 }
 
@@ -208,4 +213,8 @@ body {
     /* text-shadow: black 1PX 1PX 1PX; */
     font-weight: bolder;
 
+}
+
+.input-group {
+    padding: 0px 20px;
 }
