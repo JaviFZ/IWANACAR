@@ -31,7 +31,7 @@ export class UsuarioService {
 
   public editarPerfil(user: Usuario): Observable<object> {
 
-    return this.http.post(this.url + "editarPerfil", user)
+    return this.http.put(this.url + "editarPerfil", user)
   }
 
 

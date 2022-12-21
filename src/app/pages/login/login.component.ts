@@ -32,16 +32,3 @@ export class LoginComponent {
     })
   }
 }
-// this.usuarioService.login(user).subscribe((user: Usuario)=>{
-//   if (typeof user !== 'string'){
-//    this.usuarioService.logueado = true; 
-//    this.usuarioService.usuario = user;
-//    this.router.navigateByUrl("libros")
-//  }else console.log("datos erroneos")
-// },
-//    ()=>{ this.usuarioService.logueado = false});
-
-// // }
-// // }
-//  }
-// }
