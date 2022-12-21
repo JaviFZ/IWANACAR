@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router'
+import { Usuario } from 'src/app/models/usuario';
+import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -8,31 +10,36 @@ import {Router} from '@angular/router'
 })
 export class LoginComponent {
 
-  public correo : string;
+  public email : string;
   public password : string;
   public usuarioConectado : boolean;
   public dataOk : boolean;
 
-    constructor(private router : Router){
-      this.correo="jferzap@gmail.com";
-      this.password="1234";
-      this.usuarioConectado=false;
-      this.dataOk=true;
-    }
+    constructor(private router : Router , private usuarioService : UsuarioService) {}
     
-    public userValidate(correo, password){
-      if(correo==this.correo && password==this.password){
-
-        this.router.navigateByUrl('/buscarViaje');
-        this.usuarioConectado=true;
-      }
-      else{
-
-        console.log("Usuario o contraseña no coinciden");
-        this.usuarioConectado = false;
-        this.dataOk = false;
+    public userValidate(email:string, password:string){
+      let user = new Usuario("","","",email,password,"","","","","","","",[], 0,-1,-1)
+      // this.usuarioService.login(user).subscribe((result: any) => {
+      //   console.log(result);
+      //   if (result.error) {
+      //     console.log("Usuario no encontrado");
+      //   } else {
+      //     this.usuarioService.usuario = new Usuario(result.nombre, result.apellidos, result.fechaDeNacimiento, result.email, result.password, result.direccion, result.telefono, result.genero, result.foto, result.sobreMi, result.fechaDealta, result.tiempoDeEspera, result.coches, result.puntuacionMedia, result.id_usuario, result.id_opinion)
+      //     this.usuarioService.logueado = true;
+      //     this.router.navigateByUrl('buscarViaje')
         
-      }
-    }
+//       }
+//     })
+this.usuarioService.login(user).subscribe((user: Usuario)=>{
+  if (typeof user !== 'string'){
+   this.usuarioService.logueado = true;
+   this.usuarioService.usuario = user;
+   this.router.navigateByUrl("libros")
+ }else console.log("datos erroneos")
+},
+   ()=>{ this.usuarioService.logueado = false});
 
+// }
+// }
+ }
 }

@@ -5,7 +5,7 @@ export class Usuario {
     public email: string;
     public nombre: string;
     public apellidos: string;
-    public fechaDeNacimiento: Date;
+    public fechaDeNacimiento: string;
     public telefono: string;
     public genero: string;
     public puntuacionMedia: number;
@@ -15,12 +15,12 @@ export class Usuario {
     public id_opinion: number;
     public password: string;
     public direccion: string;
-    public fechaDealta: Date;
+    public fechaDealta: string;
     public tiempoDeEspera: string;
 
 
 
-    constructor(nombre: string, apellidos: string, fechaDeNacimiento: Date, email: string, password: string, direccion: string, telefono: string, genero: string, foto: string, sobreMi: string, fechaDeAlta: Date, tiempoDeEspera: string, coches: Coche[], puntuacionMedia: number, id_usuario: number, id_opinion: number) {
+    constructor(nombre: string, apellidos: string, fechaDeNacimiento: string, email: string, password: string, direccion: string, telefono: string, genero: string, foto: string, sobreMi: string, fechaDeAlta: string, tiempoDeEspera: string, coches: Coche[], puntuacionMedia: number, id_usuario: number, id_opinion: number) {
 
         this.nombre = nombre;
         this.apellidos = apellidos;
