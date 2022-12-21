@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  public url: string = "http://containers-us-west-123.railway.app"
+  public url: string = "https://apiwana-production.up.railway.app/" // https://apiwana-production.up.railway.app/
   public logueado: boolean = false
   public usuario: Usuario;
 
@@ -17,9 +17,9 @@ export class UsuarioService {
 
   // **********metodo para register**************
 
-  public register(user: Usuario): Observable<object> {
+  public register(usuario: Usuario){
 
-    return this.http.post(this.url + "registro", user)
+    return this.http.post(this.url + "registro", usuario)
   }
 
   // **********metodo para login**************

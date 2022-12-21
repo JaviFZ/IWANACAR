@@ -65,6 +65,8 @@ body{
     margin-top: 0%;
     border-radius: 10px;
     border: 1px solid #0e9a5f;
+    padding: 3%;
+    color: #0e9a5f;
 }
 
 .registrarse{
