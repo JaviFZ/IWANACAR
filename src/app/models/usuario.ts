@@ -1,16 +1,49 @@
 import { Coche } from "./coche";
 
 export class Usuario {
-    public foto:string;
-    public email:string;
-    public nomnre:string;
-    public apellido:string;
-    public fecha_nacimiento:Date;
-    public telefono:string;
-    public genero:string;
-    public valoracion:number;
-    public descripcion:string;
-    public coches:Coche[];
-    
-    constructor(){}
+    public foto: string;
+    public email: string;
+    public nombre: string;
+    public apellidos: string;
+    public fechaDeNacimiento: Date;
+    public telefono: string;
+    public genero: string;
+    public puntuacionMedia: number;
+    public sobreMi: string;
+    public coches: Coche[];
+    public id_usuario: number;
+    public id_opinion: number;
+    public password: string;
+    public direccion: string;
+    public fechaDealta: Date;
+    public tiempoDeEspera: string;
+
+
+
+    constructor(nombre: string, apellidos: string, fechaDeNacimiento: Date, email: string, password: string, direccion: string, telefono: string, genero: string, foto: string, sobreMi: string, fechaDeAlta: Date, tiempoDeEspera: string, coches: Coche[], puntuacionMedia: number, id_usuario: number, id_opinion: number) {
+
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.email = email;
+        this.password = password;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.genero = genero;
+        this.foto = foto;
+        this.sobreMi = sobreMi;
+        this.fechaDealta = fechaDeAlta;
+        this.tiempoDeEspera = tiempoDeEspera;
+        this.coches = coches;
+        this.puntuacionMedia = puntuacionMedia;
+        this.id_usuario = id_usuario;
+        this.id_opinion = id_opinion;
+
+
+     }
+
+     public nombreCompleto ():string 
+     {
+         return this.nombre + " " + this.apellidos
+     }
 }
