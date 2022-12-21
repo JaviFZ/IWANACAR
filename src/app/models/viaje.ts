@@ -12,9 +12,6 @@ export class Viaje {
     public precio:number;
     public fecha:Date;
     public pasajeros:Number;
-    public paradas:boolean;
-    public direccion_parada:string;
-
     constructor(){}
     
 }

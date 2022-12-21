@@ -6,7 +6,6 @@ export class Coche {
     public color:string;
     public combustible:string;
     public fumar:boolean;
-    public desvios:boolean;
     public mascotas:boolean;
     public tiempoMax:string
     constructor(){

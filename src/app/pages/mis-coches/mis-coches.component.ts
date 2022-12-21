@@ -18,7 +18,6 @@ export class MisCochesComponent {
       combustible: 'Gasolina',
       fumar: false,
       mascotas: true,
-      desvios: true,
       tiempoMax: '20min',
     },{
       nombre: 'Mi lovely car',
@@ -29,7 +28,6 @@ export class MisCochesComponent {
       combustible: 'Diesel',
       fumar: false,
       mascotas: true,
-      desvios: true,
       tiempoMax: '20min',
     }];
   }

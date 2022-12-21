@@ -24,7 +24,6 @@ import { CrearViajeComponent } from './pages/crear-viaje/crear-viaje.component';
 import { CrearViaje1Component } from './components/crear-viaje1/crear-viaje1.component';
 import { CrearViaje2Component } from './components/crear-viaje2/crear-viaje2.component';
 import { CrearViaje3Component } from './components/crear-viaje3/crear-viaje3.component';
-import { CrearViaje4Component } from './components/crear-viaje4/crear-viaje4.component';
 import { PublicarViajeComponent } from './pages/publicar-viaje/publicar-viaje.component';
 import { ViajePublicadoComponent } from './pages/viaje-publicado/viaje-publicado.component';
 import { HistoricoChatsComponent } from './pages/historico-chats/historico-chats.component';
@@ -57,7 +56,6 @@ import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.com
         CrearViaje1Component,
         CrearViaje2Component,
         CrearViaje3Component,
-        CrearViaje4Component,
         PublicarViajeComponent,
         ViajePublicadoComponent,
         HistoricoChatsComponent,

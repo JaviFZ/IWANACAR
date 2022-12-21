@@ -14,8 +14,6 @@
     <div class="iconos2">
         <div *ngIf="preferencias.mascotas == true; else isFalse"><img class="ic3" src="../../../assets/img/Group 8.png" alt=""></div>
         <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/no_mascotas.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.paradas == true;else isFals"><img class="ic3" src="../../../assets/img/paradas.png" alt=""></div>
-        <ng-template #isFals><div><img class="ic3" src="../../../assets/img/no_paradas.png" alt=""></div></ng-template>
         <div *ngIf="preferencias.fumar == true;else False"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
         <ng-template #False><div><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div></ng-template>
         <div ><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{preferencias.tiempoMax}}</p></div>
