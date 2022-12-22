@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-crear-viaje',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class CrearViajeComponent {
   paginaActual: number;
-    constructor(){
+    constructor(public viajes:ViajeService){
       this.paginaActual = 1;
     }
     public paginaSig(){
@@ -17,6 +18,25 @@ export class CrearViajeComponent {
       this.paginaActual = this.paginaActual - 1;
       if(this.paginaActual == 0){
         this.paginaActual = 1;
+      }
+    }
+    public guardarDatos(origen:string,destino:string){
+      if (this.paginaActual == 1 || this.paginaActual == 0){
+        this.viajes.viaje.origen = origen;
+        this.viajes.viaje.destino = destino;
+      }
+    }
+    public guardarDato(habitual:boolean,fecha_dia:Date){
+      if (this.paginaActual == 1 || this.paginaActual == 0){
+        this.viajes.viaje.habitual = habitual;
+        this.viajes.viaje.fecha = fecha_dia;
+      }
+    }
+    public guardarDat(coche:number,plazas:number,precio:number){
+      if (this.paginaActual == 1 || this.paginaActual == 0){
+        this.viajes.viaje.id_coche = coche;
+        this.viajes.viaje.pasajeros = plazas;
+        this.viajes.viaje.precio = precio
       }
     }
 

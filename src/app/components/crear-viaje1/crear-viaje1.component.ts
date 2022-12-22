@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgForm} from '@angular/forms';
+import { Viaje } from 'src/app/models/viaje';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-crear-viaje1',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./crear-viaje1.component.css']
 })
 export class CrearViaje1Component {
-
+ constructor(public viaje:ViajeService){}
 }
