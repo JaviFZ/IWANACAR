@@ -30,7 +30,7 @@ export class LoginComponent {
         
 //       }
 //     })
-this.usuarioService.login(user).subscribe((user: Usuario)=>{
+this.usuarioService.login(user).subscribe((user: any)=>{
   if (typeof user !== 'string'){
    this.usuarioService.logueado = true;
    this.usuarioService.usuario = user;
