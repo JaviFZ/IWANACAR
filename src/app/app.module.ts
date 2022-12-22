@@ -32,6 +32,7 @@ import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.co
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opinion.component';
 
 @NgModule({
     declarations: [
@@ -63,7 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
         ChatsAbiertosComponent,
         SobreNosotrosComponent,
         ContactoComponent,
-        MenuBurguerComponent
+        MenuBurguerComponent,
+        EscribirOpinionComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
