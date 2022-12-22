@@ -52,7 +52,7 @@
 
 
 
-            <a routerLink="" class="teclas" *ngIf="usuarioServices.logueado==true">
+            <a routerLink="/home" class="teclas" *ngIf="usuarioServices.logueado==true" (click)="cerrarSesion()">
                 <div>  <img class="icons" src="../../../assets/img/cerrarSesion.png" alt="icono perfil" ></div>
                 <div class="text">Cerrar Sesion</div>
             </a>
