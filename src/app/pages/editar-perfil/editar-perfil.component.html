@@ -14,39 +14,39 @@
                 <div class="form1">
                     <div class="input-group">
                         <label class="label">Nombre</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #nombre>
                         <div></div>
                     </div>
 
                     <div class="input-group">
-                        <label class="label">Apellido</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="">
+                        <label class="label">Apellidos</label><br>
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #apellidos>
                         <div></div>
                     </div>
 
 
                 </div>
 
-                <div class="huevo"><img class="huevo-form" src="../../../assets/img/profile.jpg" alt="huevo"></div>
+                <div class="huevo" #foto><img class="huevo-form" src="../../../assets/img/profile.jpg" alt="huevo" ></div>
             </div>
 
             <div class="parte2">
 
                 <div class="input-group">
                     <label class="label">Direccion</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="">
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #direccion>
                     <div></div>
                 </div>
 
                 <div class="input-group">
                     <label class="label">Telefono</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="">
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #telefono>
                     <div></div>
                 </div>
 
                 <div class="input-group">
-                    <label class="label">Sexo</label><br>
-                    <select name="sexo" id="sexo" class="input2">
+                    <label class="label">genero</label><br>
+                    <select name="sexo" id="sexo" class="input2" #genero>
                         <option value="">Hombre</option>
                         <option value="">Mujer</option>
                         <option value="">No Contestar</option>
@@ -55,17 +55,17 @@
 
                 <div class="input-group">
                     <label class="label">Fecha de Nacimiento</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="date" placeholder="">
+                    <input autocomplete="off" name="name" class="input2" type="date" placeholder="" #fechaNac>
                     <div></div>
                 </div>
 
                 <div class="input-group">
                     <label class="label">Sobre mí</label><br>
-                    <input autocomplete="off" name="name" class="input3" type="text" placeholder="">
+                    <input autocomplete="off" name="name" class="input3" type="text" placeholder="" #sobreMi>
                     <div></div>
                 </div>
 
-                    <button class="boton-perfil">Actualizar Perfil</button>
+                    <button class="boton-perfil" (click)="editar(nombre.value,apellidos.value,foto.value,direccion.value,telefono.value,genero.value,fechaNac.value,sobreMi)">Actualizar Perfil</button>
             </div>
         </div>
     </div>
