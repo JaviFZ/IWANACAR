@@ -14,58 +14,58 @@
                 <div class="form1">
                     <div class="input-group">
                         <label class="label">Nombre</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #nombre>
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input1>
                         <div></div>
                     </div>
 
                     <div class="input-group">
                         <label class="label">Apellidos</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #apellidos>
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input2>
                         <div></div>
                     </div>
 
 
                 </div>
 
-                <div class="huevo" #foto><img class="huevo-form" src="../../../assets/img/profile.jpg" alt="huevo" ></div>
+                <div class="huevo" #input3><img class="huevo-form" src="../../../assets/img/profile.jpg" alt="huevo" ></div>
             </div>
 
             <div class="parte2">
 
                 <div class="input-group">
-                    <label class="label">Direccion</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #direccion>
+                    <label class="label">Dirección</label><br>
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #input4>
                     <div></div>
                 </div>
 
                 <div class="input-group">
-                    <label class="label">Telefono</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #telefono>
+                    <label class="label">Teléfono</label><br>
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #input5>
                     <div></div>
                 </div>
 
                 <div class="input-group">
-                    <label class="label">genero</label><br>
-                    <select name="sexo" id="sexo" class="input2" #genero>
-                        <option value="">Hombre</option>
-                        <option value="">Mujer</option>
-                        <option value="">No Contestar</option>
+                    <label class="label">Género</label><br>
+                    <select name="sexo" id="sexo" class="input2" #input6>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                        <option value="No Contestar">No Contestar</option>
                     </select>
                 </div>
 
                 <div class="input-group">
                     <label class="label">Fecha de Nacimiento</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="date" placeholder="" #fechaNac>
+                    <input autocomplete="off" name="name" class="input2" type="date" placeholder="" #input7>
                     <div></div>
                 </div>
 
                 <div class="input-group">
                     <label class="label">Sobre mí</label><br>
-                    <input autocomplete="off" name="name" class="input3" type="text" placeholder="" #sobreMi>
+                    <textarea autocomplete="off" name="name" class="input3" type="text" placeholder="" #input8></textarea>
                     <div></div>
                 </div>
 
-                    <button class="boton-perfil" (click)="editar(nombre.value,apellidos.value,foto.value,direccion.value,telefono.value,genero.value,fechaNac.value,sobreMi)">Actualizar Perfil</button>
+                    <button class="boton-perfil" (click)="modificar(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value,input8.value)">Actualizar Perfil</button>
             </div>
         </div>
     </div>

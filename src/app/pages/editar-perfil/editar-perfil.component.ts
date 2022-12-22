@@ -9,13 +9,30 @@ import { UsuarioService } from 'src/shared/usuario.service';
   styleUrls: ['./editar-perfil.component.css']
 })
 export class EditarPerfilComponent {
-  constructor(public usuarioService: UsuarioService, private router : Router){    }
 
-  public editar(nombre:string, apellidos:string,foto:string,direccion:string, telefono:string,genero:string, fechaDeNacimiento:string,sobreMi:string){
-    let usuarioEditado = new Usuario(nombre, apellidos, fechaDeNacimiento,"","",direccion, telefono, genero, foto, sobreMi, "", "", [], -1,-1,-1 )
-    this.usuarioService.editarPerfil(usuarioEditado).subscribe((respuesta)=>{
-      this.router.navigateByUrl("perfil")
-      console.log(respuesta);
+  public modifiedUser: Usuario;
+
+  constructor(public usuarioService: UsuarioService, private router: Router) {
+    this.modifiedUser = usuarioService.usuario;
+  }
+
+  public modificar(newName: string, newSurname: string, newPhoto: string, newAddress: string, newPhone: string, newGender: string, newBirthDate: string, newAboutMe: string) {
+    this.modifiedUser.nombre = (newName == '' ? null : newName);
+    this.modifiedUser.apellidos = (newSurname == '' ? null : newSurname);
+    this.modifiedUser.foto = (newPhoto == '' ? null : newPhoto);
+    this.modifiedUser.direccion = (newAddress == '' ? null : newAddress);
+    this.modifiedUser.telefono = (newPhone == '' ? null : newPhone);
+    this.modifiedUser.genero = (newGender == '' ? null : newGender);
+    this.modifiedUser.fechaDeNacimiento = (newBirthDate == '' ? null : newBirthDate);
+    this.modifiedUser.sobreMi = (newAboutMe == '' ? null : newAboutMe);
+    console.log(this.modifiedUser);
+    
+    this.usuarioService.editarPerfil(this.modifiedUser).subscribe((data:any) => {
+      console.log(data);
     })
   }
+
+
+
+
 }
