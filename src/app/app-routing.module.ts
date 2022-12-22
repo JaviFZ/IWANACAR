@@ -14,6 +14,7 @@ import { ChatsAbiertosComponent } from './pages/chats-abiertos/chats-abiertos.co
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { CrearViajeComponent } from './pages/crear-viaje/crear-viaje.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opinion.component';
 import { HistoricoChatsComponent } from './pages/historico-chats/historico-chats.component';
 import { HistoricoViajesComponent } from './pages/historico-viajes/historico-viajes.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -60,7 +61,8 @@ const routes: Routes = [
   {path: "header", component:HeaderComponent},
   {path: "mapa", component:MapaComponent},
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
-  {path: "tarjetaChat", component:TarjetaChatComponent}
+  {path: "tarjetaChat", component:TarjetaChatComponent},
+  {path: "escribirOpinion", component:EscribirOpinionComponent}
 ];
 
 @NgModule({
