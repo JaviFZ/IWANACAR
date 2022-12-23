@@ -3,11 +3,11 @@
     <div class="titulo">
         <p>Mis Coches</p>
     </div>
-    <section class="tarjeta" *ngFor="let car of coche;let i= index">
+    <section class="tarjeta" *ngFor="let car of coches;let i= index"> 
         <div class="cruz">
-            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCar(index)">
+            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCoche(car.id_coche)">
             <div class="title">
-                <h1>{{car.nombre}}</h1>
+                <h1>{{car.nombreCoche}}</h1>
             </div>
         </div>
         <div class="padre-modulos">
@@ -20,11 +20,11 @@
             </section>
             <div class="barra"></div>
             <section class="modulo2">
-                <div *ngIf="car.mascotas == true"><img class="ic2" src="../../../assets/img/mascotas.png" alt=""></div>
-                <div *ngIf="car.mascotas == false"><img class="ic2" src="../../../assets/img/no_mascotas.png" alt=""></div>
-                <div *ngIf="car.fumar == true"><img class="ic2" class="ic2" src="../../../assets/img/fumar.png" alt=""></div>
-                <div *ngIf="car.fumar == false"><img class="ic2" src="../../../assets/img/no_fumar.png" alt=""></div>
-                <div><img class="ic2" src="../../../assets/img/esperar.png" alt="">{{car.tiempoMax}}</div>
+                <div *ngIf="car.mascotas == 'Si'"><img class="ic2" src="../../../assets/img/mascotas.png" alt=""></div>
+                <div *ngIf="car.mascotas == 'No'"><img class="ic2" src="../../../assets/img/no_mascotas.png" alt=""></div>
+                <div *ngIf="car.fumar == Si"><img class="ic2" class="ic2" src="../../../assets/img/fumar.png" alt=""></div>
+                <div *ngIf="car.fumar == No"><img class="ic2" src="../../../assets/img/no_fumar.png" alt=""></div>
+                <div><img class="ic2" src="../../../assets/img/esperar.png" alt="">{{usuarioService?.usuario.tiempoDeEspera}}</div>
             </section>
         </div>
     </section>

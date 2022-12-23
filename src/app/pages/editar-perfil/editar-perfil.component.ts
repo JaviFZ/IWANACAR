@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/shared/usuario.service';
-
 @Component({
   selector: 'app-editar-perfil',
   templateUrl: './editar-perfil.component.html',
