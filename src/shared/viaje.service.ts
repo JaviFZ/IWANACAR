@@ -11,7 +11,7 @@ export class ViajeService {
   public viaje:Viaje;
   constructor(public http:HttpClient) {
     this.viaje = new Viaje();
-    this.url = "http://localhost:3000";
+    this.url = "http://containers-us-west-123.railway.app";
   }
   crearViaje(){
     return this.http.post(this.url + "/viajes",this.viaje);
