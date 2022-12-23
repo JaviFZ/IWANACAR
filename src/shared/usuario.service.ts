@@ -28,10 +28,19 @@ export class UsuarioService {
 
     return this.http.post(this.url + "login", user)
   }
+  // **********metodo para editar perfil**************
 
   public editarPerfil(user: Usuario): Observable<object> {
     console.log(user);
     return this.http.put(this.url + "editarPerfil", user)
+  }
+
+  // **********metodo para mostrar datos del usuario**************
+
+  public showDataUser(id_usuario: number): Observable<object> {
+    // console.log(id_usuario);
+
+    return this.http.get(this.url + "perfil?id_usuario=" + id_usuario)
   }
 
 
