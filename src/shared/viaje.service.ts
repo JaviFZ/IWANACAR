@@ -16,4 +16,7 @@ export class ViajeService {
   crearViaje(){
     return this.http.post(this.url + "/viajes",this.viaje);
   }
+  buscarViaje(){
+
+  }
 }
