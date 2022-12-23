@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Viaje } from 'src/app/models/viaje';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-buscar-viaje',
@@ -9,7 +10,7 @@ import { Viaje } from 'src/app/models/viaje';
 })
 export class BuscarViajeComponent {
   public viaje:Viaje;
-  constructor(public router:Router){
+  constructor(public router:Router,public viajes:ViajeService){
     this.viaje = new Viaje();
   }
   buscarViaje(origen:string,destino:string,radioBusqueda:number,fecha:Date,pasajeros:number){

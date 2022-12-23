@@ -23,7 +23,7 @@
         <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 2" (click)="guardarDato(habitual.value,fecha.value,hora.value)">
             <img src="../../../assets/img/flechaDCHA.png" >
         </button>
-        <button  routerLink="/publicarViaje" class="buttonDcha" *ngIf="paginaActual === 3" (click)="guardarDat(coche.value,plazas.value,precio.value)" (click)="ViajeService.crearViaje()">
+        <button  routerLink="/publicarViaje" class="buttonDcha" *ngIf="paginaActual === 3" (click)="viajes.crearViaje()" (click)="guardarDat(coche.value,plazas.value,precio.value)" >
             <img src="../../../assets/img/flechaDCHA.png" >
         </button>
         

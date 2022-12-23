@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { Component } from '@angular/core';
 import { ViajeService } from 'src/shared/viaje.service';
 
@@ -26,10 +27,11 @@ export class CrearViajeComponent {
         this.viajes.viaje.destino = destino;
       }
     }
-    public guardarDato(habitual:boolean,fecha_dia:Date){
+    public guardarDato(habitual:boolean,fecha_dia:Date,hora:string){
       if (this.paginaActual == 1 || this.paginaActual == 0){
         this.viajes.viaje.habitual = habitual;
         this.viajes.viaje.fecha = fecha_dia;
+        this.viajes.viaje.hora = hora
       }
     }
     public guardarDat(coche:number,plazas:number,precio:number){
