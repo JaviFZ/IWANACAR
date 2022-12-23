@@ -2,37 +2,37 @@
     <div class="flex-container1">
 
 
-            <a routerLink="/login" class="teclas">
-               <div> <img class="icons" src="../../../assets/img/inicioSesion.png" alt=""></div>
+            <a routerLink="/login" class="teclas" *ngIf="usuarioServices.logueado==false">
+               <div> <img class="icons" src="../../../assets/img/inicioSesion.png" alt="" ></div>
                 <div class="text">INICIAR SESION</div>
             </a>
 
 
 
-            <a routerLink="/registro" class="teclas">
-                <div> <img class="icons" src="../../../assets/img/añadirUsuasio.png" alt=""></div>
+            <a routerLink="/registro" class="teclas" *ngIf="usuarioServices.logueado==false">
+                <div> <img class="icons" src="../../../assets/img/añadirUsuasio.png" alt="" ></div>
                 <div class="text">REGISTRARSE</div>
             </a>
 
 
 
 
-            <a routerLink="/editarPerfil" class="teclas">
-                <div> <img class="icons" src="../../../assets/img/editar perfil.png" alt="icono perfil"></div>
+            <a routerLink="/editarPerfil" class="teclas" *ngIf="usuarioServices.logueado==true">
+                <div> <img class="icons" src="../../../assets/img/editar perfil.png" alt="icono perfil" ></div>
                 <div class="text">Editar Perfil</div>
             </a>
 
 
 
-            <a routerLink="/historicoViajes" class="teclas">
-                <div> <img class="icons" src="../../../assets/img/viajes.png" alt="Mis viajes"></div>
+            <a routerLink="/historicoViajes" class="teclas" *ngIf="usuarioServices.logueado==true">
+                <div> <img class="icons" src="../../../assets/img/viajes.png" alt="Mis viajes" ></div>
                 <div class="text">Mis Viajes</div>
             </a>
 
 
 
-            <a routerLink="/misCoches" class="teclas">
-                <div> <img class="icons" src="../../../assets/img/misCoches.png" alt="icono perfil"></div>
+            <a routerLink="/misCoches" class="teclas" *ngIf="usuarioServices.logueado==true">
+                <div> <img class="icons" src="../../../assets/img/misCoches.png" alt="icono perfil" ></div>
                 <div class="text">Mis Coches</div>
             </a>
 
@@ -52,8 +52,8 @@
 
 
 
-            <a routerLink="" class="teclas">
-                <div>  <img class="icons" src="../../../assets/img/cerrarSesion.png" alt="icono perfil"></div>
+            <a routerLink="/home" class="teclas" *ngIf="usuarioServices.logueado==true" (click)="cerrarSesion()">
+                <div>  <img class="icons" src="../../../assets/img/cerrarSesion.png" alt="icono perfil" ></div>
                 <div class="text">Cerrar Sesion</div>
             </a>
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from 'src/shared/usuario.service';
+
 
 @Component({
   selector: 'app-menu-burguer',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-burguer.component.css']
 })
 export class MenuBurguerComponent {
-
+  constructor(public usuarioServices: UsuarioService) {
+    if (this.usuarioServices.logueado == true) {
+    }
+  }
+  public cerrarSesion(){
+    this.usuarioServices.logueado = false;
+    this.usuarioServices.usuario.id_usuario = 0;
+    
+  }
 }
