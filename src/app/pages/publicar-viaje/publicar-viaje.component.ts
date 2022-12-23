@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-publicar-viaje',
@@ -9,16 +10,15 @@ import { Router } from '@angular/router';
 export class PublicarViajeComponent {
   public tarjetaResumen: any;
   
-    constructor(){
+    constructor(public viaje:ViajeService){
       this.tarjetaResumen = {
-        fecha: "14/12/2022",
-        hora: "7:15",
-        calle1: "Calle Hermanos Rodriguez nº34",
-        calle2: "Calle Paz nº12",
-        coche: "coche1",
-        precio: "5€",
-        pasajeros: 3,
-
+        fecha: viaje.viaje.fecha,
+        hora: viaje.viaje.hora,
+        calle1: viaje.viaje.origen,
+        calle2: viaje.viaje.destino,
+        coche: viaje.viaje.id_coche,
+        precio: viaje.viaje.precio,
+        pasajeros: viaje.viaje.pasajeros,
       }
 
     }
