@@ -63,7 +63,7 @@ import { HttpClientModule } from '@angular/common/http';
         ChatsAbiertosComponent,
         SobreNosotrosComponent,
         ContactoComponent,
-        MenuBurguerComponent
+        MenuBurguerComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

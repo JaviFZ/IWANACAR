@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
-import { UsuarioService } from 'src/shared/usuario.service';
+import { UsuarioService } from 'src/app/shared/usuario.service';
 
 @Component({
   selector: 'app-registro',
