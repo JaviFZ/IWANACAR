@@ -13,11 +13,9 @@ import { MapaComponent } from './components/mapa/mapa.component';
 import { TarjetaViajeComponent } from './components/tarjeta-viaje/tarjeta-viaje.component';
 import { ResultadosBusquedaComponent } from './pages/resultados-busqueda/resultados-busqueda.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-import { SolicitarViajeComponent } from './pages/solicitar-viaje/solicitar-viaje.component';
 import { HistoricoViajesComponent } from './pages/historico-viajes/historico-viajes.component';
 import { ViajesPublicadosComponent } from './pages/viajes-publicados/viajes-publicados.component';
 import { MenuHamburguesaComponent } from './pages/menu-hamburguesa/menu-hamburguesa.component';
-import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { MisCochesComponent } from './pages/mis-coches/mis-coches.component';
 import { AnadirCocheComponent } from './pages/anadir-coche/anadir-coche.component';
 import { CrearViajeComponent } from './pages/crear-viaje/crear-viaje.component';
@@ -30,12 +28,17 @@ import { HistoricoChatsComponent } from './pages/historico-chats/historico-chats
 import { ChatsAbiertosComponent } from './pages/chats-abiertos/chats-abiertos.component';
 import { SobreNosotrosComponent } from './pages/sobre-nosotros/sobre-nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
-import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opinion.component';
+import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.component';
+import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
+import { SolicitarViajeComponent } from './pages/solicitar-viaje/solicitar-viaje.component';
 
 @NgModule({
     declarations: [
+        MenuBurguerComponent,
+        EditarPerfilComponent,
+        SolicitarViajeComponent,
         AppComponent,
         HomeComponent,
         HeaderComponent,
@@ -47,11 +50,9 @@ import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opin
         TarjetaViajeComponent,
         ResultadosBusquedaComponent,
         PerfilComponent,
-        SolicitarViajeComponent,
         HistoricoViajesComponent,
         ViajesPublicadosComponent,
         MenuHamburguesaComponent,
-        EditarPerfilComponent,
         MisCochesComponent,
         AnadirCocheComponent,
         CrearViajeComponent,
@@ -64,7 +65,6 @@ import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opin
         ChatsAbiertosComponent,
         SobreNosotrosComponent,
         ContactoComponent,
-        MenuBurguerComponent,
         EscribirOpinionComponent
     ],
     providers: [],

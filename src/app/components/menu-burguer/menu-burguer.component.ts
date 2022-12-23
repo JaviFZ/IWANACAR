@@ -12,4 +12,9 @@ export class MenuBurguerComponent {
     if (this.usuarioServices.logueado == true) {
     }
   }
+  public cerrarSesion(){
+    this.usuarioServices.logueado = false;
+    this.usuarioServices.usuario.id_usuario = 0;
+    
+  }
 }
