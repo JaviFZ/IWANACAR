@@ -11,15 +11,15 @@ private coche: Coche[];
   constructor(private httpClient:HttpClient) {  }
 
   get(id_conductor:number){
-    return this.httpClient.get("https://apiwana-production.up.railway.app/",{params:{id_conductor}})
+    return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})
   }
 
 add(coche: Coche) {
-  return this.httpClient.post("https://apiwana-production.up.railway.app/", coche)
+  return this.httpClient.post("https://apiwana-production.up.railway.app/coche", coche)
   }
 
   delete(id_coche:number) {
-    return this.httpClient.delete("https://apiwana-production.up.railway.app/",{body:{id_coche: id_coche}})
+    return this.httpClient.delete("https://apiwana-production.up.railway.app/coche",{body:{id_coche: id_coche}})
 
   }
 }
