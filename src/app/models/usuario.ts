@@ -20,7 +20,7 @@ export class Usuario {
 
 
 
-    constructor(nombre: string, apellidos: string, fechaDeNacimiento: string, email: string, password: string, direccion: string, telefono: string, genero: string, foto: string, sobreMi: string, fechaDeAlta: string, tiempoDeEspera: string, coches: Coche[], puntuacionMedia: number, id_usuario: number, id_opinion: number) {
+    constructor(nombre: string, apellidos: string, fechaDeNacimiento: string, email: string, password: string, direccion: string, telefono: string, genero: string, foto: string, sobreMi: string, fechaDeAlta: string, tiempoDeEspera: string, coches?: Coche[], puntuacionMedia?: number, id_usuario?: number, id_opinion?: number) {
 
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -42,8 +42,8 @@ export class Usuario {
 
      }
 
-     public nombreCompleto ():string 
-     {
-         return this.nombre + " " + this.apellidos
-     }
+    //  public nombreCompleto ():string 
+    //  {
+    //      return this.nombre + " " + this.apellidos
+    //  }
 }
