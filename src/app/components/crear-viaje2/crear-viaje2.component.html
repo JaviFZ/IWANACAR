@@ -3,14 +3,14 @@
         
     <div class="divInputs">
         <p class="textoInput">¿Es viaje habitual?</p>
-        <select (change)="cambiarInput($event)" name="viajeHabitual"class="input">
+        <select (change)="cambiarInput($event)" name="viajeHabitual"class="input" #habitual>
             <option value="no">No</option>
             <option value="si">Sí</option>
         </select>
         <p  *ngIf="opcion === 'no'" class="textoInput">Fecha</p>
-        <input *ngIf="opcion === 'no'" type="date" class="input" placeholder="DD/MM/AAA">
+        <input *ngIf="opcion === 'no'" type="date" class="input" placeholder="DD/MM/AAA" #fecha>
         <p *ngIf="opcion === 'si'" class="textoInput">Dia de la semana</p>
-        <select *ngIf="opcion === 'si'" name="diaSemana"class="input">
+        <select *ngIf="opcion === 'si'" name="diaSemana"class="input" #diasSemana>
             <option >Lunes</option>
             <option >Martes</option>
             <option >Miercoles</option>
@@ -20,7 +20,7 @@
             <option >Domingo</option>
         </select>
         <p class="textoInput">Hora</p>
-        <input type="time" class="input">
+        <input type="time" class="input" #hora>
     </div>
     
     
