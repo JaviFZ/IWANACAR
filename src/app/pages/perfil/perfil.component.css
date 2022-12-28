@@ -65,6 +65,7 @@ body {
     flex-direction: column;
     padding: 2%;
     border-radius: 50px;
+    width: 50%;
 }
 
 input::placeholder {
