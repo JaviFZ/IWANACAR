@@ -15,7 +15,7 @@ export class Usuario {
     public id_opinion: number;
     public password: string;
     public direccion: string;
-    public fechaDealta: string;
+    public fechaDeAlta: string;
     public tiempoDeEspera: string;
 
 
@@ -32,7 +32,7 @@ export class Usuario {
         this.genero = genero;
         this.foto = foto;
         this.sobreMi = sobreMi;
-        this.fechaDealta = fechaDeAlta;
+        this.fechaDeAlta = fechaDeAlta;
         this.tiempoDeEspera = tiempoDeEspera;
         this.coches = coches;
         this.puntuacionMedia = puntuacionMedia;
@@ -40,10 +40,8 @@ export class Usuario {
         this.id_opinion = id_opinion;
 
 
-     }
+    }
 
-    //  public nombreCompleto ():string 
-    //  {
-    //      return this.nombre + " " + this.apellidos
-    //  }
+
+
 }
