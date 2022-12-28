@@ -33,7 +33,6 @@ import { EscribirOpinionComponent } from './pages/escribir-opinion/escribir-opin
 import { MenuBurguerComponent } from './components/menu-burguer/menu-burguer.component';
 import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.component';
 import { SolicitarViajeComponent } from './pages/solicitar-viaje/solicitar-viaje.component';
-
 @NgModule({
     declarations: [
         MenuBurguerComponent,

@@ -7,27 +7,6 @@
         <app-crear-viaje2 *ngIf="paginaActual === 2"></app-crear-viaje2>
         <app-crear-viaje3 *ngIf="paginaActual === 3"></app-crear-viaje3>
     </main>
-    <div class="divButtons">
-        <button  on-click="paginaAnt()" class="buttonIzq" >
-            <!-- <img src="../../../assets/img/flechaIZQ.png" > -->
-            <svg width="50" height="50" viewBox="2 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="flecha" >
-                <path d="M31.2307 41.4492L17.6892 27.9077C16.0899 26.3085 16.0899 23.6916 17.6892 22.0923L31.2307 8.55078" stroke="#fffaef" stroke-width="4.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-        </button>
-        <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 1" (click)="guardarDatos(origen.value,destino.value)">
-            <!-- <img src="../../../assets/img/flechaDCHA.png" > -->
-            <svg width="50" height="50" viewBox="2 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.9073 9.5131L33.3499 23.1528C34.9375 24.7636 34.9185 27.3805 33.3076 28.968L19.6679 42.4107" stroke="#fffaef" stroke-width="4.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-        </button>
-        <button  on-click="paginaSig()" class="buttonDcha" *ngIf="paginaActual === 2" (click)="guardarDato(habitual.value,fecha.value,hora.value)">
-            <img src="../../../assets/img/flechaDCHA.png" >
-        </button>
-        <button  routerLink="/publicarViaje" class="buttonDcha" *ngIf="paginaActual === 3" (click)="viajes.crearViaje()" (click)="guardarDat(coche.value,plazas.value,precio.value)" >
-            <img src="../../../assets/img/flechaDCHA.png" >
-        </button>
-        
-    </div>
     
     <div class="footer">
         <app-footer></app-footer>

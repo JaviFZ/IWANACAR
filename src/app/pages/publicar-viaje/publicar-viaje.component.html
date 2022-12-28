@@ -27,13 +27,9 @@
                     <p>{{tarjetaResumen.pasajeros}}</p>
                 </div>
             </div>
-    
         </div>
-            
     </section>
-    <div class="mapa">
-        <img src="../../../assets/img/mapa.jpg">
-    </div>
+    <div id="mapa" (click)="iniciarMap()"></div>
     <div class="buttons">   
         <button class="publicar" routerLink="/viajePublicado">Publicar viaje</button>
         <a routerLink="login">Salir</a>

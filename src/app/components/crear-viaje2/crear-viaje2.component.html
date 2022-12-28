@@ -20,17 +20,20 @@
             <option >Domingo</option>
         </select>
         <p class="textoInput">Hora</p>
-        <input type="time" class="input" #hora>
+        <input type="text" class="input" #hora>
     </div>
     
     
 </div>
-<!-- <-- <div class="divButtons">
-    <button  routerLink="crearViaje1" class="buttonDcha">
+<div class="divButtons">
+    <button  routerLink="/crearViaje" class="buttonDcha" (click)="paginaAnt()">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
-    <button  routerLink="/crearViaje3" class="buttonDcha">
+    <button *ngIf="opcion === 'no'" routerLink="/crearViaje" class="buttonDcha" (click)="guardarDatos(habitual.value,fecha.value,hora.value)" (click)="paginaSig()">
+        <img src="../../../assets/img/flechaDCHA.png" >
+    </button>
+    <button *ngIf="opcion === 'si'" routerLink="/crearViaje" class="buttonDcha" (click)="guardarDato(habitual.value,diasSemana.value,hora.value)" (click)="paginaSig()">
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
     
-</div> --> 
+</div> 
