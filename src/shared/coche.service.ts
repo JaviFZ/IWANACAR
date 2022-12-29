@@ -6,9 +6,10 @@ import { Coche } from 'src/app/models/coche';
   providedIn: 'root'
 })
 export class CocheService {
-private coche: Coche[];
+  public coche: Coche[];
 
-  constructor(private httpClient:HttpClient) {  }
+  constructor(private httpClient:HttpClient) { 
+   }
 
   get(id_conductor:number){
     return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})

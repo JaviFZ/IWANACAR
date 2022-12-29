@@ -1,17 +1,16 @@
 <div class="divFormulario">   
-    <div class="divInputs">
+    <div class="divInputs" >
         <p class="textoInput">Origen</p>
-        <input type="text" class="input" #origen>
+        <input type="text" class="input" id="origen" #origen (click)="autocompletar()">
         <p class="textoInput">Destino</p>
-        <input type="text" class="input" #destino>
-    </div>
+        <input type="text" class="input" id="destino" #destino (click)="autocompletar1()">
 </div>
-<!-- <div class="divButtons">
-    <button  routerLink="/buscarViaje" class="buttonDcha">
+</div>
+<div class="divButtons">
+    <button  routerLink="/buscarViaje" class="buttonDcha" (click)="paginaAnt()">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
-    <button  routerLink="/crearViaje2" class="buttonDcha">
+    <button  routerLink="/crearViaje" class="buttonDcha" (click)="guardarDatos(origen.value,destino.value)" (click)="paginaSig()">
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
-    
-</div> -->
+</div>
