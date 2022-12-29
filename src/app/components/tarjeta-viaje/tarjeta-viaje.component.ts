@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Viaje } from 'src/app/models/viaje';
-import { UsuarioService } from 'src/shared/usuario.service';
-import { ViajeService } from 'src/shared/viaje.service';
 
 
 @Component({
@@ -10,12 +7,18 @@ import { ViajeService } from 'src/shared/viaje.service';
   styleUrls: ['./tarjeta-viaje.component.css']
 })
 export class TarjetaViajeComponent {
-  public viajesEncontrados:any;
-
-  constructor(public viajeService: ViajeService, public usuarioService: UsuarioService){
-    
-    this.usuarioService.url = usuarioService.url
-    
-    
+  public tarjeta_viaje:any;
+  constructor(){
+    this.tarjeta_viaje = {
+      foto:"https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg",
+      nombre:"Pedro",
+      origen:"Alcalá",
+      destino:"Universidad Ponticifica de Comillas",
+      fecha:"12/12/2022",
+      hora:"07:30",
+      precio:15,
+      pasajeros:2,
+      valoracion:3
+    }
   }
 }
