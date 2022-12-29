@@ -10,12 +10,16 @@ import { ViajeService } from 'src/shared/viaje.service';
   styleUrls: ['./crear-viaje2.component.css']
 })
 export class CrearViaje2Component {
-  public opcion : String;
+  public opcion : string;
   public viaje:Viaje;
   public paginaActual:number;
+  public isHidden:boolean;
+  public isHidden2:boolean;
     constructor(public viajes:ViajeService,public componente:CrearViajeComponent){
       this.opcion = "no";
       this.paginaActual = 2;
+      this.isHidden = false;
+      this.isHidden2 = true;
     }
     public paginaSig(){
       this.paginaActual = this.paginaActual + 1;
@@ -28,21 +32,16 @@ export class CrearViaje2Component {
         this.paginaActual = 1;
       }
     }
-    public cambiarInput($event){
-      if(this.opcion === "no"){
-        this.opcion = "si";
-      } else {
-        this.opcion = "no";
-      }
-    }
-    public guardarDato(habitual:boolean,diasSemana:string,hora:string){
+    public guardarDato(habitual:string,diasSemana:string,fecha:Date,hora:string){
         this.viajes.viaje.habitual = habitual;
         this.viajes.viaje.hora = hora;
         this.viajes.viaje.dia= diasSemana;
+        this.viajes.viaje.fecha = fecha;
     }
-    public guardarDatos(habitual:boolean,fecha:Date,hora:string){
-      this.viajes.viaje.habitual = habitual;
-      this.viajes.viaje.fecha = fecha;
-      this.viajes.viaje.hora = hora;
-  }
+  //   public guardarDatos(habitual:string,fecha:Date,hora:string){
+  //     this.viajes.viaje.habitual = habitual;
+  //     this.viajes.viaje.fecha = fecha;
+  //     console.log(fecha)
+  //     this.viajes.viaje.hora = hora;
+  // }
 }

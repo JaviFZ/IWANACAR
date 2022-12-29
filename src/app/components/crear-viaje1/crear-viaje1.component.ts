@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { Viaje } from 'src/app/models/viaje';
 import { CrearViajeComponent } from 'src/app/pages/crear-viaje/crear-viaje.component';
+import { MapaService } from 'src/shared/mapa.service';
 import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { ViajeService } from 'src/shared/viaje.service';
 export class CrearViaje1Component {
   public viaje:Viaje;
   public paginaActual: number;
-  constructor(public viajes:ViajeService,public componente:CrearViajeComponent){  
+  constructor(public viajes:ViajeService,public componente:CrearViajeComponent,public mapaService:MapaService){  
     this.paginaActual = 1;
   }
   public paginaSig(){
@@ -27,7 +28,15 @@ export class CrearViaje1Component {
     }
   }
   public guardarDatos(origen:string,destino:string){
+    
       this.viajes.viaje.origen = origen;
       this.viajes.viaje.destino = destino;
+  }
+  public autocompletar(){
+    this.mapaService.autocompletar(document.getElementById('origen') as HTMLInputElement);
+
+  }
+  public autocompletar1(){
+    this.mapaService.autocompletar1(document.getElementById('destino') as HTMLInputElement);
   }
 }

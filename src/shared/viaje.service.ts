@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Viaje } from 'src/app/models/viaje';
+import { UsuarioService } from './usuario.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +11,13 @@ import { Viaje } from 'src/app/models/viaje';
 export class ViajeService {
   public url:string;
   public viaje:Viaje;
-  constructor(public http:HttpClient) {
+  constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viaje = new Viaje();
-    this.url = "http://containers-us-west-123.railway.app";
+    this.url = "https://apiwana-production.up.railway.app/";
   }
-  crearViaje(){
-    return this.http.post(this.url + "/viajes",this.viaje);
+  public crearViaje(viaje:Viaje): Observable<object>{
+    console.log(viaje);
+    return this.http.post(this.url + "viajes?id_usuarios="+this.usuario.usuario.id_usuario,viaje);
   }
   buscarViaje(){
 

@@ -1,24 +1,23 @@
 
 <div class="divFormulario">
-        
     <div class="divInputs">
         <p class="textoInput">¿Es viaje habitual?</p>
-        <select (change)="cambiarInput($event)" name="viajeHabitual"class="input" #habitual>
-            <option value="no">No</option>
-            <option value="si">Sí</option>
+        <select name="viajeHabitual"class="input" #habitual>
+            <option value="no" >No</option>
+            <option value="si" >Sí</option>
         </select>
-        <p  *ngIf="opcion === 'no'" class="textoInput">Fecha</p>
-        <input *ngIf="opcion === 'no'" type="date" class="input" placeholder="DD/MM/AAA" #fecha>
-        <p *ngIf="opcion === 'si'" class="textoInput">Dia de la semana</p>
-        <select *ngIf="opcion === 'si'" name="diaSemana"class="input" #diasSemana>
-            <option >Lunes</option>
-            <option >Martes</option>
-            <option >Miercoles</option>
-            <option >Jueves</option>
-            <option >Viernes</option>
-            <option >Sabado</option>
-            <option >Domingo</option>
-        </select>
+            <p class="textoInput">Fecha</p>
+            <input type="date" class="input" #fecha>
+            <p  class="textoInput">Dia de la semana</p>
+            <select  name="diaSemana"class="input" #diasSemana>
+                <option #diasSemana>Lunes</option>
+                <option #diasSemana>Martes</option>
+                <option #diasSemana>Miercoles</option>
+                <option #diasSemana>Jueves</option>
+                <option #diasSemana>Viernes</option>
+                <option #diasSemana>Sabado</option>
+                <option #diasSemana>Domingo</option>
+            </select>
         <p class="textoInput">Hora</p>
         <input type="text" class="input" #hora>
     </div>
@@ -29,10 +28,10 @@
     <button  routerLink="/crearViaje" class="buttonDcha" (click)="paginaAnt()">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
-    <button *ngIf="opcion === 'no'" routerLink="/crearViaje" class="buttonDcha" (click)="guardarDatos(habitual.value,fecha.value,hora.value)" (click)="paginaSig()">
+    <!-- <button *ngIf="isHidden2" routerLink="/crearViaje" class="buttonDcha" (click)="paginaSig()" (click)="guardarDatos(habitual.value,fecha.value,hora.value)" >
         <img src="../../../assets/img/flechaDCHA.png" >
-    </button>
-    <button *ngIf="opcion === 'si'" routerLink="/crearViaje" class="buttonDcha" (click)="guardarDato(habitual.value,diasSemana.value,hora.value)" (click)="paginaSig()">
+    </button> -->
+    <button routerLink="/crearViaje" class="buttonDcha" (click)="paginaSig()" (click)="guardarDato(habitual.value,diasSemana.value,fecha.value,hora.value)" >
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
     
