@@ -3,9 +3,8 @@
         
     <div class="divInputs">
         <p class="textoInput">Elige vehículo</p>
-        <select placeholder="Elige vehículo" name="elige vehículo"class="input" #coche>
-            <option >Coche 1</option>
-            <option >Coche 2</option>
+        <select  placeholder="Elige vehículo" name="elige vehículo"class="input" #inputCoche>
+            <option *ngFor="let coche of coches">{{coche.id_coche}}</option>
         </select>
         <p class="textoInput">Plazas</p>
         <input type="text" class="input" #plazas>
@@ -19,7 +18,7 @@
     <button  routerLink="/crearViaje" class="buttonDcha" (click)="paginaAnt()">
         <img src="../../../assets/img/flechaIZQ.png" >
     </button>
-    <button  routerLink="/publicarViaje" class="buttonDcha"(click)="guardarDat(coche.value,plazas.value,precio.value)" (click)="viajes.crearViaje()">
+    <button  routerLink="/publicarViaje" class="buttonDcha"(click)="guardarDat(plazas.value,precio.value,inputCoche.value)" >
         <img src="../../../assets/img/flechaDCHA.png" >
         </button>
 

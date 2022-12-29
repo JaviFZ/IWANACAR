@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Viaje } from 'src/app/models/viaje';
+import { MapaService } from 'src/shared/mapa.service';
 import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
@@ -9,45 +11,30 @@ import { ViajeService } from 'src/shared/viaje.service';
 })
 export class PublicarViajeComponent {
   public tarjetaResumen: any;
-    constructor(public viaje:ViajeService){
+  public viaje:Viaje;
+    constructor(public viajeService:ViajeService,public mapa:MapaService){
+      this.viaje = viajeService.viaje;
       this.tarjetaResumen = {
-        fecha: viaje.viaje.fecha,
-        hora: viaje.viaje.hora,
-        calle1: viaje.viaje.origen,
-        calle2: viaje.viaje.destino,
-        coche: viaje.viaje.id_coche,
-        precio: viaje.viaje.precio,
-        pasajeros: viaje.viaje.pasajeros,
+        fecha: viajeService.viaje.fecha,
+        diasSemana: viajeService.viaje.dia,
+        hora: viajeService.viaje.hora,
+        calle1: viajeService.viaje.origen,
+        calle2: viajeService.viaje.destino,
+        coche: viajeService.viaje.id_coche,
+        precio: viajeService.viaje.precio,
+        pasajeros: viajeService.viaje.pasajeros,
+        habitual: viajeService.viaje.habitual
       }
     }
-  iniciarMap(){
-    var coord = {lat:40.4167754,lng:-3.7037902};
-    var DirectionsRequest = {
-      origin: 'Chicago, IL',
-      destination: 'Los Angeles, CA',
-      waypoints: [
-        {
-          location: 'Joplin, MO',
-          stopover: false
-        },{
-          location: 'Oklahoma City, OK',
-          stopover: true
-        }],
-      provideRouteAlternatives: false,
-      travelMode: 'DRIVING',
-      drivingOptions: {
-        departureTime: new Date(/* now, or future date */),
-        trafficModel: 'pessimistic'
-      },
-      unitSystem: google.maps.UnitSystem.IMPERIAL
+    crearViaje(){
+      let viaje = this.viajeService.viaje;
+      console.log(this.viajeService.viaje);
+      this.viajeService.crearViaje(viaje).subscribe((data:Viaje) =>{
+        this.viaje = data[0];
+        console.log(data)
+      })
     }
-    var map = new google.maps.Map(document.getElementById('mapa'),{
-      zoom: 10,
-      center: coord
-    });
-    var marker = new google.maps.Marker({
-      position: coord,
-      map: map
-    });
+  iniciarMap(){
+    this.mapa.iniciarMap(document.getElementById('mapa'));
   }
 }

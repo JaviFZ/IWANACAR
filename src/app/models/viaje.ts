@@ -4,7 +4,7 @@ export class Viaje {
     public origen:string;
     public destino:string;
     public radio_busqueda:number;
-    public habitual:boolean;
+    public habitual:string;
     public dia:string;
     public hora:string;
     public id_usuario:number;
