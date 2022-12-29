@@ -14,7 +14,7 @@ export class TarjetaViajeComponent {
 
   constructor(public viajeService: ViajeService, public usuarioService: UsuarioService){
     
-    this.usuarioService.url = usuarioService.url,
+    this.usuarioService.url = usuarioService.url
     
     
   }
