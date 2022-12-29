@@ -31,6 +31,8 @@ export class CrearViaje1Component {
     
       this.viajes.viaje.origen = origen;
       this.viajes.viaje.destino = destino;
+      this.viajes.viaje.codigoPostalOrigen = this.mapaService.codPostalOr;
+      this.viajes.viaje.codigoPostalDestino= this.mapaService.codPostalDes;
   }
   public autocompletar(){
     this.mapaService.autocompletar(document.getElementById('origen') as HTMLInputElement);

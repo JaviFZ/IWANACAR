@@ -22,7 +22,11 @@ export class ViajeService {
   buscarViaje(viaje: Viaje){
     console.log(viaje);
     
-    return this.http.get(`${this.url}/viajes?origen=${viaje.origen}&destino=${viaje.destino}
-    &radio=${viaje.radio_busqueda}&fecha=${viaje.fecha}&pasajeros=${viaje.pasajeros}`)
+    return this.http.get(this.url + `/viajes?codigoPostalOrigen=${viaje.codigoPostalOrigen}&codigoPostalDestino=${viaje.codigoPostalDestino}
+   &fecha=${viaje.fecha}`)
+  }
+
+  public datosUsuarioViaje(){
+    return this.http.get(this.url + "viaje?id_usuarios=" + this.viaje.id_usuario)
   }
 }

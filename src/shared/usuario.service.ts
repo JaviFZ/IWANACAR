@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ViajeService } from './viaje.service';
 
 @Injectable({
   providedIn: 'root'
@@ -37,11 +38,14 @@ export class UsuarioService {
 
   // **********metodo para mostrar datos del usuario**************
 
-  public showDataUser(id_usuario: number): Observable<object> {
+  public showDataUser(id_usuario: number) {
     // console.log(id_usuario);
 
     return this.http.get(this.url + "perfil?id_usuario=" + id_usuario)
   }
+
+  
+  
 
 
 }

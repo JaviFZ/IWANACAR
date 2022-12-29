@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 export class MapaService {
   origen_coord:any;
   destino_coord:any;
+  public codPostalOr:number;
+  public codPostalDes:number;
   constructor() {}
   public autocompletar(id:HTMLInputElement){
     let origen:any;
@@ -21,6 +23,8 @@ export class MapaService {
       console.log(near_place);
       this.origen_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
       console.log(this.origen_coord);
+      this.codPostalOr = parseInt(near_place.address_components[6].long_name);
+
       
     });
   }
@@ -37,6 +41,8 @@ export class MapaService {
       let near_place = autocomplete.getPlace();
       console.log(near_place)
       this.destino_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
+      this.codPostalDes = parseInt(near_place.address_components[6].long_name);
+
     });
     
   }
