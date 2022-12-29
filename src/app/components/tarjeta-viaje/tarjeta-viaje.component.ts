@@ -26,11 +26,11 @@ export class TarjetaViajeComponent {
     }
   }
 
-  public usuarioViaje(){
-  let usuario =   this.viajeService.datosUsuarioViaje()
+  // public usuarioViaje(){
+  // let usuario =   this.viajeService.datosUsuarioViaje()
 
-    console.log(usuario);
+  //   console.log(usuario);
     
     
-  }
+  // }
 }
