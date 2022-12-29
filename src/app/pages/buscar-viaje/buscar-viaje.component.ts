@@ -21,6 +21,7 @@ export class BuscarViajeComponent {
     this.viaje.pasajeros = pasajeros;
     console.log(this.viaje)
     this.router.navigateByUrl('/resultadosBusqueda');
+    this.viajes.buscarViaje(this.viaje)
   }
 }
 

@@ -16,7 +16,10 @@ export class ViajeService {
   crearViaje(){
     return this.http.post(this.url + "/viajes",this.viaje);
   }
-  buscarViaje(){
-
+  buscarViaje(viaje: Viaje){
+    console.log(viaje);
+    
+    return this.http.get(`${this.url}/viajes?origen=${viaje.origen}&destino=${viaje.destino}
+    &radio=${viaje.radio_busqueda}&fecha=${viaje.fecha}&pasajeros=${viaje.pasajeros}`)
   }
 }
