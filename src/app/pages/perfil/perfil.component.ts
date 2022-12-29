@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { disableDebugTools } from '@angular/platform-browser';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/shared/usuario.service';
 
@@ -10,17 +11,54 @@ import { UsuarioService } from 'src/shared/usuario.service';
 export class PerfilComponent {
 
   public usuario: Usuario;
-  public opiniones:any;
+  public opiniones: any;
 
-  constructor( public usuarioService: UsuarioService ) {
-    this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {console.log(result);
-     this.usuario = result })     
+  constructor(public usuarioService: UsuarioService) {
+    this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
+      console.log(result);
+      this.usuario = result[0]
+    })
 
-    this.usuario = new Usuario (this.usuarioService.usuario.nombre,this.usuarioService.usuario.apellidos,this.usuarioService.usuario.fechaDeNacimiento,this.usuarioService.usuario.email,this.usuarioService.usuario.password,this.usuarioService.usuario.direccion,this.usuarioService.usuario.telefono,this.usuarioService.usuario.genero,this.usuarioService.usuario.foto,this.usuarioService.usuario.sobreMi,this.usuarioService.usuario.fechaDealta,this.usuarioService.usuario.tiempoDeEspera,this.usuarioService.usuario.coches,this.usuarioService.usuario.puntuacionMedia,this.usuarioService.usuario.id_usuario,this.usuarioService.usuario.id_opinion)
+  }
 
-    
-   }
-   
-   
+  //  *************Metodo para convertir la fecha de nacimiento en una edad*******
+
+  public convertAge(birthDate: string): number {
+    const birthDateParsed = new Date(birthDate);
+    const currentYear = new Date().getFullYear();
+    let age = currentYear - birthDateParsed.getFullYear();
+
+    // Si la fecha de hoy es anterior al mes y día de cumpleaños de la persona, se debe restar un año más , con el condicional de abajo
+
+    if (new Date().getMonth() < birthDateParsed.getMonth() ||
+      (new Date().getMonth() === birthDateParsed.getMonth() && new Date().getDate() < birthDateParsed.getDate())) {
+      age--;
+    }
+
+
+    console.log(age);
+
+    return age;
+
+  }
+
+  // ***************Metodo para convertir fecha de alta en miembro desde ...***
+
+  public convertDate(date: string): string {
+    const monthNames = [
+      "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+      "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+
+    const dateParsed = new Date(date)
+    const day = dateParsed.getDate();
+    const monthIndex = dateParsed.getMonth();
+    const year = dateParsed.getFullYear();
+
+    return `Miembro desde ${day} de ${monthNames[monthIndex]} de ${year}`;
+  }
+
+
+
 }
 
