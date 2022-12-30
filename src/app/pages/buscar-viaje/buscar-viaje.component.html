@@ -2,11 +2,10 @@
 <main class="body">
     <div class="formulario">
             <p class="textoInput" for="">Origen</p>
-            <input type="text" class="input" name="origen" #inputOrigen>
+            <input type="text" class="input" name="origen" (click)="autocompletarOrigen()" id="inputOrigen" #inputOrigen>
             <p class="textoInput" for="">Destino</p>
-            <input type="text" class="input" name="destino" #inputDestino>
-            <p class="textoInput" for="">Radio de busqueda (m)</p>
-            <input type="number" class="input" name="radio_busqueda" #inputRadioBusqueda>
+            <input type="text" class="input" name="destino" (click)="autocompletarDestino()" id="inputDestino" #inputDestino>
+            
         <div class="grupo">
             <div class="div">
                 <p class="textoInput" for="">Fecha</p>
@@ -18,7 +17,7 @@
             </div>
         </div>
         <div>
-            <button routerLink="/resultadosBusqueda" (click)="buscarViaje(inputOrigen.value,inputDestino.value,inputRadioBusqueda.value,inputFecha.value,inputPasajeros.value)">BUSCAR VIAJE</button>
+            <button routerLink="/resultadosBusqueda" (click)="buscarViaje(inputOrigen.value,inputDestino.value,inputFecha.value,inputPasajeros.value)" >BUSCAR VIAJE</button>
         </div>
     </div>
 </main>

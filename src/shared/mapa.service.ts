@@ -24,6 +24,8 @@ export class MapaService {
       this.origen_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
       this.codPostalOr = near_place.address_components[6].long_name;
       console.log(this.origen_coord);
+      this.codPostalOr = parseInt(near_place.address_components[6].long_name);
+
       
     });
   }
@@ -40,7 +42,8 @@ export class MapaService {
       let near_place = autocomplete.getPlace();
       console.log(near_place)
       this.destino_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
-      this.codPostalDes = near_place.address_components[6].long_name;
+      this.codPostalDes = parseInt(near_place.address_components[6].long_name);
+
     });
     
   }

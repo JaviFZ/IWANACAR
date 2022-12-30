@@ -19,7 +19,14 @@ export class ViajeService {
     console.log(viaje);
     return this.http.post(this.url + "viajes?id_usuarios="+this.usuario.usuario.id_usuario,viaje);
   }
-  buscarViaje(){
+  buscarViaje(viaje: Viaje){
+    console.log(viaje);
+    
+    return this.http.get(this.url + `/viajes?codigoPostalOrigen=${viaje.codigoPostalOrigen}&codigoPostalDestino=${viaje.codigoPostalDestino}
+   &fecha=${viaje.fecha}`)
+  }
 
+  public datosUsuarioViaje(){
+    return this.http.get(this.url + "viaje?id_usuarios=" + this.viaje.id_usuario)
   }
 }
