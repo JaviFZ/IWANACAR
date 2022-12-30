@@ -3,7 +3,6 @@ import { Time } from "@angular/common";
 export class Viaje {
     public origen:string;
     public destino:string;
-    public radio_busqueda:number;
     public habitual:string;
     public dia:string;
     public hora:string;
