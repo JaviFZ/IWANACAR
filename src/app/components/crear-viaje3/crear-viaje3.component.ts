@@ -8,6 +8,7 @@ import { CocheService } from 'src/shared/coche.service';
 import { UsuarioService } from 'src/shared/usuario.service';
 import { ViajeService } from 'src/shared/viaje.service';
 import { Coche } from 'src/app/models/coche';
+import { Usuario } from 'src/app/models/usuario';
 @Component({
   selector: 'app-crear-viaje3',
   templateUrl: './crear-viaje3.component.html',
@@ -17,9 +18,11 @@ export class CrearViaje3Component {
   public paginaActual:number
   public viaje:Viaje;
   public coches:Coche[]
-  constructor(public viajes:ViajeService,public componente:CrearViajeComponent,public coche:CocheService,public usuario:UsuarioService){  
+  public usuario: Usuario
+  constructor(public viajes:ViajeService,public componente:CrearViajeComponent,public coche:CocheService,public usuarioService:UsuarioService){  
     this.paginaActual = 3;
     this.coches = coche.coche;
+    this.coche.get(this.usuarioService.usuario.id_usuario).subscribe((coches:Coche[])=>this.coches = coches);
   }
   public getCoche(){
     this.coches = this.coche.coche;
