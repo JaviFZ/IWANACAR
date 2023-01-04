@@ -37,22 +37,20 @@
 
         <div class="tarjeta2">
             <div class="iconos1">
-                <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">Seat Ibiza</p></div>
-                <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos"> Blanco</p></div>
-                <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br> <p class="infoLogos"> 8536CWC</p></div>
-                <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">Diesel</p></div>
+                <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">{{coches.marca}} {{coches.modelo}} </p></div>
+                <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos">{{coches.color}}</p></div>
+                <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br> <p class="infoLogos">{{coches.matricula}}</p></div>
+                <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">{{coches.combustible}}</p></div>
 
             </div>
             <hr />
 
             <div class="iconos2">
-                <div> <img class="ic3" src="../../../assets/img/mascotas.png" alt=""></div>
-                <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/no_mascotas.png" alt=""></div></ng-template>
-                <!-- <div><img class="ic3" src="../../../assets/img/paradas.png" alt=""></div> -->
-                <!-- <ng-template #isFals><div><img class="ic3" src="../../../assets/img/no_paradas.png" alt=""></div></ng-template> -->
-                <div><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
-                <ng-template #False><div><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div></ng-template>
-                <div><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>15min</p></div>
+                <div *ngIf="coches.mascotas == 'Si'"> <img class="ic3" src="../../../assets/img/mascotas.png" alt=""></div>
+                <div *ngIf="coches.mascotas == 'No'"><img class="ic3" src="../../../assets/img/no_mascotas.png" alt=""></div>
+                <div *ngIf="coches.fumar == 'Si'"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
+                <div *ngIf="coches.fumar == 'No'"><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div>
+                <div><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{usuario.tiempoDeEspera}}</p></div>
             </div>
         </div>
 
