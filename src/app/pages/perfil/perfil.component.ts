@@ -14,9 +14,10 @@ export class PerfilComponent {
   public opiniones: any;
 
   constructor(public usuarioService: UsuarioService) {
-    this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
-      console.log(result);
-      this.usuario = result[0]
+     //this.usuario = this.usuarioService.usuario;
+     this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
+       console.log(result);
+       this.usuario = result[0]
     })
 
   }
