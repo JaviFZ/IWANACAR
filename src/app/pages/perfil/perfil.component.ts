@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
+import { Coche } from 'src/app/models/coche';
 import { Usuario } from 'src/app/models/usuario';
+import { CocheService } from 'src/shared/coche.service';
 import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
@@ -12,12 +14,18 @@ export class PerfilComponent {
 
   public usuario: Usuario;
   public opiniones: any;
+  public coches: Coche;
 
-  constructor(public usuarioService: UsuarioService) {
-     //this.usuario = this.usuarioService.usuario;
-     this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
-       console.log(result);
-       this.usuario = result[0]
+  constructor(public usuarioService: UsuarioService, public cocheService: CocheService) {
+
+    this.cocheService.get(this.usuarioService.usuario.id_usuario).subscribe((coches: Coche[]) => {
+      console.log(coches);
+      this.coches = coches[0]
+    });
+
+    this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
+      console.log(result);
+      this.usuario = result[0]
     })
 
   }

@@ -21,9 +21,12 @@ export class MisCochesComponent {
   constructor(private cocheService: CocheService, public usuarioService: UsuarioService) { 
 
       this.cocheService.get(this.usuarioService.usuario.id_usuario).subscribe((coches:Coche[])=>this.coches = coches);
-      this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((tiempoDeEspera: string) => {
-        return this.usuario.tiempoDeEspera = tiempoDeEspera;
+
+      this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
+        console.log(result);
+        this.usuario = result[0]
       })
+
   }
       deleteCoche(id_coche: number){
         this.cocheService.delete(id_coche).subscribe(()=>{
