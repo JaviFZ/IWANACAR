@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, first } from 'rxjs';
 import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
@@ -9,25 +9,41 @@ import { UsuarioService } from 'src/shared/usuario.service';
   templateUrl: './chats-abiertos.component.html',
   styleUrls: ['./chats-abiertos.component.css']
 })
-export class ChatsAbiertosComponent implements OnInit {
+export class ChatsAbiertosComponent implements OnInit, OnDestroy {
 
   url = "https://apiwana-production.up.railway.app";
   idUsuario2: string;
   idViaje: string;
   chat = new BehaviorSubject(undefined);
+  interval: NodeJS.Timer;
 
 constructor(private activatedRoute: ActivatedRoute, 
             private usuarioService: UsuarioService,
             private httpClient: HttpClient) {}
+  
 
 ngOnInit(): void {
   this.idUsuario2 = this.activatedRoute.snapshot.queryParams.id_usuario2;
   this.idViaje = this.activatedRoute.snapshot.queryParams.id_viaje;
   this.getChat();
+  this.realtimeChat();
 }
+
+ngOnDestroy(): void {
+  clearInterval(this.interval);
+}
+
+realtimeChat(): void {
+  this.interval = setInterval(() => {
+    this.getChat();
+  }, 5000);
+}
+
+
 
 getChat() {
   this.httpClient.post(`${this.url}/chat`,{id_viaje: parseInt(this.idViaje), id_usuario1: this.usuarioService.usuario.id_usuario, id_usuario2: parseInt(this.idUsuario2, 10)})
+  .pipe(first())
   .subscribe((chat) => this.chat.next(chat));
 }
 
