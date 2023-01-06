@@ -16,6 +16,8 @@ export class PerfilComponent {
   public opiniones: any;
   public coches: Coche;
 
+  arrayEstrella = Array(5).fill('');
+
   constructor(public usuarioService: UsuarioService, public cocheService: CocheService) {
 
     this.cocheService.get(this.usuarioService.usuario.id_usuario).subscribe((coches: Coche[]) => {
@@ -68,6 +70,6 @@ export class PerfilComponent {
   }
 
 
-
+  
 }
 
