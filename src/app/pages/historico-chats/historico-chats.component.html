@@ -1,10 +1,10 @@
 <app-header></app-header>
 
 <main class="container">
-    <section *ngFor="let chat of (chats | async)" [routerLink]="'/ChatsAbiertos'" [queryParams]="{id_usuario2: chat.id_usuario2, id_viaje: chat.id_viaje}">
+    <section *ngFor="let chat of (chats | async)" [routerLink]="'/ChatsAbiertos'" [queryParams]="{id_usuario1: chat.id_usuario1, id_usuario2: chat.id_usuario2, id_viaje: chat.id_viaje}">
 
         <div class="titulo">
-            <p>{{chat.nombre}}</p>
+            <p>{{chat.nombre}} {{chat.apellidos}}</p>
         </div>
         <div class="contenido">
         <a class="imagen2" routerLink="/perfil">
@@ -18,8 +18,7 @@
         </div>   
         <div class="mensaje">
             <p class=""> {{chat.ultimoMensaje?.mensaje}}</p>
-        </div>
-            
+        </div> 
 </section>
 </main>
 

@@ -12,6 +12,7 @@ import { UsuarioService } from 'src/shared/usuario.service';
 export class ChatsAbiertosComponent implements OnInit, OnDestroy {
 
   url = "https://apiwana-production.up.railway.app";
+  idUsuario1: string;
   idUsuario2: string;
   idViaje: string;
   chat = new BehaviorSubject(undefined);
@@ -24,6 +25,7 @@ constructor(private activatedRoute: ActivatedRoute,
 
 ngOnInit(): void {
   this.idUsuario2 = this.activatedRoute.snapshot.queryParams.id_usuario2;
+  this.idUsuario1 = this.activatedRoute.snapshot.queryParams.id_usuario1;
   this.idViaje = this.activatedRoute.snapshot.queryParams.id_viaje;
   this.getChat();
   this.realtimeChat();
@@ -42,7 +44,12 @@ realtimeChat(): void {
 
 
 getChat() {
-  this.httpClient.post(`${this.url}/chat`,{id_viaje: parseInt(this.idViaje), id_usuario1: this.usuarioService.usuario.id_usuario, id_usuario2: parseInt(this.idUsuario2, 10)})
+  this.httpClient.post(`${this.url}/chat`,{
+    id_viaje: parseInt(this.idViaje),
+    id_usuario1: parseInt(this.idUsuario1, 10),
+    id_usuario2: parseInt(this.idUsuario2, 10),
+    usuario_actual: this.usuarioService.usuario.id_usuario
+  })
   .pipe(first())
   .subscribe((chat) => this.chat.next(chat));
 }
