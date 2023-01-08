@@ -4,6 +4,7 @@ import { Usuario } from 'src/app/models/usuario';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ViajeService } from './viaje.service';
+import { Opinion } from 'src/app/models/opinion';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class UsuarioService {
   public url: string = "https://apiwana-production.up.railway.app/"
   public logueado: boolean = false
   public usuario: Usuario;
+  public opinion: Opinion;
 
 
   constructor(private http: HttpClient) { }
@@ -44,6 +46,12 @@ export class UsuarioService {
     return this.http.get(this.url + "perfil?id_usuario=" + id_usuario)
   }
 
+ // **********metodo para enviar opinion**************
+
+  public publicarOpinion(opinion: Opinion){
+
+    return this.http.post(this.url + "escribir-opinion", opinion)
+  }
   
   
 
