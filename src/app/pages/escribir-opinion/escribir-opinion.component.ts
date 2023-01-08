@@ -22,7 +22,7 @@ export class EscribirOpinionComponent {
       coche: "adad",
       precio: viajeService.viaje.precio,
       pasajeros: viajeService.viaje.pasajeros,
-      id_viaje: 28
+      id_viaje: 20
 
     }
 
