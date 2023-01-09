@@ -3,8 +3,8 @@
 <section class="mapa" id="mapa" (click)="iniciarMapResult()">
     <img src="../../../assets/img/mapa.jpg" alt="">
 </section>
-<section *ngFor="let tarjeta of tarjetas_viaje;let i = index">
-<app-tarjeta-viaje [tarjetaViaje[i]] = "tarjet_viaje"></app-tarjeta-viaje>
+<section *ngFor="let tarjeta of viajeService.viajesArray">
+<app-tarjeta-viaje [tarjet_viaje] = "tarjeta" (click)="solicitarIdViaje()" ></app-tarjeta-viaje>
 </section>
 </main>
 <app-footer></app-footer>

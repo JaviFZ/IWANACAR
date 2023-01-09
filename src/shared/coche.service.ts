@@ -15,7 +15,7 @@ export class CocheService {
     return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})
   }
 
-add(coche: Coche) {
+  add(coche: Coche) {
   return this.httpClient.post("https://apiwana-production.up.railway.app/coche", coche)
   }
 

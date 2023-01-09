@@ -7,7 +7,7 @@ export class TarjetaViaje {
     public pasajeros: number;
     public origen: string;
     public destino: string;
-
+    public id_viaje:number;
     constructor(){}
 
 }

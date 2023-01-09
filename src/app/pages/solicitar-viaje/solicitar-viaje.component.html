@@ -1,27 +1,25 @@
 <app-header class="header"></app-header>
-<main class="body">
+<main class="body" *ngFor="let info of viajeService.solicitarViaje">
 
-<app-tarjeta-viaje></app-tarjeta-viaje>
+<app-tarjeta-viaje [tarjet_viaje] = "info"></app-tarjeta-viaje>
 <section class="tarjeta2">
     <div class="iconos1">
-        <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">{{coche.marca}} {{coche.modelo}}</p></div>
-        <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos"> {{coche.color}}</p></div>
-        <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br> <p class="infoLogos">{{coche.matricula}}</p></div>
-        <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">{{coche.combustible}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br><p class="infoLogos">{{info.marca}} {{info.modelo}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br><p class="infoLogos"> {{info.color}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br> <p class="infoLogos">{{info.matricula}}</p></div>
+        <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br><p class="infoLogos">{{info.combustible}}</p></div>
     </div>
     <div class="barra"></div>
 
     <div class="iconos2">
-        <div *ngIf="preferencias.mascotas == true; else isFalse"><img class="ic3" src="../../../assets/img/Group 8.png" alt=""></div>
+        <div *ngIf="info.mascotas == true; else isFalse"><img class="ic3" src="../../../assets/img/Group 8.png" alt=""></div>
         <ng-template #isFalse><div><img class="ic3" src="../../../assets/img/no_mascotas.png" alt=""></div></ng-template>
-        <div *ngIf="preferencias.fumar == true;else False"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
+        <div *ngIf="info.fumar == true;else False"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
         <ng-template #False><div><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div></ng-template>
-        <div ><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{preferencias.tiempoMax}}</p></div>
+        <div ><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{info.tiempoDeEspera}}</p></div>
     </div>
 </section>
-<section class="mapa">
-    <img src="../../../assets/img/mapa.jpg" alt="">
-</section>
+<div id="mapa" (click)="map()"></div>
 <div class="caja_boton">
     <button class="boton" (click)="solicitarViaje()" *ngIf="usuarioServices.logueado==true">solicitar viaje</button>
     <button class="boton" routerLink="/login" *ngIf="usuarioServices.logueado==false">solicitar viaje</button>
