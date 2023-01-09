@@ -5,7 +5,7 @@ export class Opinion {
     public opinion: string;
     public puntuacion: number;
 
-        constructor(opinion: string, puntuacion: number, id_opinion: number, id_pasajero: number, id_viaje: number){
+        constructor(opinion: string, puntuacion: number, id_opinion: number, id_pasajero: number, id_viaje: number ){
             this.opinion = opinion,
             this.puntuacion = puntuacion,
             this.id_opinion = id_opinion,

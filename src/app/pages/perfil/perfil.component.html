@@ -73,24 +73,17 @@
 
     <div class="flex-container4">Opiniones :
 
-        <!-- <div class="tarjeta-opi">
-            <div class="huevo-name">
-                <img class="h-opi" src="../../../assets/img/Ellipse 14.png" alt="imagen padre">
-                <input type="text" class="nombre-opi" placeholder="Nombre">
-            </div>
-            <input type="text" class="input-opi" readonly="readonly" placeholder="{{opiniones.mensaje1}}">
-        </div> -->
 
-        <div class="opinion">
+        <div *ngFor="let opinion of opiniones" class="opinion">
             <div class="titulo">
-                <p class=""><b>Carlos</b></p>
+                <p class=""><b>{{opiniones[0].nombre}}</b></p>
             </div>
             <div class="tarjeta-opi">
                 <div class="huevo-name">
-                    <img class="perfil" src="../../../assets/img/profile.jpg" alt="imagen padre">
+                    <img class="perfil" src="{{opiniones[0].foto}}" alt="imagen padre">
                 </div>
                 <div class="input-opi">
-                    <p class=""></p>
+                    <p class="">{{opiniones[0].opinion}}</p>
                 </div>
             </div>
 

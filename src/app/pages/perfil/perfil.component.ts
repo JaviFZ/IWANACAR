@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 import { Coche } from 'src/app/models/coche';
+import { Opinion } from 'src/app/models/opinion';
 import { Usuario } from 'src/app/models/usuario';
 import { CocheService } from 'src/shared/coche.service';
 import { UsuarioService } from 'src/shared/usuario.service';
@@ -13,7 +14,7 @@ import { UsuarioService } from 'src/shared/usuario.service';
 export class PerfilComponent {
 
   public usuario: Usuario;
-  public opiniones: any;
+  public opiniones: Opinion;
   public coches: Coche;
 
   arrayEstrella = Array(5).fill('');
@@ -28,6 +29,11 @@ export class PerfilComponent {
     this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
       console.log(result);
       this.usuario = result[0]
+    })
+
+    this.usuarioService.showOpinion(this.usuarioService.usuario.id_usuario).subscribe((result: Opinion) => {
+      console.log(result);
+      this.opiniones = result
     })
 
   }
