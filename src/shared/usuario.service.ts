@@ -56,11 +56,11 @@ export class UsuarioService {
 
    // **********metodo para mostrar opinion**************
 
-   public showOpinion (id_opiniones : number): Observable<object> {
-    console.log(id_opiniones);
-    console.log(this.url + "mostrarOpinion" + id_opiniones);
+   public showOpinion (id_usuario : number): Observable<object> {
+    console.log(id_usuario);
+    console.log(this.url + "mostrarOpinion" + id_usuario);
     
-    return this.http.get(this.url + "mostrarOpinion?id_pasajero=" + id_opiniones)
+    return this.http.get(this.url + "mostrarOpinion?id_usuario=" + id_usuario)
 
    }
 

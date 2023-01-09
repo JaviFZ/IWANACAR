@@ -21,8 +21,8 @@
                 <img class="perfil" src="{{usuario.foto}}" alt="imagen padre">
             </div>
             <div class="estrellas">
-                <div *ngFor="let estrella of arrayEstrella;let index =index">
-                    <span *ngIf="usuario.puntuacionMedia > index ; else emptyStar"><img class="img"
+                <div *ngFor="let estrella of arrayEstrella">
+                    <span *ngIf="usuario.puntuacionMedia > estrella ; else emptyStar"><img class="img"
                             src="../../../assets/img/estrella_rana.png" alt=""></span>
                     <ng-template #emptyStar>
                         <img class="img" src="../../../assets/img/estrella negra.png" alt="">
@@ -76,14 +76,14 @@
 
         <div *ngFor="let opinion of opiniones" class="opinion">
             <div class="titulo">
-                <p class=""><b>{{opiniones[0].nombre}}</b></p>
+                <p class=""><b>{{opinion.nombre}}</b></p>
             </div>
             <div class="tarjeta-opi">
                 <div class="huevo-name">
-                    <img class="perfil" src="{{opiniones[0].foto}}" alt="imagen padre">
+                    <img class="perfil" src="{{opinion.foto}}" alt="imagen padre">
                 </div>
                 <div class="input-opi">
-                    <p class="">{{opiniones[0].opinion}}</p>
+                    <p class="">{{opinion.opinion}}</p>
                 </div>
             </div>
 

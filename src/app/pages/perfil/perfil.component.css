@@ -214,6 +214,7 @@ input::placeholder {
 
 
 .flex-container4 {
+    gap: 3vh;
     display: flex;
     flex-direction: column;
     justify-content: flex start;

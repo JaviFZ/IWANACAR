@@ -14,10 +14,10 @@ import { UsuarioService } from 'src/shared/usuario.service';
 export class PerfilComponent {
 
   public usuario: Usuario;
-  public opiniones: Opinion;
+  public opiniones: Opinion[];
   public coches: Coche;
 
-  arrayEstrella = Array(5).fill('');
+  arrayEstrella = Array.from({ length: 5 }, (_, i) => i+1);
 
   constructor(public usuarioService: UsuarioService, public cocheService: CocheService) {
 
@@ -31,7 +31,7 @@ export class PerfilComponent {
       this.usuario = result[0]
     })
 
-    this.usuarioService.showOpinion(this.usuarioService.usuario.id_usuario).subscribe((result: Opinion) => {
+    this.usuarioService.showOpinion(this.usuarioService.usuario.id_usuario).subscribe((result: Opinion[]) => {
       console.log(result);
       this.opiniones = result
     })
