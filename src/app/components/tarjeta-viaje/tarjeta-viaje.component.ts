@@ -11,16 +11,19 @@ import { ViajeService } from 'src/shared/viaje.service';
   styleUrls: ['./tarjeta-viaje.component.css']
 })
 export class TarjetaViajeComponent {
-  @Input() tarjet_viaje:TarjetaViaje;
-  public tarjetasViaje:TarjetaViaje[];
+  @Input() tarjet_viaje:any;
   constructor(public usuarioService: UsuarioService, public viajeService: ViajeService){
-    this.tarjetasViaje = viajeService.viajesArray;
+    this.viajeService.tarjeta_viaje = this.tarjet_viaje;
     // for(let i:number = 0;i<this.tarjetas.length;i++){
     //   this.tarjeta_viaje = this.tarjetas[i];
     // }
     // }
   }
+  public igualarTarjetas(){
+    this.viajeService.tarjeta_viaje = this.tarjet_viaje;
+  }
 }
+
   // public usuarioViaje(){
   // let usuario =   this.viajeService.datosUsuarioViaje()
 

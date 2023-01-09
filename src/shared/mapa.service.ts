@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ViajeService } from './viaje.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class MapaService {
   destino_coord:any;
   public codPostalOr:string;
   public codPostalDes:string;
-  constructor() {}
+  constructor(public viajeService:ViajeService) {}
   public autocompletar(id:HTMLInputElement){
     let origen:any;
     let autocomplete:any;
