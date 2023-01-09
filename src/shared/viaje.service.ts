@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TarjetaViaje } from 'src/app/models/tarjeta-viaje';
 import { Viaje } from 'src/app/models/viaje';
 import { UsuarioService } from './usuario.service';
 
@@ -11,6 +12,7 @@ import { UsuarioService } from './usuario.service';
 export class ViajeService {
   public url:string;
   public viaje:Viaje;
+  public viajesArray:TarjetaViaje[];
   constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viaje = new Viaje();
     this.url = "https://apiwana-production.up.railway.app/";
@@ -22,8 +24,7 @@ export class ViajeService {
   buscarViaje(viaje: Viaje){
     console.log(viaje);
     
-    return this.http.get(this.url + `/viajes?codigoPostalOrigen=${viaje.codigoPostalOrigen}&codigoPostalDestino=${viaje.codigoPostalDestino}
-   &fecha=${viaje.fecha}`)
+    return this.http.get(this.url + `viajes?codigoPostalOrigen=${this.viaje.codigoPostalOrigen}&codigoPostalDestino=${this.viaje.codigoPostalDestino}&fecha=${this.viaje.fecha}`)
   }
 
   public datosUsuarioViaje(){

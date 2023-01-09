@@ -3,8 +3,8 @@ import { Time } from "@angular/common";
 export class Viaje {
     public origen:string;
     public destino:string;
-    public codigoPostalOrigen: number;
-    public codigoPostalDestino: number;
+    public codigoPostalOrigen: string;
+    public codigoPostalDestino: string;
     public habitual:string;
     public dia:string;
     public hora:string;

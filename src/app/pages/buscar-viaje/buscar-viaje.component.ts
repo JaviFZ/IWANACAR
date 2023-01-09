@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Viaje } from 'src/app/models/viaje';
 import { MapaService } from 'src/shared/mapa.service';
 import { ViajeService } from 'src/shared/viaje.service';
+import { TarjetaViaje } from 'src/app/models/tarjeta-viaje';
 
 @Component({
   selector: 'app-buscar-viaje',
@@ -11,21 +12,23 @@ import { ViajeService } from 'src/shared/viaje.service';
 })
 export class BuscarViajeComponent {
   public viaje:Viaje;
-  
   constructor(public router:Router,public viajes:ViajeService, public mapaService: MapaService){
     this.viaje = new Viaje();
   }
   buscarViaje(origen:string,destino:string,fecha:string,pasajeros:number){
-    this.viaje.origen = origen;
-    this.viaje.destino = destino;
-    this.viaje.codigoPostalOrigen = this.mapaService.codPostalOr;
-    this.viaje.codigoPostalDestino = this.mapaService.codPostalDes;
-    this.viaje.fecha = fecha;
-    this.viaje.pasajeros = pasajeros;
+    this.viajes.viaje.origen = origen;
+    this.viajes.viaje.destino = destino;
+    this.viajes.viaje.codigoPostalOrigen = this.mapaService.codPostalOr;
+    this.viajes.viaje.codigoPostalDestino = this.mapaService.codPostalDes;
+    this.viajes.viaje.fecha = fecha;
+    this.viajes.viaje.pasajeros = pasajeros;
     console.log(this.viaje)
     this.router.navigateByUrl('/resultadosBusqueda');
-    this.viajes.buscarViaje(this.viaje)
-
+    this.viajes.buscarViaje(this.viajes.viaje).subscribe((data:TarjetaViaje[])=>{
+      this.viajes.viajesArray = data;
+      console.log(this.viajes.viajesArray);
+      
+    });    
   }
 
   public autocompletarOrigen(){

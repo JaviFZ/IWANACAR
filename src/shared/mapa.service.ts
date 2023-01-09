@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class MapaService {
   origen_coord:any;
   destino_coord:any;
-  public codPostalOr:number;
-  public codPostalDes:number;
+  public codPostalOr:string;
+  public codPostalDes:string;
   constructor() {}
   public autocompletar(id:HTMLInputElement){
     let origen:any;
@@ -24,8 +24,7 @@ export class MapaService {
       this.origen_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
       this.codPostalOr = near_place.address_components[6].long_name;
       console.log(this.origen_coord);
-      this.codPostalOr = parseInt(near_place.address_components[6].long_name);
-
+      console.log(this.codPostalOr);
       
     });
   }
@@ -42,10 +41,21 @@ export class MapaService {
       let near_place = autocomplete.getPlace();
       console.log(near_place)
       this.destino_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
-      this.codPostalDes = parseInt(near_place.address_components[6].long_name);
-
+      this.codPostalDes = near_place.address_components[6].long_name;
+      console.log(this.codPostalDes);
     });
     
+  }
+  iniciarMapResult(id:HTMLElement){
+    let coord = this.origen_coord;
+    let map = new google.maps.Map(id,{
+      zoom: 15,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
   }
   iniciarMap(id:HTMLElement){
     console.log(this.origen_coord);
@@ -73,9 +83,5 @@ export class MapaService {
         alert("ERROR"+status);
       }
     });
-    // var marker = new google.maps.Marker({
-    //   position: coord,
-    //   map: map
-    // });
   }
 }
