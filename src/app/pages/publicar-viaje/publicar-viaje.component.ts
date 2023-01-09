@@ -30,7 +30,7 @@ export class PublicarViajeComponent {
       let viaje = this.viajeService.viaje;
       console.log(this.viajeService.viaje);
       this.viajeService.crearViaje(viaje).subscribe((data:Viaje) =>{
-        this.viaje = data[0];
+        this.viaje = data;
         console.log(data)
       })
     }

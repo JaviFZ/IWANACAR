@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TarjetaViaje } from 'src/app/models/tarjeta-viaje';
 import { BuscarViajeComponent } from 'src/app/pages/buscar-viaje/buscar-viaje.component';
 import { UsuarioService } from 'src/shared/usuario.service';
 import { ViajeService } from 'src/shared/viaje.service';
@@ -10,22 +11,16 @@ import { ViajeService } from 'src/shared/viaje.service';
   styleUrls: ['./tarjeta-viaje.component.css']
 })
 export class TarjetaViajeComponent {
-  public tarjeta_viaje:any;
+  @Input() tarjet_viaje:TarjetaViaje;
+  public tarjetasViaje:TarjetaViaje[];
   constructor(public usuarioService: UsuarioService, public viajeService: ViajeService){
-
-    this.tarjeta_viaje = {
-      foto:viajeService.viaje.id_usuario,
-      nombre:usuarioService.usuario.nombre,
-      origen:viajeService.viaje.origen,
-      destino:viajeService.viaje.destino,
-      fecha:viajeService.viaje.fecha,
-      hora:viajeService.viaje.hora,
-      precio:viajeService.viaje.precio,
-      pasajeros:viajeService.viaje.pasajeros,
-      valoracion:usuarioService
-    }
+    this.tarjetasViaje = viajeService.viajesArray;
+    // for(let i:number = 0;i<this.tarjetas.length;i++){
+    //   this.tarjeta_viaje = this.tarjetas[i];
+    // }
+    // }
   }
-
+}
   // public usuarioViaje(){
   // let usuario =   this.viajeService.datosUsuarioViaje()
 
@@ -33,4 +28,4 @@ export class TarjetaViajeComponent {
     
     
   // }
-}
+
