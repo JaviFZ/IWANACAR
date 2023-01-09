@@ -4,8 +4,9 @@
     <div class="divInputs">
         <p class="textoInput">Elige vehículo</p>
         <select  placeholder="Elige vehículo" name="elige vehículo"class="input" #inputCoche>
-            <option *ngFor="let coche of coches">{{coche.id_coche}}</option>
+            <option *ngFor="let coche of coches; let i= index"> {{coche.nombreCoche}}</option>
         </select>
+        
         <p class="textoInput">Plazas</p>
         <input type="text" class="input" #plazas>
         <p class="textoInput">Precio/Plaza</p>

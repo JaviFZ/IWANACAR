@@ -25,7 +25,10 @@ export class SolicitarViajeComponent {
       tiempoMax:"20min"
     }
   }
+
+
   solicitarViaje(){
-    this.router.navigateByUrl('/ChatsAbiertos');
+    this.router.navigateByUrl('/ChatsAbiertos?id_usuario2=2&id_viaje=24');
   }
+
 }

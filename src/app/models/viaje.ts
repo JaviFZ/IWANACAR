@@ -1,6 +1,7 @@
 import { Time } from "@angular/common";
 
 export class Viaje {
+    public id_viaje: number;
     public origen:string;
     public destino:string;
     public codigoPostalOrigen: number;

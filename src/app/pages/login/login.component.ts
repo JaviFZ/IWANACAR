@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {Router} from '@angular/router'
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/shared/usuario.service';

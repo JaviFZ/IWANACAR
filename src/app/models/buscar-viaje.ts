@@ -1,9 +1,13 @@
 export class BuscarViaje {
-    public origen:string;
-    public destino:string;
-    public radio_busqueda:string;
-    public fecha:Date;
-    public pasajeros:Number
+    public foto:string;
+    public nombre:string;
+    public hora:string;
+    public fecha:string;
+    public precio:Number;
+    public pasajeros: number;
+    public direccionOrigen: string;
+    public direccionDestino: string;
+
     constructor(){}
     
 }
