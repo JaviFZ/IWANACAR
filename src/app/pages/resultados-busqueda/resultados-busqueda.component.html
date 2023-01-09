@@ -1,11 +1,10 @@
 <app-header class="header"></app-header>
 <main class="body">
-<section class="mapa">
+<section class="mapa" id="mapa" (click)="iniciarMapResult()">
     <img src="../../../assets/img/mapa.jpg" alt="">
 </section>
-<section>
-<app-tarjeta-viaje ></app-tarjeta-viaje>
-
+<section *ngFor="let tarjeta of viajeService.viajesArray">
+<app-tarjeta-viaje [tarjet_viaje] = "tarjeta" (click)="solicitarIdViaje()" ></app-tarjeta-viaje>
 </section>
 </main>
 <app-footer></app-footer>

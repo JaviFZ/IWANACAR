@@ -52,6 +52,19 @@ export class UsuarioService {
 
     return this.http.post(this.url + "escribir-opinion", opinion)
   }
+
+
+   // **********metodo para mostrar opinion**************
+
+   public showOpinion (id_usuario : number): Observable<object> {
+    console.log(id_usuario);
+    console.log(this.url + "mostrarOpinion" + id_usuario);
+    
+    return this.http.get(this.url + "mostrarOpinion?id_usuario=" + id_usuario)
+
+   }
+
+
   
   
 

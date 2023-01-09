@@ -4,8 +4,8 @@ export class Viaje {
     public id_viaje: number;
     public origen:string;
     public destino:string;
-    public codigoPostalOrigen: number;
-    public codigoPostalDestino: number;
+    public codigoPostalOrigen: string;
+    public codigoPostalDestino: string;
     public habitual:string;
     public dia:string;
     public hora:string;
