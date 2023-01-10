@@ -27,7 +27,6 @@ export class BuscarViajeComponent {
     this.viajes.buscarViaje(this.viajes.viaje).subscribe((data:TarjetaViaje[])=>{
       this.viajes.viajesArray = data;
       console.log(this.viajes.viajesArray);
-      
     });    
   }
 

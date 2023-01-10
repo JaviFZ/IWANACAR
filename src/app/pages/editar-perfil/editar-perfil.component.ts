@@ -29,6 +29,9 @@ export class EditarPerfilComponent {
     this.usuarioService.editarPerfil(this.modifiedUser).subscribe((data:any) => {
       console.log(data);
     })
+    setTimeout(() => {
+      this.router.navigateByUrl('/perfil');
+    }, 500);
   }
 
 

@@ -33,8 +33,9 @@ body {
 .img {
     padding: 5%;
     height: 40px;
+    width: 100%;
     position: relative;
-    bottom: 20px;
+    bottom: 10px;
 
 }
 
@@ -88,6 +89,8 @@ input::placeholder {
 
     margin-left: 21px;
     margin-right: 21px;
+
+    margin-top: 10px;
 
 
 }

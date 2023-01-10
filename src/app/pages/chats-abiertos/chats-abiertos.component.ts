@@ -1,30 +1,68 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BehaviorSubject, first } from 'rxjs';
+import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
   selector: 'app-chats-abiertos',
   templateUrl: './chats-abiertos.component.html',
   styleUrls: ['./chats-abiertos.component.css']
 })
-export class ChatsAbiertosComponent {
-chat ={
-  nombre: "Francisco Javier Miquel Leal",
-  foto: "https://imgs.search.brave.com/UCaHk0ot7wjzmDQAV_lBrpmwsOM-jFTwY9encY5QYhs/rs:fit:375:375:1/g:ce/aHR0cHM6Ly9tZWRp/YS5saWNkbi5jb20v/ZG1zL2ltYWdlL0M1/NjAzQVFHYW1XZTNL/QU5OT1EvcHJvZmls/ZS1kaXNwbGF5cGhv/dG8tc2hyaW5rXzgw/MF84MDAvMC8xNTg5/NDUzMTQxMTkxP2U9/MjE0NzQ4MzY0NyZ2/PWJldGEmdD15ZlJH/M1BnZENZdzZaOG92/M2tKYkY2NDc2Tm5l/N0RmOXJyTkxubHZ0/dS0w",
-  mensajes:[{texto:" Hola, ¿a qué hora sales mañana?", fecha:"21:29", propio:false},
-            {texto:" buenos tardes, saldre a las 6 AM", fecha:"21:30", propio:true},
-            {texto:" perfecto", fecha:"21:33", propio:false},
-            {texto:" podrias recogerme una manzana despues", fecha:"21:33", propio:false},
-            {texto:" seria en Calle Hermanas Ramirez Nº3 en lugar de Calle Hermanos Rodriguez Nº34", fecha:"21:34", propio:false},
-            {texto:" Vale, no habria problema", fecha:"21:36", propio:true},
-            {texto:" Genia! muchas gracias.", fecha:"21:37", propio:false},
-            {texto:" Buenos dias, llego 5 minutos tarde, por el atasco", fecha:"05:56", propio:true},
-            {texto:" Ok! gracias por habisar", fecha:"05:58", propio:false},
-            {texto:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aperiam impedit tempora quos nam officiis nesciunt explicabo harum perspiciatis reprehenderit, architecto sequi adipisci, voluptatem qui assumenda inventore odio quae ex.", fecha:"6:07", propio:true},
-            {texto:" Ups disculpa, se me ha escapado un Lorem.", fecha:"06:07", propio:true},
-],
+export class ChatsAbiertosComponent implements OnInit, OnDestroy {
 
+  url = "https://apiwana-production.up.railway.app";
+  idUsuario1: string;
+  idUsuario2: string;
+  idViaje: string;
+  chat = new BehaviorSubject(undefined);
+  interval: NodeJS.Timer;
+
+constructor(private activatedRoute: ActivatedRoute, 
+            private usuarioService: UsuarioService,
+            private httpClient: HttpClient) {}
+  
+
+ngOnInit(): void {
+  this.idUsuario2 = this.activatedRoute.snapshot.queryParams.id_usuario2;
+  this.idUsuario1 = this.activatedRoute.snapshot.queryParams.id_usuario1;
+  this.idViaje = this.activatedRoute.snapshot.queryParams.id_viaje;
+  this.getChat();
+  this.realtimeChat();
 }
+
+ngOnDestroy(): void {
+  clearInterval(this.interval);
+}
+
+realtimeChat(): void {
+  this.interval = setInterval(() => {
+    this.getChat();
+  }, 5000);
+}
+
+
+
+getChat() {
+  this.httpClient.post(`${this.url}/chat`,{
+    id_viaje: parseInt(this.idViaje),
+    id_usuario1: parseInt(this.idUsuario1, 10),
+    id_usuario2: parseInt(this.idUsuario2, 10),
+    usuario_actual: this.usuarioService.usuario.id_usuario
+  })
+  .pipe(first())
+  .subscribe((chat) => this.chat.next(chat));
+}
+
+mensajePropio(mensaje){
+  return mensaje.id_usuario === this.usuarioService.usuario.id_usuario;
+}
+
 public nuevoMensaje(mensaje:string){
-  this.chat.mensajes.push({texto: mensaje, fecha:"06:07", propio:true});
+ const chatActual = this.chat.getValue(); 
+  this.httpClient.post(`${this.url}/mensaje`, {id_chat: chatActual.id_chat, id_usuario: this.usuarioService.usuario.id_usuario, fecha: new Date().toISOString(), mensaje})
+  .subscribe(() => this.getChat())
 }
 }
   
+ 

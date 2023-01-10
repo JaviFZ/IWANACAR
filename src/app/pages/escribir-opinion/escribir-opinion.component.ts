@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Opinion } from 'src/app/models/opinion';
+import { CocheService } from 'src/shared/coche.service';
+import { UsuarioService } from 'src/shared/usuario.service';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-escribir-opinion',
@@ -7,18 +12,33 @@ import { Component } from '@angular/core';
 })
 export class EscribirOpinionComponent {
   public tarjetaResumen: any;
-  
-    constructor(){
-      this.tarjetaResumen = {
-        fecha: "14/12/2022",
-        hora: "7:15",
-        calle1: "Calle Hermanos Rodriguez nº34",
-        calle2: "Calle Paz nº12",
-        coche: "coche1",
-        precio: "5€",
-        pasajeros: 3,
 
-      }
+  constructor(private router: Router, public viajeService: ViajeService, public cocheService: CocheService, public usuarioService: UsuarioService) {
+    this.tarjetaResumen = {
+      fecha: viajeService.viaje.fecha,
+      hora: viajeService.viaje.hora,
+      calle1: viajeService.viaje.origen,
+      calle2: viajeService.viaje.destino,
+      coche: "adad",
+      precio: viajeService.viaje.precio,
+      pasajeros: viajeService.viaje.pasajeros,
+      id_viaje: 20
 
     }
+
+  }
+
+  public escibirOpinion(opinion: string, puntuacion: number) {
+    console.log(opinion, puntuacion)
+    if (!puntuacion) {
+      console.log("puntua el viaje");
+    } else {
+      let nuevaOpinion = new Opinion(opinion, puntuacion, -1, this.usuarioService.usuario.id_usuario, this.tarjetaResumen.id_viaje);
+      console.log(nuevaOpinion)
+      this.usuarioService.publicarOpinion(nuevaOpinion).subscribe((respuesta) => {
+        this.router.navigate(["historicoViajes"])
+        console.log(respuesta);
+      })
+    }
+  }
 }
