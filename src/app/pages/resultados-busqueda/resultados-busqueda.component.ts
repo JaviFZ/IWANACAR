@@ -23,11 +23,11 @@ export class ResultadosBusquedaComponent {
   }
   public solicitarIdViaje(){
     console.log(this.viajeService.tarjeta_viaje.id_viaje);
-    
+   
     this.viajeService.datosUsuarioViaje(this.viajeService.tarjeta_viaje.id_viaje).subscribe((data)=>{
       console.log(data);
       this.viajeService.solicitarViaje = data;
-    })
+    }) 
     setTimeout(() => {
       this.router.navigateByUrl('/solicitarViaje');
     }, 500);

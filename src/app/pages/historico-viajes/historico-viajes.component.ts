@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
   selector: 'app-historico-viajes',
@@ -6,19 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./historico-viajes.component.css']
 })
 export class HistoricoViajesComponent {
-  public tarjeta_viaje:any;
-  constructor(){
-    this.tarjeta_viaje = {
-      foto:"https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg",
-      nombre:"Pedro",
-      origen:"Alcalá",
-      destino:"Universidad Ponticifica de Comillas",
-      fecha:"12/12/2022",
-      hora:"07:30",
-      precio:15,
-      pasajeros:2,
-      valoracion:3
-    }
+  public tarjetas_viaje = [];
+  constructor(private httpClient: HttpClient, private usuarioService: UsuarioService){
+    this.httpClient.get("https://apiwana-production.up.railway.app/misViajes?id_pasajero="+this.usuarioService.usuario.id_usuario)
+    .subscribe((result:any[])=>{this.tarjetas_viaje=result})
   }
 }
 

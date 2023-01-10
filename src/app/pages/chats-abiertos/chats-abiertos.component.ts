@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, first } from 'rxjs';
+import { Chat, Mensaje } from 'src/app/models/chat';
 import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class ChatsAbiertosComponent implements OnInit, OnDestroy {
   idUsuario1: string;
   idUsuario2: string;
   idViaje: string;
-  chat = new BehaviorSubject(undefined);
+  chat = new BehaviorSubject<Chat>(undefined);
   interval: NodeJS.Timer;
 
 constructor(private activatedRoute: ActivatedRoute, 
@@ -51,7 +52,7 @@ getChat() {
     usuario_actual: this.usuarioService.usuario.id_usuario
   })
   .pipe(first())
-  .subscribe((chat) => this.chat.next(chat));
+  .subscribe((chat: Chat) => this.chat.next(chat));
 }
 
 mensajePropio(mensaje){
@@ -60,7 +61,7 @@ mensajePropio(mensaje){
 
 public nuevoMensaje(mensaje:string){
  const chatActual = this.chat.getValue(); 
-  this.httpClient.post(`${this.url}/mensaje`, {id_chat: chatActual.id_chat, id_usuario: this.usuarioService.usuario.id_usuario, fecha: new Date().toISOString(), mensaje})
+  this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), mensaje))
   .subscribe(() => this.getChat())
 }
 }

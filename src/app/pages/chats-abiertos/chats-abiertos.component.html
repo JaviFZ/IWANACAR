@@ -4,12 +4,13 @@
     <svg width="80" height="80" viewBox="13 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"  routerLink="/historicoChats" class="flecha">
         <path d="M31.2307 41.4492L17.6892 27.9077C16.0899 26.3085 16.0899 23.6916 17.6892 22.0923L31.2307 8.55078" stroke="#BBD792" stroke-width="4.8" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <div class="titulo">
-            <p>{{chatActual.otroUsuario.nombre}} {{chatActual.otroUsuario.apellidos}}>
-        </div>
         <div class="imagen">
             <img class="perfil" src="{{chatActual.otroUsuario.foto}}" alt="" routerLink="/perfil">
         </div>
+        <div class="titulo">
+            <p>{{chatActual.otroUsuario.nombre}} {{chatActual.otroUsuario.apellidos}}</p>
+        </div>
+        
     </div>
 
 <main class="container">
