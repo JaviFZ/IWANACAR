@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TarjetaViajesPublicados } from 'src/app/models/tarjeta-viajes-publicados';
 import { UsuarioService } from 'src/shared/usuario.service';
 import { ViajeService } from 'src/shared/viaje.service';
@@ -9,11 +9,17 @@ import { ViajeService } from 'src/shared/viaje.service';
   templateUrl: './viajes-publicados.component.html',
   styleUrls: ['./viajes-publicados.component.css']
 })
-export class ViajesPublicadosComponent {
+export class ViajesPublicadosComponent implements OnInit{
   public viajes_publicados: [];
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public viajeService: ViajeService){
-    this.httpClient.get("https://apiwana-production.up.railway.app/viajesPublicados?id_conductor="+this.usuarioService.usuario.id_usuario)
-    .subscribe((result:[])=>{this.viajes_publicados=result})
+  
+  }
+  public ngOnInit(): void {
+    this.viajeService.viajesPublicados(this.usuarioService.usuario.id_usuario).subscribe((data:[])=>{
+      console.log(data);
+      this.viajes_publicados = data
+      
+    })
   }
   }
 
