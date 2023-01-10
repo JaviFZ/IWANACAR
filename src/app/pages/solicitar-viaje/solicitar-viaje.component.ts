@@ -9,13 +9,15 @@ import { MapaService } from 'src/shared/mapa.service';
   templateUrl: './solicitar-viaje.component.html',
   styleUrls: ['./solicitar-viaje.component.css']
 })
-export class SolicitarViajeComponent{
+export class SolicitarViajeComponent implements OnInit{
   public coche:any;
   public preferencias:any;
   constructor(public router:Router, public usuarioServices: UsuarioService, public viajeService:ViajeService,public mapa:MapaService){
   }
-  map(){
-    this.mapa.iniciarMap(document.getElementById('mapa'));
+  public ngOnInit(){
+    setTimeout(()=>{
+      this.mapa.iniciarMapSolicitarViaje(document.getElementById('mapa'));
+    },50)
   }
   solicitarViaje(){
     // this.router.navigateByUrl(`/ChatsAbiertos?id_usuario1=${this.usuarioServices.usuario.id_usuario}&id_usuario2=2&id_viaje=24`
