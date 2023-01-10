@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { TarjetaViajesPublicados } from 'src/app/models/tarjeta-viajes-publicados';
+import { UsuarioService } from 'src/shared/usuario.service';
+import { ViajeService } from 'src/shared/viaje.service';
 
 @Component({
   selector: 'app-viajes-publicados',
@@ -6,18 +10,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./viajes-publicados.component.css']
 })
 export class ViajesPublicadosComponent {
-  public tarjeta_viaje:any;
-  constructor(){
-    this.tarjeta_viaje = {
-      foto:"assets/img/iguana.png",
-      nombre:"user",
-      origen:"calle alcala n9",
-      destino:"Universidad Ponticifica de Comillas",
-      fecha:"12/12/2022",
-      hora:"07:30",
-      precio:15,
-      pasajeros:2,
-      valoracion:3
-    }
+  public viajes_publicados: [];
+  constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public viajeService: ViajeService){
+    this.httpClient.get("https://apiwana-production.up.railway.app/viajesPublicados?id_conductor="+this.usuarioService.usuario.id_usuario)
+    .subscribe((result:[])=>{this.viajes_publicados=result})
   }
-}
+  }
+
