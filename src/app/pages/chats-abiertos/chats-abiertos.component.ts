@@ -41,7 +41,7 @@ ngOnDestroy(): void {
 realtimeChat(): void {
   this.interval = setInterval(() => {
     this.getChat();
-  }, 5000);
+  }, 2000);
 }
 
 
@@ -61,16 +61,20 @@ mensajePropio(mensaje){
   return mensaje.id_usuario === this.usuarioService.usuario.id_usuario;
 }
 
-public nuevoMensaje(mensaje:string){
+public nuevoMensaje(elemento){
  const chatActual = this.chat.getValue(); 
-  this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), mensaje))
+  this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), elemento.value))
   .subscribe(() => this.getChat())
+  elemento.value = ""
+
+  
+
 }
 
-public cleaningForm() {
-  this.form.reset()
+// public cleaningForm() {
+//   this.form.reset()
 
-}
+// }
 
 
 
