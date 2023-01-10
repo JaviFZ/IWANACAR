@@ -8,22 +8,7 @@ import { UsuarioService } from 'src/shared/usuario.service';
   styleUrls: ['./solicitar-viaje.component.css']
 })
 export class SolicitarViajeComponent {
-  public coche:any;
-  public preferencias:any;
   constructor(public router:Router, public usuarioServices: UsuarioService){
-    this.coche = {
-      marca:"SEAT",
-      color: "Azul",
-      matricula: "2356LGB",
-      modelo: "Ibiza",
-      combustible: "Diesel"
-    };
-    this.preferencias = {
-      mascotas:true,
-      paradas:false,
-      fumar:true,
-      tiempoMax:"20min"
-    }
   }
   solicitarViaje(){
     this.router.navigateByUrl('/ChatsAbiertos');

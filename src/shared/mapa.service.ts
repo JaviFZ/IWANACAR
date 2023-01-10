@@ -64,7 +64,12 @@ export class MapaService {
     let coord = this.origen_coord;
     let map = new google.maps.Map(id,{
       zoom: 15,
-      center: coord
+      center: coord,
+      scrollwheel: false,
+      zoomControl: true,
+      rotateControl : false,
+      mapTypeControl: true,
+      streetViewControl: false,
     });
     let objConfigDR = {
       map:map
@@ -83,5 +88,37 @@ export class MapaService {
         alert("ERROR"+status);
       }
     });
+    
   }
+  // public getCoords(id:HTMLElement){
+  //   let map = new google.maps.Map(id,{
+  //     zoom: 15,
+  //     center: coord,
+  //     scrollwheel: false,
+  //     zoomControl: true,
+  //     rotateControl : false,
+  //     mapTypeControl: true,
+  //     streetViewControl: false,
+  //   });
+  // let geocoder = new google.maps.Geocoder();
+
+  // let address = document.getElementById('search').value;
+  // if(address!='')
+  // {
+  //   // Llamamos a la función geodecode pasandole la dirección que hemos introducido en la caja de texto.
+  // geocoder.geocode({ 'address': address}, function(results, status)
+  // {
+  //   if (status == 'OK')
+  //   {
+  // // Mostramos las coordenadas obtenidas en el p con id coordenadas
+  //   document.getElementById("coordenadas").innerHTML='Coordenadas:   '+results[0].geometry.location.lat()+', '+results[0].geometry.location.lng();
+  // // Posicionamos el marcador en las coordenadas obtenidas
+  //   map.marker.setPosition(results[0].geometry.location);
+  // // Centramos el mapa en las coordenadas obtenidas
+  //   map.map.setCenter(map.marker.getPosition());
+  //   agendaForm.showMapaEventForm();
+  //   }
+  //   });
+  // }
+  // }
 }
