@@ -8,6 +8,7 @@ export class TarjetaViaje {
     public origen: string;
     public destino: string;
     public id_viaje:number;
+    public id_conductor: number;
     constructor(){}
 
 }
