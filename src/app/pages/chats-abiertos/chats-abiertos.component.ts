@@ -62,7 +62,7 @@ mensajePropio(mensaje){
 public nuevoMensaje(mensaje:string){
  const chatActual = this.chat.getValue(); 
   this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), mensaje))
-  .subscribe(() => this.getChat())
+  .subscribe(() => this.getChat());
 }
 }
   

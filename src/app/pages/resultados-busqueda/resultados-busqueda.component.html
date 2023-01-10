@@ -6,5 +6,11 @@
 <section *ngFor="let tarjeta of viajeService.viajesArray">
 <app-tarjeta-viaje [tarjet_viaje] = "tarjeta" (click)="solicitarIdViaje()" ></app-tarjeta-viaje>
 </section>
+<div *ngIf="viajeService.viajesArray.length == 0">
+    <section id="iguana" >
+        <img src="../../../assets/img/iguanacar_v1.png" alt="">
+        <h1>NO HAY VIAJES PUBLICADOS PARA ESTA FECHA</h1>
+    </section>
+</div>
 </main>
 <app-footer></app-footer>
