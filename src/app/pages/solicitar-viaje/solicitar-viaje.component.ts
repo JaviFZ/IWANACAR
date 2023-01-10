@@ -18,7 +18,10 @@ export class SolicitarViajeComponent{
     this.mapa.iniciarMap(document.getElementById('mapa'));
   }
   solicitarViaje(){
-    this.router.navigateByUrl(`/ChatsAbiertos?id_usuario1=${this.usuarioServices.usuario.id_usuario}&id_usuario2=2&id_viaje=24`);
+    // this.router.navigateByUrl(`/ChatsAbiertos?id_usuario1=${this.usuarioServices.usuario.id_usuario}&id_usuario2=2&id_viaje=24`
+    this.router.navigateByUrl(`/ChatsAbiertos?id_usuario1=${this.usuarioServices.usuario.id_usuario}&id_usuario2=${this.viajeService.solicitarViaje[0].id_usuario}&id_viaje=${this.viajeService.solicitarViaje[0].id_viaje}}`
+    );
   }
 
 }
+

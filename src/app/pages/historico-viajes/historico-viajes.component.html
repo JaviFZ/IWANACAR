@@ -8,65 +8,32 @@
             <p class="texto">viajes publicados</p>
                     </button>
     </div>
-    <div class="tarjetasviajes">
-        <div class="section">
+    <div class="tarjetasviajes" *ngFor="let miViaje of tarjetas_viaje" [routerLink]=" miViaje.activo===1? undefined: '/escribirOpinion' ">
+        <div [ngClass]="{'section': miViaje.activo===1, 'section2': miViaje.activo!=1}">
         <div class="cuadro">
             <div class="titulo">
-                <p>{{tarjeta_viaje.nombre}}</p>
+                <p>{{miViaje.nombre}}</p>
             </div>
             <div class="imagen2">
-                <img class="perfil" src="{{tarjeta_viaje.foto}}" alt="">
+                <img class="perfil" src="{{miViaje.foto}}" alt="">
             </div>
             <div class="viaje">
-            <p class="destino">{{tarjeta_viaje.origen}}</p>
-            <p class="destino">{{tarjeta_viaje.destino}}</p>
+            <p class="destino">{{miViaje.origen}}</p>
+            <p class="destino">{{miViaje.destino}}</p>
         </div>
             <div class="hora">
-                <p>{{tarjeta_viaje.hora}}</p>
+                <p>{{miViaje.hora}}</p>
             </div>
             <div class="fecha">
-                <p>{{tarjeta_viaje.fecha}}</p>
+                <p>{{miViaje.fecha}}</p>
             </div>
             <div class="precio">
-                <p>{{tarjeta_viaje.precio}}€</p>
+                <p>{{miViaje.precio}}€</p>
             </div>
             <div class="imagen">
                 <img src="../../../assets/img/iguana 13.png" alt="">
                 <div class="pasajeros">
-                    <p>{{tarjeta_viaje.pasajeros}}</p>
-                </div>
-                </div>
-            </div>
-    
-        </div>
-    </div>
-
-    <div class="tarjetasviajes" routerLink="/escribirOpinion">
-        <div class="section2">
-        <div class="cuadro">
-            <div class="titulo">
-                <p>{{tarjeta_viaje.nombre}}</p>
-            </div>
-            <div class="imagen2">
-                <img class="perfil" src="{{tarjeta_viaje.foto}}" alt="">
-            </div>
-            <div class="viaje">
-            <p class="destino">{{tarjeta_viaje.origen}}</p>
-            <p class="destino">{{tarjeta_viaje.destino}}</p>
-        </div>
-            <div class="hora">
-                <p>{{tarjeta_viaje.hora}}</p>
-            </div>
-            <div class="fecha">
-                <p>{{tarjeta_viaje.fecha}}</p>
-            </div>
-            <div class="precio">
-                <p>{{tarjeta_viaje.precio}}€</p>
-            </div>
-            <div class="imagen">
-                <img src="../../../assets/img/iguana 13.png" alt="">
-                <div class="pasajeros">
-                    <p>{{tarjeta_viaje.pasajeros}}</p>
+                    <p>{{miViaje.pasajeros}}</p>
                 </div>
                 </div>
             </div>
