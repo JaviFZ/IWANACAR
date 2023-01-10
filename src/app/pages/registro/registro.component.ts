@@ -21,7 +21,7 @@ export class RegistroComponent {
        alert("Las contraseñas no coinciden");
       }
       else{
-         let nuevoUsuario = new Usuario(nombre,apellidos,fechaDeNacimiento, email, password,"","","",`https://avatars.dicebear.com/api/miniavs/${nombre}-${apellidos}.svg`,"","","",[],-1,-1,-1)
+         let nuevoUsuario = new Usuario(nombre,apellidos,fechaDeNacimiento, email, password,"","","","","","","",[],-1,-1,-1)
          this.usuarioService.register(nuevoUsuario).subscribe((respuesta) => {
           this.router.navigateByUrl("login")
          console.log(respuesta);
