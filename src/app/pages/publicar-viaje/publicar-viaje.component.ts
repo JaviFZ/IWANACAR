@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Viaje } from 'src/app/models/viaje';
 import { MapaService } from 'src/shared/mapa.service';
@@ -9,7 +9,7 @@ import { ViajeService } from 'src/shared/viaje.service';
   templateUrl: './publicar-viaje.component.html',
   styleUrls: ['./publicar-viaje.component.css']
 })
-export class PublicarViajeComponent {
+export class PublicarViajeComponent implements OnInit{
   public tarjetaResumen: any;
   public viaje:Viaje;
     constructor(public viajeService:ViajeService,public mapa:MapaService){
@@ -34,7 +34,9 @@ export class PublicarViajeComponent {
         console.log(data)
       })
     }
-  iniciarMap(){
-    this.mapa.iniciarMap(document.getElementById('mapa'));
+  public ngOnInit(){
+    setTimeout(()=>{
+      this.mapa.iniciarMap(document.getElementById('mapa'));
+    },50)
   }
 }

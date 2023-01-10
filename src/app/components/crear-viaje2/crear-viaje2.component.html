@@ -8,7 +8,7 @@
         </select>
             <p class="textoInput">Fecha</p>
             <input type="date" class="input" #fecha>
-            <p  class="textoInput">Dia de la semana</p>
+            <!-- <p  class="textoInput">Dia de la semana</p>
             <select  name="diaSemana"class="input" #diasSemana>
                 <option #diasSemana>Lunes</option>
                 <option #diasSemana>Martes</option>
@@ -17,12 +17,10 @@
                 <option #diasSemana>Viernes</option>
                 <option #diasSemana>Sabado</option>
                 <option #diasSemana>Domingo</option>
-            </select>
+            </select> -->
         <p class="textoInput">Hora</p>
         <input type="text" class="input" #hora>
     </div>
-    
-    
 </div>
 <div class="divButtons">
     <button  routerLink="/crearViaje" class="buttonDcha" (click)="paginaAnt()">
@@ -31,7 +29,7 @@
     <!-- <button *ngIf="isHidden2" routerLink="/crearViaje" class="buttonDcha" (click)="paginaSig()" (click)="guardarDatos(habitual.value,fecha.value,hora.value)" >
         <img src="../../../assets/img/flechaDCHA.png" >
     </button> -->
-    <button routerLink="/crearViaje" class="buttonDcha" (click)="paginaSig()" (click)="guardarDato(habitual.value,diasSemana.value,fecha.value,hora.value)" >
+    <button routerLink="/crearViaje" class="buttonDcha" (click)="paginaSig()" (click)="guardarDato(habitual.value,fecha.value,hora.value)" >
         <img src="../../../assets/img/flechaDCHA.png" >
     </button>
     

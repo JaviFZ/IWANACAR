@@ -16,6 +16,7 @@ export class ViajeService {
   public tarjeta_viaje:TarjetaViaje;
   public solicitarViaje:any;
   constructor(public http:HttpClient, public usuario:UsuarioService) {
+    this.viajesArray = [];
     this.viaje = new Viaje();
     this.url = "https://apiwana-production.up.railway.app/";
   }

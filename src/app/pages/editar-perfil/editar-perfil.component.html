@@ -14,33 +14,39 @@
                 <div class="form1">
                     <div class="input-group">
                         <label class="label">Nombre</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input1>
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="{{usuario.nombre}}" #input1>
                         <div></div>
                     </div>
 
                     <div class="input-group">
                         <label class="label">Apellidos</label><br>
-                        <input autocomplete="off" name="name" class="input" type="text" placeholder="" #input2>
+                        <input autocomplete="off" name="name" class="input" type="text" placeholder="{{usuario.apellidos}}" #input2>
                         <div></div>
                     </div>
 
 
                 </div>
 
-                <div class="huevo" #input3><img class="huevo-form" src="../../../assets/img/profile.jpg" alt="huevo" ></div>
+                <div class="huevo"><img class="huevo-form" src="{{usuario.foto}}" alt="huevo" ></div>
             </div>
 
             <div class="parte2">
 
                 <div class="input-group">
                     <label class="label">Dirección</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #input4>
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="{{usuario.direccion}}" #input4>
                     <div></div>
                 </div>
 
                 <div class="input-group">
                     <label class="label">Teléfono</label><br>
-                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #input5>
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="{{usuario.telefono}}" #input5>
+                    <div></div>
+                </div>
+
+                <div class="input-group">
+                    <label class="label">Foto</label><br>
+                    <input autocomplete="off" name="name" class="input2" type="text" placeholder="" #input3>
                     <div></div>
                 </div>
 
@@ -60,12 +66,23 @@
                 </div>
 
                 <div class="input-group">
+                    <label class="label">Tiempo de Espera</label><br>
+                    <select name="time" id="time" class="input2" #input8>
+                        <option value="5min">5min</option>
+                        <option value="10min">10min</option>
+                        <option value="15min">15min</option>
+                        <option value="20min">20min</option>
+
+                    </select>
+                </div>
+
+                <div class="input-group">
                     <label class="label">Sobre mí</label><br>
-                    <textarea autocomplete="off" name="name" class="input3" type="text" placeholder="" #input8></textarea>
+                    <textarea autocomplete="off" name="name" class="input3" type="text" placeholder="" #input9></textarea>
                     <div></div>
                 </div>
 
-                    <button class="boton-perfil" (click)="modificar(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value,input8.value)">Actualizar Perfil</button>
+                    <button class="boton-perfil" (click)="modificar(input1.value,input2.value,input3.value,input4.value,input5.value,input6.value,input7.value,input8.value,input9.value)">Actualizar Perfil</button>
             </div>
         </div>
     </div>
