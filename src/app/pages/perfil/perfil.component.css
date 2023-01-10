@@ -332,3 +332,8 @@ input::placeholder {
 
 
 }
+
+.marginOpi {
+    word-break: break-word;
+
+}
