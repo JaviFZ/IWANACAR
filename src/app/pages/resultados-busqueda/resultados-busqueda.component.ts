@@ -11,15 +11,14 @@ import { ViajeService } from 'src/shared/viaje.service';
   templateUrl: './resultados-busqueda.component.html',
   styleUrls: ['./resultados-busqueda.component.css']
 })
-export class ResultadosBusquedaComponent {
+export class ResultadosBusquedaComponent implements OnInit{
   constructor(public viajeService: ViajeService, public mapa:MapaService, public router:Router){
     console.log(viajeService.viajesArray);
   }
-  public iniciarMap(){
-    this.mapa.iniciarMap(document.getElementById("mapa"))
-  }
-  public iniciarMapResult(){
-    this.mapa.iniciarMapResult(document.getElementById("mapa"))
+  public ngOnInit(){
+    setTimeout(()=>{
+      this.mapa.getCoords(document.getElementById("mapa"))
+    },50)
   }
   public solicitarIdViaje(){
     console.log(this.viajeService.tarjeta_viaje.id_viaje);
