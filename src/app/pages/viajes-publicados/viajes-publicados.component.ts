@@ -11,6 +11,7 @@ import { ViajeService } from 'src/shared/viaje.service';
 })
 export class ViajesPublicadosComponent implements OnInit{
   public viajes_publicados: [];
+  // public pasajeros: [];
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public viajeService: ViajeService){
   
   }
@@ -18,8 +19,12 @@ export class ViajesPublicadosComponent implements OnInit{
     this.viajeService.viajesPublicados(this.usuarioService.usuario.id_usuario).subscribe((data:[])=>{
       console.log(data);
       this.viajes_publicados = data
-      
     })
+    // this.viajeService.pasajeros(this.viajeService.viaje.id_viaje).subscribe((data:[])=>{
+    //   console.log(data);
+    //   this.pasajeros = data
+    // })
+
   }
   }
 

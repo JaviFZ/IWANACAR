@@ -39,4 +39,8 @@ export class ViajeService {
   public viajesPublicados(id_usuario: number){
     return this.http.get(this.url + "viajesPublicados?id_usuario=" + id_usuario)
   }
+
+  public pasajeros(id_viaje: number){
+    return this.http.get(this.url + "viajesPublicados?id_viaje=" + id_viaje)
+  }
 }
