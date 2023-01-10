@@ -19,7 +19,7 @@
         <div ><img class="ic3" src="../../../assets/img/esperar.png" alt=""><p>{{info.tiempoDeEspera}}</p></div>
     </div>
 </section>
-<div id="mapa" (click)="map()"></div>
+<div id="mapa" ></div>
 <div class="caja_boton">
     <button class="boton" (click)="solicitarViaje()" *ngIf="usuarioServices.logueado==true">solicitar viaje</button>
     <button class="boton" routerLink="/login" *ngIf="usuarioServices.logueado==false">solicitar viaje</button>

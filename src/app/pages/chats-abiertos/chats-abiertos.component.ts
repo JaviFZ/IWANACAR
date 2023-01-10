@@ -21,67 +21,59 @@ export class ChatsAbiertosComponent implements OnInit, OnDestroy {
   interval: NodeJS.Timer;
   form:FormGroup
 
+constructor(private activatedRoute: ActivatedRoute, 
+            private usuarioService: UsuarioService,
+            private httpClient: HttpClient) {}
+  
 
-  public validar() {
-    console.log('El mensaje se ha enviado');
-    this.form.reset()
+ngOnInit(): void {
+  this.idUsuario2 = this.activatedRoute.snapshot.queryParams.id_usuario2;
+  this.idUsuario1 = this.activatedRoute.snapshot.queryParams.id_usuario1;
+  this.idViaje = this.activatedRoute.snapshot.queryParams.id_viaje;
+  this.getChat();
+  this.realtimeChat();
+}
 
-    return false;
+ngOnDestroy(): void {
+  clearInterval(this.interval);
+}
 
-  }
-
-  constructor(private activatedRoute: ActivatedRoute,
-    private usuarioService: UsuarioService,
-    private httpClient: HttpClient) { }
-
-
-  ngOnInit(): void {
-    this.idUsuario2 = this.activatedRoute.snapshot.queryParams.id_usuario2;
-    this.idUsuario1 = this.activatedRoute.snapshot.queryParams.id_usuario1;
-    this.idViaje = this.activatedRoute.snapshot.queryParams.id_viaje;
+realtimeChat(): void {
+  this.interval = setInterval(() => {
     this.getChat();
-    this.realtimeChat();
-  }
-
-  ngOnDestroy(): void {
-    clearInterval(this.interval);
-  }
-
-  realtimeChat(): void {
-    this.interval = setInterval(() => {
-      this.getChat();
-    }, 5000);
-  }
+  }, 5000);
+}
 
 
 
-  getChat() {
-    this.httpClient.post(`${this.url}/chat`, {
-      id_viaje: parseInt(this.idViaje),
-      id_usuario1: parseInt(this.idUsuario1, 10),
-      id_usuario2: parseInt(this.idUsuario2, 10),
-      usuario_actual: this.usuarioService.usuario.id_usuario
-    })
-      .pipe(first())
-      .subscribe((chat: Chat) => this.chat.next(chat));
-  }
+getChat() {
+  this.httpClient.post(`${this.url}/chat`,{
+    id_viaje: parseInt(this.idViaje),
+    id_usuario1: parseInt(this.idUsuario1, 10),
+    id_usuario2: parseInt(this.idUsuario2, 10),
+    usuario_actual: this.usuarioService.usuario.id_usuario
+  })
+  .pipe(first())
+  .subscribe((chat: Chat) => this.chat.next(chat));
+}
 
-  mensajePropio(mensaje) {
-    return mensaje.id_usuario === this.usuarioService.usuario.id_usuario;
-  }
+mensajePropio(mensaje){
+  return mensaje.id_usuario === this.usuarioService.usuario.id_usuario;
+}
 
-  public nuevoMensaje(mensaje: string) {
-    const chatActual = this.chat.getValue();
-    this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), mensaje))
-      .subscribe(() => this.getChat())
-  }
+public nuevoMensaje(mensaje:string){
+ const chatActual = this.chat.getValue(); 
+  this.httpClient.post(`${this.url}/mensaje`, new Mensaje(chatActual.id_chat, this.usuarioService.usuario.id_usuario, new Date().toISOString(), mensaje))
+  .subscribe(() => this.getChat())
+}
 
+public cleaningForm() {
+  this.form.reset()
 
-
-
-
+}
 
 
 
 }
-
+  
+ 

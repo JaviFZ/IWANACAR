@@ -33,11 +33,11 @@
                 <p class="hora">{{mensaje.fecha | date: "hh:mm"}}</p>
             </div>
         </div>
-        <div id="formulario" class="send">
+        <div [formGroup]="myForm" class="send">
             <textarea placeholder="Escribe aqui" name="" id="formulario" class="textArea" #mensaje wrap="on" cols="30" rows="1"
                 (keyup.enter)="nuevoMensaje(mensaje.value)"></textarea>
 
-            <button type="submit" class="learn-more" on-click=nuevoMensaje(mensaje.value) (click)="validar()">
+            <button type="reset" class="learn-more" on-click=nuevoMensaje(mensaje.value) on-click="cleaningForm()">
                 <span class="circle" aria-hidden="true">
                     <span class="icon arrow"></span>
                 </span>
