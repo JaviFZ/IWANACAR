@@ -8,7 +8,7 @@
             <p class="texto">viajes publicados</p>
                     </button>
     </div>
-    <div class="tarjetasviajes" *ngFor="let miViaje of tarjetas_viaje" [routerLink]=" miViaje.activo===1? undefined: '/escribirOpinion' ">
+    <div class="tarjetasviajes" *ngFor="let miViaje of tarjetas_viaje" (click)="opinarViaje(miViaje)">
         <div [ngClass]="{'section': miViaje.activo===1, 'section2': miViaje.activo!=1}">
         <div class="cuadro">
             <div class="titulo">

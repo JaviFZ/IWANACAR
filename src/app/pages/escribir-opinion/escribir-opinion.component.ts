@@ -14,18 +14,7 @@ export class EscribirOpinionComponent {
   public tarjetaResumen: any;
 
   constructor(private router: Router, public viajeService: ViajeService, public cocheService: CocheService, public usuarioService: UsuarioService) {
-    this.tarjetaResumen = {
-      fecha: viajeService.viaje.fecha,
-      hora: viajeService.viaje.hora,
-      calle1: viajeService.viaje.origen,
-      calle2: viajeService.viaje.destino,
-      coche: "adad",
-      precio: viajeService.viaje.precio,
-      pasajeros: viajeService.viaje.pasajeros,
-      id_viaje: 30,
-      id_conductor: 2
-
-    }
+    this.tarjetaResumen = this.viajeService.solicitarViaje
 
   }
 
@@ -34,7 +23,7 @@ export class EscribirOpinionComponent {
     if (!puntuacion) {
       console.log("puntua el viaje");
     } else {
-      let nuevaOpinion = new Opinion(opinion, puntuacion, -1, this.usuarioService.usuario.id_usuario, this.tarjetaResumen.id_viaje,this.tarjetaResumen.id_conductor);
+      let nuevaOpinion = new Opinion(opinion, puntuacion, -1, this.usuarioService.usuario.id_usuario, this.tarjetaResumen.id_viaje,this.tarjetaResumen.id_usuarios);
       console.log(nuevaOpinion)
       this.usuarioService.publicarOpinion(nuevaOpinion).subscribe((respuesta) => {
         this.router.navigate(["historicoViajes"])
