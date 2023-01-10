@@ -19,6 +19,8 @@ export class PerfilComponent {
 
   arrayEstrella = Array.from({ length: 5 }, (_, i) => i+1);
 
+
+
   constructor(public usuarioService: UsuarioService, public cocheService: CocheService) {
 
     this.cocheService.get(this.usuarioService.usuario.id_usuario).subscribe((coches: Coche[]) => {

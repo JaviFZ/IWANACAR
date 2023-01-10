@@ -18,8 +18,11 @@
     <div class="flex-container2">
         <div class="huevoyestrellas">
             <div class="huevo">
-                <img class="perfil" src="{{usuario.foto}}" alt="imagen padre">
+                <img *ngIf="usuario.foto != null " class="perfil" src="{{usuario.foto}}" alt="imagen padre">
+                <img *ngIf="usuario.foto == null " class="perfil"
+                    src="../../../assets/img/iguana.png" alt="imagen padre">
             </div>
+
             <div class="estrellas">
                 <div *ngFor="let estrella of arrayEstrella">
                     <span *ngIf="usuario.puntuacionMedia > estrella ; else emptyStar"><img class="img"
