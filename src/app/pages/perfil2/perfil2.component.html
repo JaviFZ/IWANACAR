@@ -1,0 +1,98 @@
+<app-header class="header"></app-header>
+
+<!-- <button class="atras" routerLink="/crearViaje">
+    <img class="img" src="../../../assets/img/Vector.png">
+</button> -->
+
+<body>
+
+
+    <div class="flex-container1">
+        <div class="input">
+            <p><b>{{usuarioService.usuario2.nombre}} {{usuarioService.usuario2.apellidos}}</b></p>
+            <p> {{convertAge(usuarioService.usuario2.fechaDeNacimiento)}} Años</p>
+        </div>
+        <div class="desde">{{convertDate(usuarioService.usuario2.fechaDeAlta)}}</div>
+    </div>
+
+    <div class="flex-container2">
+        <div class="huevoyestrellas">
+            <div class="huevo">
+                <img *ngIf="usuarioService.usuario2.foto != null " class="perfil" src="{{usuarioService.usuario2.foto}}" alt="imagen padre">
+                <img *ngIf="usuarioService.usuario2.foto == null " class="perfil"
+                    src="../../../assets/img/iguana.png" alt="imagen padre">
+            </div>
+
+            <div class="estrellas">
+                <div *ngFor="let estrella of arrayEstrella">
+                    <span *ngIf="usuarioService.usuario2.puntuacionMedia > estrella ; else emptyStar"><img class="img"
+                            src="../../../assets/img/estrella_rana.png" alt=""></span>
+                    <ng-template #emptyStar>
+                        <img class="img" src="../../../assets/img/estrella negra.png" alt="">
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-container3">
+        <div class="tarjeta1">
+            <h4>Acerca de {{usuarioService.usuario2.nombre}} :</h4>
+            <p> {{usuarioService.usuario2.sobreMi}}</p>
+        </div>
+
+        <div class="tarjeta2">
+            <div class="iconos1">
+                <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br>
+                    <p class="infoLogos">{{usuarioService.coches2.marca}} {{usuarioService.coches2.modelo}} </p>
+                </div>
+                <div><img class="ic1" src="../../../assets/img/nuevo_pintura.png" alt=""><br>
+                    <p class="infoLogos">{{usuarioService.coches2.color}}</p>
+                </div>
+                <div><img class="ic1" src="../../../assets/img/matricula.png" alt=""><br>
+                    <p class="infoLogos">{{usuarioService.coches2.matricula}}</p>
+                </div>
+                <div><img class="ic1" src="../../../assets/img/motor.png" alt=""><br>
+                    <p class="infoLogos">{{usuarioService.coches2.combustible}}</p>
+                </div>
+
+            </div>
+            <hr />
+
+            <div class="iconos2">
+                <div *ngIf="usuarioService.coches2.mascotas == 'Si'"> <img class="ic3" src="../../../assets/img/mascotas.png" alt="">
+                </div>
+                <div *ngIf="usuarioService.coches2.mascotas == 'No'"><img class="ic3" src="../../../assets/img/no_mascotas.png" alt="">
+                </div>
+                <div *ngIf="usuarioService.coches2.fumar == 'Si'"><img class="ic3" src="../../../assets/img/fumar.png" alt=""></div>
+                <div *ngIf="usuarioService.coches2.fumar == 'No'"><img class="ic3" src="../../../assets/img/no_fumar.png" alt=""></div>
+                <div><img class="ic3" src="../../../assets/img/esperar.png" alt="">
+                    <p>{{usuarioService.usuario2.tiempoDeEspera}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex-container4">Opiniones :
+
+
+        <div *ngFor="let opinion of usuarioService.opiniones2" class="opinion">
+            <div class="titulo">
+                <p class=""><b>{{opinion.nombre}}</b></p>
+            </div>
+            <div class="tarjeta-opi">
+                <div class="huevo-name">
+                    <img class="perfil" src="{{opinion.foto}}" alt="imagen padre">
+                </div>
+                <div class="input-opi">
+                    <p class="marginOpi">{{opinion.opinion}}</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+<app-footer></app-footer>

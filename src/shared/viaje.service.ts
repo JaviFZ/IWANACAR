@@ -13,7 +13,7 @@ export class ViajeService {
   public url:string;
   public viaje:Viaje;
   public viajesArray:TarjetaViaje[];
-  public tarjeta_viaje:TarjetaViaje;
+  public tarjeta_viaje:TarjetaViaje =undefined;
   public solicitarViaje:any;
   constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viajesArray = [];
