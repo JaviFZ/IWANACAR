@@ -12,6 +12,7 @@ import { UsuarioService } from './usuario.service';
 export class ViajeService {
   public url:string;
   public viaje:Viaje;
+  public pasajeras: [];
   public viajesArray:TarjetaViaje[];
   public tarjeta_viaje:TarjetaViaje;
   public solicitarViaje:any;
@@ -37,10 +38,13 @@ export class ViajeService {
   }
 
   public viajesPublicados(id_usuario: number){
-    return this.http.get(this.url + "viajesPublicados?id_usuario=" + id_usuario)
+    return this.http.get(this.url + "viajePublicado?id_usuario=" + id_usuario)
   }
 
-  public pasajeros(id_viaje: number){
-    return this.http.get(this.url + "viajesPublicados?id_viaje=" + id_viaje)
+  public pasajeros(id_usuario: number){
+    console.log(id_usuario);
+    
+    return this.http.get(this.url + "viajesPublicados?id_usuario=" + id_usuario)
+    
   }
 }
