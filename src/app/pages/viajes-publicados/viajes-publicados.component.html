@@ -9,7 +9,7 @@
         </button>
 
     </div>
-    <section *ngFor="let misViajes of viajes_publicados" >
+    <section *ngFor="let misViajes of viajes_publicados;let j=index" >
     <div class="tarjetasviajes1" [routerLink]=" misViajes.activo===1? undefined: '/escribirOpinion' ">
         <div class="section1">
             <div class="cuadro1">
@@ -28,15 +28,21 @@
                     <p class="destino1">{{misViajes.origen}}</p>
                     <p class="destino1">{{misViajes.destino}}</p>
                 </div>
-                <div class="inferior">
-                    <div class="user">
-                        <div class="imagen21">
-                            <img class="perfil1" src="{{misViajes.foto}}" alt="">
+                <div class="inferior"  >
+                    
+                    <ng-container *ngFor="let pasajero of pasajeros; let i = index;">
+                      
+                        <div class="a"*ngIf="pasajero.id_viaje == misViajes.id_viaje">
+                            
+                            <div class="imagen21">
+                                <img class="perfil1" src="{{pasajero.foto}}" alt="">
+                            </div>
+                            <div class="titulo1">
+                                <p>{{pasajero.nombre}}</p>
+                            </div>
+                           
                         </div>
-                        <div class="titulo1">
-                            <p>{{misViajes.nombre}}</p>
-                        </div>
-                    </div>
+                    </ng-container>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@
     height: 100%;
     padding-top: 10%;
     padding: 30px;
+    min-height: calc(100vh - 110px);
 
 
     background-image: url("../../../assets/img/logo_transparent.png");

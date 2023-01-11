@@ -7,7 +7,7 @@ export class TarjetaViajesPublicados {
     public origen: string;
     public destino: string;
     public id_viaje:number;
-    public pasajeros: Usuario[];
+    public pasajeros: [];
     public foto: string;
     public nombre: string;
     constructor(){}

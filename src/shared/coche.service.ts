@@ -23,4 +23,16 @@ export class CocheService {
     return this.httpClient.delete("https://apiwana-production.up.railway.app/coche",{body:{id_coche: id_coche}})
 
   }
+
+
+
+
+
+// **************metodo para perfil2 **********************
+
+  getCocheOtherUser(id_conductor:number){
+    return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})
+  }
+
+  // ************ fin metodos para el perfil2 *************
 }

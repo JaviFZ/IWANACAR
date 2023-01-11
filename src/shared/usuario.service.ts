@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ViajeService } from './viaje.service';
 import { Opinion } from 'src/app/models/opinion';
+import { Coche } from 'src/app/models/coche';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class UsuarioService {
   public logueado: boolean = false
   public usuario: Usuario;
   public opinion: Opinion;
-
+  public usuario2: any;
+  public opiniones2: Opinion[];
+  public coches2: Coche;
 
   constructor(private http: HttpClient) { }
 
@@ -46,27 +49,45 @@ export class UsuarioService {
     return this.http.get(this.url + "perfil?id_usuario=" + id_usuario)
   }
 
- // **********metodo para enviar opinion**************
+  // **********metodo para enviar opinion**************
 
-  public publicarOpinion(opinion: Opinion){
+  public publicarOpinion(opinion: Opinion) {
 
     return this.http.post(this.url + "escribir-opinion", opinion)
   }
 
 
-   // **********metodo para mostrar opinion**************
+  // **********metodo para mostrar opinion**************
 
-   public showOpinion (id_usuario : number): Observable<object> {
+  public showOpinion(id_usuario: number): Observable<object> {
     console.log(id_usuario);
-    console.log(this.url + "mostrarOpinion" + id_usuario);
-    
+
     return this.http.get(this.url + "mostrarOpinion?id_usuario=" + id_usuario)
 
-   }
+  }
 
 
-  
-  
+
+
+// ********metodos para el perfil2**********************************
+
+public datosUsuario(id_usuario2:number){
+  // console.log(id_usuario);
+
+  return this.http.get(this.url + "perfil?id_usuario=" + id_usuario2)
+}
+
+public showOpinionOtherUser(id_usuario: number): Observable<object> {
+  console.log(id_usuario);
+
+  return this.http.get(this.url + "mostrarOpinion?id_usuario=" + id_usuario)
+
+}
+// *************** fin metodos para el perfil2 **********************
+
+
+
+
 
 
 }

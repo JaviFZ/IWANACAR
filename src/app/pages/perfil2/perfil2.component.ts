@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 import { Coche } from 'src/app/models/coche';
 import { Opinion } from 'src/app/models/opinion';
@@ -7,50 +7,32 @@ import { CocheService } from 'src/shared/coche.service';
 import { UsuarioService } from 'src/shared/usuario.service';
 
 @Component({
-  selector: 'app-perfil',
-  templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  selector: 'app-perfil2',
+  templateUrl: './perfil2.component.html',
+  styleUrls: ['./perfil2.component.css']
 })
-export class PerfilComponent {
+export class Perfil2Component implements OnInit{
 
   public usuario: Usuario;
   public opiniones: Opinion[];
   public coches: Coche;
-  public usuario2 : Usuario;
-
+  public usuario2 : any;
+  
   arrayEstrella = Array.from({ length: 5 }, (_, i) => i+1);
 
 
 
   constructor(public usuarioService: UsuarioService, public cocheService: CocheService) {
 
-    this.cocheService.get(this.usuarioService.usuario.id_usuario).subscribe((coches: Coche[]) => {
-      console.log(coches);
-      this.coches = coches[0]
-    });
-
-    this.usuarioService.showDataUser(this.usuarioService.usuario.id_usuario).subscribe((result: Usuario) => {
-      console.log(result);
-      this.usuario = result[0]
-    })
-
-    this.usuarioService.showOpinion(this.usuarioService.usuario.id_usuario).subscribe((result: Opinion[]) => {
-      console.log(result);
-      this.opiniones = result
-    })
-
-    // this.usuarioService.clickedUser(this.usuarioService.usuario2.id_usuario).subscribe((result:Usuario) => {
-    //   console.log(result);
-    //   this.usuario = result[0]
-    // })
+ 
 
 
 
 
   }
-
-  
-
+  public ngOnInit(): void {
+    this.usuario2 = this.usuarioService.usuario2;
+  }
   //  *************Metodo para convertir la fecha de nacimiento en una edad*******
 
   public convertAge(birthDate: string): number {
@@ -66,7 +48,6 @@ export class PerfilComponent {
     }
 
 
-    console.log(age);
 
     return age;
 

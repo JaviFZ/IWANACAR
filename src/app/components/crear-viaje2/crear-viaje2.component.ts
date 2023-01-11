@@ -30,11 +30,12 @@ export class CrearViaje2Component {
         this.paginaActual = 1;
       }
     }
-    public guardarDato(habitual:string,diasSemana?:string,fecha?:string,hora?:string){
+    public guardarDato(habitual:string,fecha?:string,hora?:string){
         this.viajes.viaje.habitual = habitual;
+        this.viajes.viaje.fecha = fecha;
         this.viajes.viaje.hora = hora;
         // this.viajes.viaje.dia= diasSemana;
-        this.viajes.viaje.fecha = fecha;
+        
     }
   //   public guardarDatos(habitual:string,fecha:Date,hora:string){
   //     this.viajes.viaje.habitual = habitual;

@@ -6,7 +6,7 @@
 }
 .body{
     display: flex;
-
+    min-height: calc(100vh - 110px);
     flex-direction: column;
     background-color: #FFFAEF;
     background-image: url("../../../assets/img/logo_transparent.png");
@@ -241,13 +241,15 @@
     padding-top: 20px;
 }
 
-.inferior{
-    flex-wrap: wrap;
+.inferior{   
     display: flex;
     flex-direction: row;
+    
     padding: 10px;
     width: 100%;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .titulo1{
@@ -279,6 +281,5 @@
     box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
     transform: scale(1.05) ;
    }
-
 
 
