@@ -39,4 +39,12 @@ export class ViajeService {
   public viajesPublicados(id_usuario: number){
     return this.http.get(this.url + "viajesPublicados?id_usuario=" + id_usuario)
   }
+  deleteViaje(id_viaje:number) {
+    return this.http.delete("https://apiwana-production.up.railway.app/viajesPublicados",{body:{id_viaje: id_viaje}})
+
+  }
+  deletePasajero(id_chat:number) {
+    return this.http.delete("https://apiwana-production.up.railway.app/misViajes",{body:{id_chat: id_chat}})
+
+  }
 }

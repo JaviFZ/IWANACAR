@@ -21,5 +21,9 @@ export class HistoricoViajesComponent {
     this.router.navigateByUrl("/escribirOpinion") 
   }
   }
+  deleteViajePasajero(id_chat: number){
+    this.viajeService.deletePasajero(id_chat).subscribe(()=>{
+      this.tarjetas_viaje = this.tarjetas_viaje.filter( pasajero => pasajero.id_chat !=id_chat)
+   });
+  }
 }
-
