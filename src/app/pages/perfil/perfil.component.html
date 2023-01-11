@@ -38,10 +38,10 @@
     <div class="flex-container3">
         <div class="tarjeta1">
             <h4>Acerca de {{usuario.nombre}} :</h4>
-            <p> {{usuario.sobreMi}}</p>
+            <p style="margin-top: 2%"> {{usuario.sobreMi}}</p>
         </div>
 
-        <div class="tarjeta2">
+        <div class="tarjeta2" *ngIf="coches != undefined ; else false">
             <div class="iconos1">
                 <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br>
                     <p class="infoLogos">{{coches.marca}} {{coches.modelo}} </p>
@@ -57,6 +57,8 @@
                 </div>
 
             </div>
+            
+            
             <hr />
 
             <div class="iconos2">

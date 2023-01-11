@@ -28,10 +28,11 @@
                     <p class="destino1">{{misViajes.origen}}</p>
                     <p class="destino1">{{misViajes.destino}}</p>
                 </div>
-                <div class="inferior" >
-                    <section *ngFor="let pasajero of pasajeros; let i = index;" >
-                        
-                        <div class="user" *ngIf="pasajero.id_viaje == misViajes.id_viaje">
+                <div class="inferior"  >
+                    
+                    <ng-container *ngFor="let pasajero of pasajeros; let i = index;">
+                      
+                        <div class="a"*ngIf="pasajero.id_viaje == misViajes.id_viaje">
                             
                             <div class="imagen21">
                                 <img class="perfil1" src="{{pasajero.foto}}" alt="">
@@ -41,7 +42,7 @@
                             </div>
                            
                         </div>
-                    </section>
+                    </ng-container>
                 </div>
             </div>
         </div>
