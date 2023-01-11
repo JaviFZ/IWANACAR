@@ -22,6 +22,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { MenuHamburguesaComponent } from './pages/menu-hamburguesa/menu-hamburguesa.component';
 import { MisCochesComponent } from './pages/mis-coches/mis-coches.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { Perfil2Component } from './pages/perfil2/perfil2.component';
 import { PublicarViajeComponent } from './pages/publicar-viaje/publicar-viaje.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 import { ResultadosBusquedaComponent } from './pages/resultados-busqueda/resultados-busqueda.component';
@@ -62,7 +63,8 @@ const routes: Routes = [
   {path: "mapa", component:MapaComponent},
   {path: "tarjetaViaje", component:TarjetaViajeComponent},
   {path: "tarjetaChat", component:TarjetaChatComponent},
-  {path: "escribirOpinion", component:EscribirOpinionComponent}
+  {path: "escribirOpinion", component:EscribirOpinionComponent},
+  {path:'perfil2', component:Perfil2Component},
 ];
 
 @NgModule({

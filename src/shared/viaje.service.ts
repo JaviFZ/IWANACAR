@@ -14,7 +14,7 @@ export class ViajeService {
   public viaje:Viaje;
   public pasajeras: [];
   public viajesArray:TarjetaViaje[];
-  public tarjeta_viaje:TarjetaViaje;
+  public tarjeta_viaje:TarjetaViaje =undefined;
   public solicitarViaje:any;
   constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viajesArray = [];

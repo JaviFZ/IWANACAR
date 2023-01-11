@@ -1,10 +1,10 @@
 <body (click)="igualarTarjetas()">
 <section >
-    <div class="cuadro">
+    <div class="cuadro" >
         <div class="titulo">
             <p>{{tarjet_viaje.nombre}}</p>
         </div>
-        <div class="imagen2">
+        <div class="imagen2" (click)="datosUsuario(tarjet_viaje.id_usuario)">
             <img class="perfil" src="{{tarjet_viaje.foto}}" alt="">
         </div>
         <div class="viaje">
