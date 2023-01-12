@@ -3,7 +3,7 @@
     <div class="titulo">
         <p>Mis Coches</p>
     </div>
-    <section class="tarjeta" *ngFor="let car of coches;let i= index"> 
+    <section class="tarjeta" *ngFor="let car of coches?.reverse();let i= index"> 
         <div class="cruz">
             <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCoche(car.id_coche)">
             <div class="title">

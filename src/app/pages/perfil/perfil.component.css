@@ -12,7 +12,10 @@ body {
     z-index: 999;
     width: 100%;
 }
-
+.opinionEstrellas{
+    display: flex;
+    flex-direction: column;
+}
 .atras {
     display: flex;
     flex-direction: row;
@@ -112,8 +115,7 @@ input::placeholder {
     justify-content: flex start;
     align-items: center;
     width: auto;
-    /* border: solid 4px #0E9A5F; */
-    margin-left: 21px;
+    padding: 6% 6% 0%;
 }
 
 .flex-container3 {
@@ -234,7 +236,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     justify-content: flex start;
-    align-items: center;
+    /* align-items: center; */
     /* border: solid 1px #0E9A5F; */
     padding-bottom: 1vh;
     padding-left: 1vh;
@@ -252,7 +254,7 @@ input::placeholder {
 .huevo-name {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 
 
@@ -288,7 +290,7 @@ input::placeholder {
 
 .input-opi {
 
-    height: 10vh;
+    
     border-radius: 0px 20px 20px 20px;
     margin-right: 11px;
     margin-left: 11px;
@@ -303,13 +305,13 @@ input::placeholder {
 
 .perfil {
     border: solid 2px #3a8f43;
+    object-fit: cover;
     width: 90px;
     height: 100px;
     display: flex;
     transition: all 0.3s ease 0s;
-    border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
     margin-top: -2vh;
-
 }
 
 .perfil:hover {
