@@ -33,7 +33,7 @@ main{
     height: 17vh;
     display: flex;
     flex-direction: column;
-    z-index: 9;
+    z-index: 1;
     align-items: center;
 
 }
