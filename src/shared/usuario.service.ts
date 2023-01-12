@@ -15,9 +15,9 @@ export class UsuarioService {
   public logueado: boolean = false
   public usuario: Usuario;
   public opinion: Opinion;
-  public usuario2: any;
-  public opiniones2: Opinion[];
-  public coches2: Coche;
+  public usuario2: any = undefined;
+  public opiniones2: Opinion[] = undefined;
+  public coches2: Coche = undefined;
 
   constructor(private http: HttpClient) { }
 

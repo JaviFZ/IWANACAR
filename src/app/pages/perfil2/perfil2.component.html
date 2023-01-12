@@ -41,7 +41,7 @@
             <p> {{usuarioService.usuario2.sobreMi}}</p>
         </div>
 
-        <div class="tarjeta2">
+        <div class="tarjeta2" *ngIf="this.usuarioService.coches2 != undefined">
             <div class="iconos1">
                 <div><img class="ic1" src="../../../assets/img/nuevo_coche.png" alt=""><br>
                     <p class="infoLogos">{{usuarioService.coches2.marca}} {{usuarioService.coches2.modelo}} </p>
@@ -59,7 +59,7 @@
             </div>
             <hr />
 
-            <div class="iconos2">
+            <div class="iconos2" >
                 <div *ngIf="usuarioService.coches2.mascotas == 'Si'"> <img class="ic3" src="../../../assets/img/mascotas.png" alt="">
                 </div>
                 <div *ngIf="usuarioService.coches2.mascotas == 'No'"><img class="ic3" src="../../../assets/img/no_mascotas.png" alt="">
@@ -74,7 +74,7 @@
 
     </div>
 
-    <div class="flex-container4">Opiniones :
+    <div class="flex-container4" *ngIf="this.usuarioService.opiniones2 != undefined">Opiniones :
 
 
         <div *ngFor="let opinion of usuarioService.opiniones2" class="opinion">

@@ -11,7 +11,7 @@
         <button class="boton" routerLink="/buscarViaje" >nueva búsqueda</button>
     </div>
     </ng-container>
-<section class="mapa" id="mapa" >
+<section class="mapa" id="mapa" *ngIf="viajeService.viajesArray.length != 0">
     <img src="../../../assets/img/mapa.jpg" alt="">
 </section>
 <section *ngFor="let tarjeta of viajeService.viajesArray">
