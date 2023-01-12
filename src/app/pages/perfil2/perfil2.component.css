@@ -3,7 +3,7 @@ body {
     background: #FFFAEF;
     padding: 20px;
     padding-bottom: 130px;
-    
+    min-height: calc(100vh - 110px);
 }
 .header{
     position: sticky;
@@ -121,7 +121,7 @@ input::placeholder {
     justify-content: space-between;
     align-items: flex start;
 
-    height: 273px;
+    height:auto;
     /* border: solid 1px #0E9A5F; */
 
     margin-top: 13px;

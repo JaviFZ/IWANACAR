@@ -13,11 +13,11 @@ import { UsuarioService } from 'src/shared/usuario.service';
 })
 export class HistoricoChatsComponent {
 
-  url = "https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com";
+  url = "https://apiwana-nz8zei982-javifz.vercel.app";
   chats = new BehaviorSubject([]);
 
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public router:Router,public coche:CocheService) {
-    this.httpClient.get(`${this.url}/chats?id_usuario=${this.usuarioService.usuario.id_usuario}`)
+    this.httpClient.get(this.url +"/chats?id_usuario="+this.usuarioService.usuario.id_usuario)
     .subscribe((chats: any[]) => this.chats.next(chats));
   }
   public datosUsuario2(id_usuario1:number,id_usuario2:number){

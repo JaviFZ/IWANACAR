@@ -31,7 +31,7 @@ export class CocheService {
 // **************metodo para perfil2 **********************
 
   getCocheOtherUser(id_conductor:number){
-    return this.httpClient.get("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/coche",{params:{id_conductor}})
+    return this.httpClient.get("https://apiwana-nz8zei982-javifz.vercel.app/coche",{params:{id_conductor}})
   }
 
   // ************ fin metodos para el perfil2 *************
