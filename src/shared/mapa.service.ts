@@ -94,6 +94,7 @@ export class MapaService {
   public getCoords(id:HTMLElement){
     let map = new google.maps.Map(id,{
       zoom: 10,
+      minZoom: 7,
       center:{lat:40.41831,lng: -3.70275},
       scrollwheel: true,
       zoomControl: false,
@@ -153,6 +154,7 @@ export class MapaService {
       setTimeout(()=>{
         let map = new google.maps.Map(id,{
           zoom: 15,
+          minZoom: 7,
           center: coord_origen,
           scrollwheel: true,
           zoomControl: false,

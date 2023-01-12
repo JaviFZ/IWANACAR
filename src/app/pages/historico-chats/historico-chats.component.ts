@@ -13,30 +13,53 @@ import { UsuarioService } from 'src/shared/usuario.service';
 })
 export class HistoricoChatsComponent {
 
-  url = "https://apiwana-production.up.railway.app";
+  url = "https://apiwana-nz8zei982-javifz.vercel.app";
   chats = new BehaviorSubject([]);
 
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public router:Router,public coche:CocheService) {
-    this.httpClient.get(`${this.url}/chats?id_usuario=${this.usuarioService.usuario.id_usuario}`)
+    this.httpClient.get(this.url +"/chats?id_usuario="+this.usuarioService.usuario.id_usuario)
     .subscribe((chats: any[]) => this.chats.next(chats));
   }
-  public datosUsuario2(id_usuario:number){
+  public datosUsuario2(id_usuario1:number,id_usuario2:number){
+    if(this.usuarioService.usuario.id_usuario != id_usuario1){
+    setTimeout(()=>{
+          this.usuarioService.datosUsuario(id_usuario1).subscribe((data)=>{
+            console.log(data[0]);
+            
+            this.usuarioService.usuario2 = data[0];
+          });
+          this.coche.getCocheOtherUser(id_usuario1).subscribe((data) => {
+            console.log(data[0]);
+            
+            this.usuarioService.coches2= data[0]
+          })
+          this.usuarioService.showOpinionOtherUser(id_usuario1).subscribe((result: Opinion[]) => {
+            console.log(result);
+            this.usuarioService.opiniones2 = result
+          })
+        },50)
+        this.router.navigateByUrl("/perfil2")
+      }else{
+        setTimeout(()=>{
+          this.usuarioService.datosUsuario(id_usuario2).subscribe((data)=>{
+            console.log(data[0]);
+            
+            this.usuarioService.usuario2 = data[0];
+          });
+          this.coche.getCocheOtherUser(id_usuario2).subscribe((data) => {
+            console.log(data[0]);
+            
+            this.usuarioService.coches2= data[0]
+          })
+          this.usuarioService.showOpinionOtherUser(id_usuario2).subscribe((result: Opinion[]) => {
+            console.log(result);
+            this.usuarioService.opiniones2 = result
+          })
+        },50)
+        this.router.navigateByUrl("/perfil2")
+      }
     
-    this.usuarioService.datosUsuario(id_usuario).subscribe((data)=>{
-      console.log(data[0]);
-      
-      this.usuarioService.usuario2 = data[0];
-    });
-    this.coche.getCocheOtherUser(id_usuario).subscribe((data) => {
-      console.log(data[0]);
-      
-      this.usuarioService.coches2= data[0]
-    })
-     this.usuarioService.showOpinionOtherUser(id_usuario).subscribe((result: Opinion[]) => {
-      console.log(result);
-      this.usuarioService.opiniones2 = result
-    })
 
-    this.router.navigateByUrl("/perfil2")
+    
   }
 }

@@ -16,10 +16,11 @@ export class ViajeService {
   public viajesArray:TarjetaViaje[];
   public tarjeta_viaje:TarjetaViaje =undefined;
   public solicitarViaje:any;
+  public opinarPasajeroViaje: Number = 0;
   constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viajesArray = [];
     this.viaje = new Viaje();
-    this.url = "https://apiwana-production.up.railway.app/";
+    this.url = "https://apiwana-nz8zei982-javifz.vercel.app/";
   }
   public crearViaje(viaje:Viaje): Observable<object>{
     console.log(viaje);
@@ -46,6 +47,10 @@ export class ViajeService {
     
     return this.http.get(this.url + "viajesPublicados?id_usuario=" + id_usuario)
     
+  }
+
+  public historicoViajes(id_usuario: number){
+    return this.http.get(this.url + "misViajes?id_pasajero=" + id_usuario)
   }
   deleteViaje(id_viaje:number) {
     return this.http.delete("https://apiwana-production.up.railway.app/viajesPublicados",{body:{id_viaje: id_viaje}})

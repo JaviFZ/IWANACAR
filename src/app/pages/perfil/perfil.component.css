@@ -36,17 +36,18 @@ body {
 
 .img {
     padding: 5%;
-    height: 40px;
+    height: 40%;
     width: 100%;
-    position: relative;
+
     bottom: 10px;
 
 }
 
 .img2 {
-    height: 40px;
-    position: relative;
+    height: 30%;
+
     padding: 5%;
+    bottom: 10px;
 }
 
 .flex-container1 {
@@ -112,7 +113,7 @@ input::placeholder {
 .estrellas {
     display: flex;
     flex-direction: row;
-    justify-content: flex start;
+    justify-content:space-between;
     align-items: center;
     width: auto;
     padding: 6% 6% 0%;

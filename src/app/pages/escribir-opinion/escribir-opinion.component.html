@@ -15,9 +15,13 @@
             <!-- <div class="hora">
                 <p>07:45</p>
             </div> -->
-            <div class="coche">
+            <div class="coche" *ngIf="viajeService.opinarPasajeroViaje == 0;">
                 <p>{{tarjetaResumen.nombre}}</p>
             </div>
+            <div class="coche" *ngIf="viajeService.opinarPasajeroViaje == 1">
+                <p>{{pasajero.nombre}}</p>
+            </div>
+            
             <div class="precio">
                 <p>{{tarjetaResumen.precio}}€</p>
             </div>
@@ -46,11 +50,17 @@
           </div>  
     </section>
     
-    <div class="buttons">   
-        <button class="publicar" routerLink="/historicoViajes" (click)="escibirOpinion(opinion.value, puntuacion.value)">Enviar opinión</button>
+    <div class="buttons" *ngIf="viajeService.opinarPasajeroViaje == 1;else isTrue">   
+        <button class="publicar" routerLink="/historicoViajes" (click)="opinionPasajero(opinion.value, puntuacion.value)">Enviar opinión</button>
         <a routerLink="login">Salir</a>
 
     </div>
+    <ng-template  #isTrue>
+        <div class="buttons">
+        <button class="publicar" routerLink="/historicoViajes" (click)="escribirOpinion(opinion.value, puntuacion.value)">Enviar opinión</button>
+        <a routerLink="login">Salir</a>
+    </div>
+    </ng-template>
     
 </main>
 <app-footer></app-footer>

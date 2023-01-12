@@ -24,12 +24,12 @@
                 <div *ngIf="car.mascotas == 'No'"><img class="ic2" src="../../../assets/img/no_mascotas.png" alt=""></div>
                 <div *ngIf="car.fumar == 'Si'"><img class="ic2" class="ic2" src="../../../assets/img/fumar.png" alt=""></div>
                 <div *ngIf="car.fumar == 'No'"><img class="ic2" src="../../../assets/img/no_fumar.png" alt=""></div>
-                <div><img class="ic2" src="../../../assets/img/esperar.png" alt=""><p class="time">{{usuario.tiempoDeEspera}}</p></div>
+                <div><img class="ic2" src="../../../assets/img/esperar.png" alt=""><p class="time">{{usuarioService.usuario.tiempoDeEspera}}</p></div>
             </section>
         </div>
     </section>
     <div class="padre-boton">
-        <button class="añadirCoche" routerLink="/anadirCoche">Añadir un Coche</button>
+        <button class="anadirCoche" routerLink="/anadirCoche">Añadir un Coche</button>
     </div>
 
 </body>

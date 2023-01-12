@@ -13,7 +13,7 @@ import { UsuarioService } from 'src/shared/usuario.service';
 })
 export class ChatsAbiertosComponent implements OnInit, OnDestroy {
 
-  url = "https://apiwana-production.up.railway.app";
+  url = "https://apiwana-nz8zei982-javifz.vercel.app";
   idUsuario1: string;
   idUsuario2: string;
   idViaje: string;
