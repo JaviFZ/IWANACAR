@@ -118,6 +118,7 @@ main{
 }
 
 .perfil {
+    object-fit: cover;
     border: solid 2px #3a8f43;
     width: 90px;
     height: 100px;
