@@ -18,7 +18,7 @@
 }
 .body{
     display: flex;
-    min-height: calc(100vh - 110px);
+
     flex-direction: column;
     background-color: #FFFAEF;
     background-image: url("../../../assets/img/logo_transparent.png");
@@ -71,8 +71,9 @@
 }
 
 .cuadro{
+    padding: 5%;
     position: relative;
-    height: 180px;
+    /* height: 180px; */
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 20px 20px 20px;
@@ -83,22 +84,22 @@
     gap: 15px;
 }
 .hora{
-    position: absolute;
+    /* position: absolute; */
     right: 8%;
     top: 7%;
 }
 .fecha{
-    position: absolute;
+    /* position: absolute; */
     left: 5%;
     bottom: 5%;
 }
 
 .destino{
-    margin-left: 20px;
+ 
     border-bottom: 1px dashed #3A8F43;
 }
 .precio{
-    position: absolute;
+    /* position: absolute; */
     width: 60px;
     height: 40px;
     right: 25%;
@@ -120,11 +121,33 @@
 }
 .imagen{
     display: flex;
-    position: absolute;
+    /* position: absolute; */
     width: 30px;
     height: 27px;
     right: 7%;
     bottom: 8%;
+}
+.foter{
+    display: flex;
+    align-items: center;
+    gap: 20%;
+    width: 40%;
+}
+.tarjetaFooter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjetaHeader{
+    display: flex;
+    width: 100%;
+    gap: 15%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 .imagen2{
     position: absolute;
@@ -134,7 +157,7 @@
 
 .titulo{
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     width: 150px;
     left: 25%;
     top: -3%;
@@ -148,6 +171,8 @@
     padding: 2%;
 }
 .perfil{
+    object-fit: cover;
+    background-color: white;
     border: solid 2px #BBD792;
     width: 80px;
     height: 90px;

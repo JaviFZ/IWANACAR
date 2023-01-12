@@ -35,21 +35,15 @@ body {
 }
 
 .img {
-    padding: 5%;
-    height: 40%;
-    width: 100%;
-
-    bottom: 10px;
-
+    width: 50px;
 }
 
 .img2 {
-    height: 30%;
-
-    padding: 5%;
-    bottom: 10px;
+    height: 30px;
 }
-
+.img3 {
+    width: 100%;
+}
 .flex-container1 {
     padding-top: 3%;
     display: flex;
@@ -110,13 +104,22 @@ input::placeholder {
 
 }
 
-.estrellas {
+.estrellas2 {
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: center;
     width: auto;
     padding: 6% 6% 0%;
+}
+.estrellas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    gap: 2%;
+    padding: 6% 6% 0%;
+    align-items: center;
 }
 
 .flex-container3 {
@@ -314,6 +317,10 @@ input::placeholder {
     border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
     margin-top: -2vh;
 }
+.contenedorEstrellas{
+    display: flex;
+}
+
 
 .perfil:hover {
     border-color: #0E9A5F;

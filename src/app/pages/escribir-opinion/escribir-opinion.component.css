@@ -21,7 +21,7 @@ main{
 }
 img{
     width: 100%;
-    border-radius: 20px;
+
 }
 
 @media (max-width: 330px){
@@ -54,7 +54,7 @@ section{
     border-radius: 0px 20px 20px 20px;
     margin-bottom: 15%;
 }
-.cuadro{
+/* .cuadro{
     position: relative;
     height: 180px;
     background: #FFFFFF;
@@ -65,25 +65,38 @@ section{
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
+} */
+.cuadro{
+    padding: 5%;
+    position: relative;
+    /* height: 180px; */
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
 }
 .hora{
-    position: absolute;
+    /* position: absolute; */
     right: 8%;
     top: 7%;
 }
 .coche{
-    position: absolute;
+    /* position: absolute; */
     left: 5%;
     bottom: 5%;
     font-weight: bold;
 }
 
 .destino{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     border-bottom: 1px dashed #3A8F43;
 }
 .precio{
-    position: absolute;
+    /* position: absolute; */
     width: 60px;
     height: 40px;
     right: 25%;
@@ -105,11 +118,10 @@ section{
 }
 .imagen{
     display: flex;
-    position: absolute;
-    width: 30px;
-    height: 27px;
-    right: 7%;
-    bottom: 8%;
+    width: 35px;
+    height: 35px;
+    align-items: flex-end;
+
 }
 .imagen2{
     position: absolute;
@@ -119,7 +131,7 @@ section{
 
 .titulo{
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     width: 275px;
     left: 5%;
     top: 3%;
@@ -134,6 +146,8 @@ section{
     padding: 2%;
 }
 .perfil{
+    object-fit: cover;
+    background-color: white;
     border: solid 2px #BBD792;
     width: 80px;
     height: 90px;
@@ -166,6 +180,14 @@ section{
     align-items: flex-start;
     gap: 15px;
     padding: 5%;
+}
+
+.tarjetaFooter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 .input{
     width: 100%;

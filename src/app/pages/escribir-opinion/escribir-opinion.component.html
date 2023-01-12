@@ -9,6 +9,7 @@
                 <img class="perfil" src="https://as01.epimg.net/epik/imagenes/2017/12/27/portada/1514386873_804665_1514386914_noticia_normal_recorte1.jpg" alt="">
             </div> -->
             <div class="viaje">
+                <p>Viaje:</p>
             <p class="destino">{{tarjetaResumen.origen}}</p>
             <p class="destino">{{tarjetaResumen.destino}}</p>
         </div>
@@ -18,7 +19,9 @@
             <div class="coche" *ngIf="viajeService.opinarPasajeroViaje == 0;">
                 <p>{{tarjetaResumen.nombre}}</p>
             </div>
+            <div class="tarjetaFooter">
             <div class="coche" *ngIf="viajeService.opinarPasajeroViaje == 1">
+                <p>Conductor:</p>
                 <p>{{pasajero.nombre}}</p>
             </div>
             
@@ -31,6 +34,7 @@
                     <p>{{tarjetaResumen.pasajeros}}</p>
                 </div>
             </div>
+        </div>
             
     
         </div>
