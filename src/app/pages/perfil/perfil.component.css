@@ -33,16 +33,16 @@ body {
 
 .img {
     padding: 5%;
-    height: 30%;
+    height: 40%;
     width: 100%;
-    position: relative;
+
     bottom: 10px;
 
 }
 
 .img2 {
     height: 30%;
-    position: relative;
+
     padding: 5%;
     bottom: 10px;
 }
