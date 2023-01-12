@@ -123,8 +123,9 @@ main{
     height: 100px;
     display: flex;
     transition: all 0.3s ease 0s;
-    border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
+    border-radius: 49% 50% 50% 50% / 65% 65% 50% 50%;
     /* margin-top: -2vh; */
+    background: #000;
 
 }
 
