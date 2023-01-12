@@ -12,15 +12,15 @@ export class CocheService {
    }
 
   get(id_conductor:number){
-    return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})
+    return this.httpClient.get("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/coche",{params:{id_conductor}})
   }
 
   add(coche: Coche) {
-  return this.httpClient.post("https://apiwana-production.up.railway.app/coche", coche)
+  return this.httpClient.post("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/coche", coche)
   }
 
   delete(id_coche:number) {
-    return this.httpClient.delete("https://apiwana-production.up.railway.app/coche",{body:{id_coche: id_coche}})
+    return this.httpClient.delete("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/coche",{body:{id_coche: id_coche}})
 
   }
 
@@ -31,7 +31,7 @@ export class CocheService {
 // **************metodo para perfil2 **********************
 
   getCocheOtherUser(id_conductor:number){
-    return this.httpClient.get("https://apiwana-production.up.railway.app/coche",{params:{id_conductor}})
+    return this.httpClient.get("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/coche",{params:{id_conductor}})
   }
 
   // ************ fin metodos para el perfil2 *************

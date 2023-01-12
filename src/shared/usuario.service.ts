@@ -11,7 +11,7 @@ import { Coche } from 'src/app/models/coche';
   providedIn: 'root'
 })
 export class UsuarioService {
-  public url: string = "https://apiwana-production.up.railway.app/"
+  public url: string = "https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/"
   public logueado: boolean = false
   public usuario: Usuario;
   public opinion: Opinion;

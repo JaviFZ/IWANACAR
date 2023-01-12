@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Opinion } from 'src/app/models/opinion';
 import { TarjetaViaje } from 'src/app/models/tarjeta-viaje';
-import { BuscarViajeComponent } from 'src/app/pages/buscar-viaje/buscar-viaje.component';
 import { CocheService } from 'src/shared/coche.service';
 import { UsuarioService } from 'src/shared/usuario.service';
 import { ViajeService } from 'src/shared/viaje.service';

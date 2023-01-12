@@ -13,7 +13,7 @@ import { UsuarioService } from 'src/shared/usuario.service';
 })
 export class HistoricoChatsComponent {
 
-  url = "https://apiwana-production.up.railway.app";
+  url = "https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com";
   chats = new BehaviorSubject([]);
 
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public router:Router,public coche:CocheService) {

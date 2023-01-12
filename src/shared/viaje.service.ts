@@ -20,7 +20,7 @@ export class ViajeService {
   constructor(public http:HttpClient, public usuario:UsuarioService) {
     this.viajesArray = [];
     this.viaje = new Viaje();
-    this.url = "https://apiwana-production.up.railway.app/";
+    this.url = "https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/";
   }
   public crearViaje(viaje:Viaje): Observable<object>{
     console.log(viaje);

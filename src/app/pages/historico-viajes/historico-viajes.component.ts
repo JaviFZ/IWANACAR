@@ -12,7 +12,7 @@ import { ViajeService } from 'src/shared/viaje.service';
 export class HistoricoViajesComponent {
   public tarjetas_viaje = [];
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, private viajeService: ViajeService, private router: Router){
-    this.httpClient.get("https://apiwana-production.up.railway.app/misViajes?id_pasajero="+this.usuarioService.usuario.id_usuario)
+    this.httpClient.get("https://iwanacar.cv6m2ktduioy.us-east-1.rds.amazonaws.com/misViajes?id_pasajero="+this.usuarioService.usuario.id_usuario)
     .subscribe((result:any[])=>{
       this.tarjetas_viaje=result
       console.log(result);
