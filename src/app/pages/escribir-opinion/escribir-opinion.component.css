@@ -132,7 +132,7 @@ section{
 .titulo{
     box-sizing: border-box;
     /* position: absolute; */
-    width: 275px;
+    width: 100%;
     left: 5%;
     top: 3%;
     background: #FFFAEF;
@@ -143,7 +143,7 @@ section{
     justify-content: space-around;
     
     align-items: center;
-    padding: 2%;
+    padding: 3%;
 }
 .perfil{
     object-fit: cover;

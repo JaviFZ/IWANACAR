@@ -25,7 +25,7 @@
 
             <div class="estrellas">
                 <div *ngFor="let estrella of arrayEstrella">
-                    <div *ngIf="usuario.puntuacionMedia > estrella ; else emptyStar"><img class="img"
+                    <div *ngIf="usuario.puntuacionMedia >= estrella ; else emptyStar"><img class="img"
                             src="../../../assets/img/estrella_rana.png" alt=""></div>
                     <ng-template #emptyStar>
                         <img class="img2" src="../../../assets/img/estrella negra.png" alt="">
@@ -90,7 +90,7 @@
                 <div class="opinionEstrellas">
                 <div class="estrellas">
                     <div class="contenedorEstrellas" *ngFor="let estrella of arrayEstrella">
-                        <div *ngIf="opinion.puntuacion > estrella ; else emptyStar"><img class="img"
+                        <div *ngIf="opinion.puntuacion >= estrella ; else emptyStar"><img class="img"
                                 src="../../../assets/img/estrella_rana.png" alt=""></div>
                         <ng-template #emptyStar>
                             <img class="img3" src="../../../assets/img/estrella negra.png" alt="">
