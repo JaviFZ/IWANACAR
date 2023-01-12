@@ -32,10 +32,10 @@
                     
                     <ng-container *ngFor="let pasajero of pasajeros; let i = index;">
                       
-                        <div class="a"*ngIf="pasajero.id_viaje == misViajes.id_viaje">
+                        <div class="a"*ngIf="pasajero.id_viaje == misViajes.id_viaje" >
                             
-                            <div class="imagen21">
-                                <img class="perfil1" src="{{pasajero.foto}}" alt="">
+                            <div class="imagen21" >
+                                <img class="perfil1" src="{{pasajero.foto}}" alt="" (click)="puntuarPasajero(misViajes,pasajero)">
                             </div>
                             <div class="titulo1">
                                 <p>{{pasajero.nombre}}</p>

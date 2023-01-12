@@ -18,7 +18,7 @@ export class AnadirCocheComponent {
     this.cochesService.add(nuevoCoche).subscribe()
     setTimeout(() => {
       this.router.navigateByUrl('/misCoches');
-    }, 1000);
+    }, 500);
     
   }
 }
