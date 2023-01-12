@@ -77,8 +77,8 @@ main{
     flex-direction: row;
     justify-content: space-between;
     padding: 5%;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 5%;
     font-weight: bold;
     border: 2px solid #0e9a5f;
