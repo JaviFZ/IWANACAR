@@ -18,7 +18,7 @@ export class ResultadosBusquedaComponent implements OnInit{
   public ngOnInit(){
     setTimeout(()=>{
       this.mapa.getCoords(document.getElementById("mapa"))
-    },50)
+    },500)
   }
   public solicitarIdViaje(){
     console.log(this.viajeService.tarjeta_viaje.id_viaje);

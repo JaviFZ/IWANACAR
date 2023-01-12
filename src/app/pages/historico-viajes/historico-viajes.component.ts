@@ -13,11 +13,15 @@ export class HistoricoViajesComponent {
   public tarjetas_viaje = [];
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, private viajeService: ViajeService, private router: Router){
     this.httpClient.get("https://apiwana-production.up.railway.app/misViajes?id_pasajero="+this.usuarioService.usuario.id_usuario)
-    .subscribe((result:any[])=>{this.tarjetas_viaje=result})
+    .subscribe((result:any[])=>{
+      this.tarjetas_viaje=result
+      console.log(result);
+    })
   }
   opinarViaje = (viaje) =>{
     if (viaje.activo === 0){
     this.viajeService.solicitarViaje = viaje
+    this.viajeService.opinarPasajeroViaje = 0;
     this.router.navigateByUrl("/escribirOpinion") 
   }
   }
