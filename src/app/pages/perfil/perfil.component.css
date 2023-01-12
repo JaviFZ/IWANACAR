@@ -33,7 +33,7 @@ body {
 
 .img {
     padding: 5%;
-    height: 40px;
+    height: 30%;
     width: 100%;
     position: relative;
     bottom: 10px;
@@ -41,9 +41,10 @@ body {
 }
 
 .img2 {
-    height: 40px;
+    height: 30%;
     position: relative;
     padding: 5%;
+    bottom: 10px;
 }
 
 .flex-container1 {
