@@ -14,7 +14,7 @@
 .header{
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 9999;
     width: 100%;
 }
 
@@ -144,20 +144,20 @@ main{
 }
 
 .nombre{
-    margin-top: 15%;
+    margin-top: 2vh;
     font-size: larger;
     color: black;
 }
 .profesion{
     font-weight: normal;
-    margin-top: 7%;
+    margin-top: 1vh;
 }
 a{
 color: #012918;
 text-decoration:underline;
 display: flex;
 height: 20%;
-margin-top: 12%;
+margin-top: 3vh;
 }
 /* .Linkedin{
     height: 10%;
