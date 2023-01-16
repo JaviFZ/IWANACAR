@@ -30,7 +30,7 @@ body {
 
 }
 
-.img {
+/* .img {
     padding: 5%;
     height: 40px;
     width: 100%;
@@ -43,6 +43,17 @@ body {
     height: 40px;
     position: relative;
     padding: 5%;
+} */
+
+.img {
+    height: 4.5vh;
+}
+
+.img2 {
+    height: 4vh;
+}
+.img3 {
+    width: 100%;
 }
 
 .flex-container1 {
@@ -105,15 +116,26 @@ input::placeholder {
 
 }
 
-.estrellas {
+/* .estrellas {
     display: flex;
     flex-direction: row;
     justify-content: flex start;
     align-items: center;
     width: auto;
-    /* border: solid 4px #0E9A5F; */
+    border: solid 4px #0E9A5F;
     margin-left: 21px;
+} */
+
+.estrellas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    gap: 2%;
+    padding: 6% 6% 0%;
+    align-items: center;
 }
+
 
 .flex-container3 {
     display: flex;
@@ -157,7 +179,7 @@ input::placeholder {
     justify-content: flex start;
     align-items: flex start;
     border: solid 5px #0E9A5F;
-
+    margin-top: 3vh;
     height: 150px;
 
     border: 1px solid #1E9A60;
@@ -287,7 +309,7 @@ input::placeholder {
 
 .input-opi {
 
-    height: 10vh;
+   
     border-radius: 0px 20px 20px 20px;
     margin-right: 11px;
     margin-left: 11px;
@@ -300,7 +322,7 @@ input::placeholder {
 }
 
 
-.perfil {
+/* .perfil {
     border: solid 2px #3a8f43;
     width: 90px;
     height: 100px;
@@ -309,6 +331,20 @@ input::placeholder {
     border-radius: 49% 50% 50% 50% / 65% 65% 35% 35%;
     margin-top: -2vh;
 
+} */
+
+.perfil {
+    border: solid 2px #3a8f43;
+    object-fit: cover;
+    width: 90px;
+    height: 100px;
+    display: flex;
+    transition: all 0.3s ease 0s;
+    border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+    margin-top: -2vh;
+}
+.contenedorEstrellas{
+    display: flex;
 }
 
 .perfil:hover {
