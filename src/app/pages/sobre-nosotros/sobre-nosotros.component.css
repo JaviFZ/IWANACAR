@@ -129,23 +129,23 @@ main{
 }
 
 .perfil {
-    object-fit: cover;
+    object-fit:cover;
     border: solid 2px #3a8f43;
     width: 90px;
     height: 100px;
     display: flex;
-    transition: all 0.3s ease 0s;
+    /* transition: all 0.3s ease 0s; */
     border-radius: 49% 50% 50% 50% / 65% 65% 50% 50%;
     /* margin-top: -2vh; */
     background: #000;
 
 }
 
-.perfil:hover {
+/* .perfil:hover {
     border-color: #0E9A5F;
     box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
     transform: scale(1.05);
-}
+} */
 
 .datosPers{
     display: flex;
