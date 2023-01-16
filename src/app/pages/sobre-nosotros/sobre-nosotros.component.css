@@ -92,7 +92,7 @@ main{
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: row-reverse;
+    
     justify-content: space-between;
     padding: 5%;
     margin-left: 30px;
