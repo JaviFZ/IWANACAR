@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     background: #0E9A5F;
+    z-index: 99999999;
 }
 
 .flex-container1 {

@@ -25,10 +25,10 @@
 
             <div class="estrellas">
                 <div *ngFor="let estrella of arrayEstrella">
-                    <span *ngIf="usuarioService.usuario2.puntuacionMedia > estrella ; else emptyStar"><img class="img"
+                    <span *ngIf="usuarioService.usuario2.puntuacionMedia >= estrella ; else emptyStar"><img class="img"
                             src="../../../assets/img/estrella_rana.png" alt=""></span>
                     <ng-template #emptyStar>
-                        <img class="img" src="../../../assets/img/estrella negra.png" alt="">
+                        <img class="img2" src="../../../assets/img/estrella negra.png" alt="">
                     </ng-template>
                 </div>
             </div>

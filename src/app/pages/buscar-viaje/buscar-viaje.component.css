@@ -6,6 +6,7 @@
     padding-top: 10%;
     padding: 30px;
     min-height: calc(100vh - 110px);
+    z-index: 9;
 
 
     background-image: url("../../../assets/img/logo_transparent.png");
@@ -15,7 +16,7 @@
     .header{
         position: sticky;
         top: 0;
-        z-index: 99;
+        z-index: 999999;
         width: 100%;
     }
 
@@ -28,7 +29,7 @@
         flex-direction: column;
         padding-top: 50px;
         margin-bottom: 30%;
-
+        z-index: 99;
         /* border: 1px solid #0E9A5F; */
         background: rgba(187, 215, 146, 0.58);
         backdrop-filter: blur(10px);

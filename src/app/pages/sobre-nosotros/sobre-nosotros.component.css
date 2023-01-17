@@ -14,7 +14,7 @@
 .header{
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 9999;
     width: 100%;
 }
 
@@ -75,7 +75,7 @@ main{
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -92,11 +92,11 @@ main{
     width: auto;
     height: auto;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    /* justify-content: space-between; */
     padding: 5%;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 5%;
     font-weight: bold;
     border: 2px solid #0e9a5f;
@@ -113,28 +113,39 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 2%;
+    margin-right: 12vw;
+
+
+}
+.huevo-name2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 12vw;
 
 
 }
 
 .perfil {
-    object-fit: cover;
+    object-fit:cover;
     border: solid 2px #3a8f43;
     width: 90px;
     height: 100px;
     display: flex;
-    transition: all 0.3s ease 0s;
+    /* transition: all 0.3s ease 0s; */
     border-radius: 49% 50% 50% 50% / 65% 65% 50% 50%;
     /* margin-top: -2vh; */
     background: #000;
 
 }
 
-.perfil:hover {
+/* .perfil:hover {
     border-color: #0E9A5F;
     box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
     transform: scale(1.05);
-}
+} */
 
 .datosPers{
     display: flex;
@@ -144,20 +155,20 @@ main{
 }
 
 .nombre{
-    margin-top: 15%;
+    margin-top: 2vh;
     font-size: larger;
     color: black;
 }
 .profesion{
     font-weight: normal;
-    margin-top: 7%;
+    margin-top: 1vh;
 }
 a{
 color: #012918;
 text-decoration:underline;
 display: flex;
 height: 20%;
-margin-top: 12%;
+margin-top: 3vh;
 }
 /* .Linkedin{
     height: 10%;
