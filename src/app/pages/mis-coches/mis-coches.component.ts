@@ -15,8 +15,9 @@ import  { UsuarioService } from 'src/shared/usuario.service'
 export class MisCochesComponent {
 
   public coches: Coche[];
-
+  public id_coche : number;
   public usuario: Usuario;
+  public isOpen = false;
 
   constructor(private cocheService: CocheService, public usuarioService: UsuarioService) { 
 
@@ -29,8 +30,10 @@ export class MisCochesComponent {
 
   }
       deleteCoche(id_coche: number){
+        
         this.cocheService.delete(id_coche).subscribe(()=>{
           this.coches = this.coches.filter( coche => coche.id_coche !=id_coche)
+          this.isOpen= false;
        });
       }
     }

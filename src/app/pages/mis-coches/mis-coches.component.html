@@ -2,10 +2,15 @@
 <body>
     <div class="titulo">
         <p>Mis Coches</p>
+        <img class="papelera" *ngIf="coches.length>0 && isOpen==false; else paperClose" src="../../../assets/img/papelera.png" (click)="isOpen=true">
+        <ng-template #paperClose><img class="papelera"  src="../../../assets/img/papelera.png" (click)="isOpen=false"> </ng-template>
+        
     </div>
-    <section class="tarjeta" *ngFor="let car of coches?.reverse();let i= index"> 
-        <div class="cruz">
-            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCoche(car.id_coche)">
+    
+    
+    <section class="tarjeta" *ngFor="let car of coches?.reverse();let i= index" > 
+        <div class="cruz" >
+            <img class="ci" src="../../../assets/img/cruzeta.png" *ngIf="isOpen == true" (click)="deleteCoche(car.id_coche)" (click)="isOpen=false">
             <div class="title">
                 <h1>{{car.nombreCoche}}</h1>
             </div>
@@ -28,6 +33,7 @@
             </section>
         </div>
     </section>
+    
     <div class="padre-boton">
         <button class="anadirCoche" routerLink="/anadirCoche">Añadir un Coche</button>
     </div>

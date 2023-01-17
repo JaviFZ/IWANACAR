@@ -14,6 +14,7 @@ import { ViajeService } from 'src/shared/viaje.service';
 export class ViajesPublicadosComponent implements OnInit{
   public viajes_publicados: any[];
   public pasajeros: any[];
+  public isOpen = false;
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public viajeService: ViajeService, private router:Router){
   
   }

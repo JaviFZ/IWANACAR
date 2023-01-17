@@ -12,7 +12,16 @@
     <section *ngFor="let misViajes of viajes_publicados?.reverse();let j=index" >
     <div class="tarjetasviajes1" [routerLink]=" misViajes.activo===1? undefined: '/escribirOpinion' ">
         <div [ngClass]="{'section': misViajes.activo===1, 'section2': misViajes.activo!=1}">
+            <ng-container *ngIf="isOpen == true && misViajes.activo==1">
+                <p>¿borrar el vehículo?</p>
+                <div>
+                    <button (click)="deleteViajePublicado(misViajes.id_viaje)">Si</button>
+                    <button (click)="isOpen=false">no</button>
+                </div>
+            </ng-container>
             <div class="cuadro1">
+                
+                
                 <div class="superior">
                     <div class="hora1">
                         <p>{{misViajes.hora}}</p>
@@ -23,7 +32,7 @@
                     <div class="precio1">
                         <p>{{misViajes.precio}}€</p>
                     </div>
-                    <img class="ci" src="../../../assets/img/cruzeta.png" *ngIf=" misViajes.activo===1" (click)="deleteViajePublicado(misViajes.id_viaje)">
+                    <img class="ci" src="../../../assets/img/cruzeta.png" *ngIf=" misViajes.activo===1" (click)="isOpen=true">
                 </div>
                 <div class="viaje1">
                     <p class="destino1">{{misViajes.origen}}</p>
