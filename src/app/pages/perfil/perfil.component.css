@@ -155,7 +155,10 @@ input::placeholder {
 
 
 }
-
+.img4{
+    display: flex;
+    width: 110%;
+}
 .tarjeta2 {
     margin-top: 3%;
     font-weight: bold;
@@ -318,10 +321,24 @@ input::placeholder {
     border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
     margin-top: -2vh;
 }
+
+.estrellas2{
+    display: flex;
+    padding: 3%;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+}
 .contenedorEstrellas{
     display: flex;
 }
-
+.contenedorEstrellas2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    align-items: center;
+}
 
 .perfil:hover {
     border-color: #0E9A5F;
