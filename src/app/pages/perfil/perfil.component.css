@@ -157,6 +157,7 @@ input::placeholder {
 }
 
 .tarjeta2 {
+    margin-top: 3%;
     font-weight: bold;
     background-color: white;
     display: flex;
