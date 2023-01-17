@@ -9,7 +9,7 @@
         </button>
 
     </div>
-    <section *ngFor="let misViajes of viajes_publicados?.reverse();let j=index" >
+    <section *ngFor="let misViajes of viajes_publicados.reverse();let j=index" >
     <div class="tarjetasviajes1" [routerLink]=" misViajes.activo===1? undefined: '/escribirOpinion' ">
         <div [ngClass]="{'section': misViajes.activo===1, 'section2': misViajes.activo!=1}">
             <div class="cuadro1">
