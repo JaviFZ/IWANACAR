@@ -88,9 +88,9 @@
                     <img class="perfil" src="{{opinion.foto}}" alt="imagen padre">
                 </div>
                 <div class="opinionEstrellas">
-                <div class="estrellas">
-                    <div class="contenedorEstrellas" *ngFor="let estrella of arrayEstrella">
-                        <div *ngIf="opinion.puntuacion >= estrella ; else emptyStar"><img class="img"
+                <div class="estrellas2">
+                    <div class="contenedorEstrellas2" *ngFor="let estrella of arrayEstrella">
+                        <div *ngIf="opinion.puntuacion >= estrella ; else emptyStar"><img class="img4"
                                 src="../../../assets/img/estrella_rana.png" alt=""></div>
                         <ng-template #emptyStar>
                             <img class="img3" src="../../../assets/img/estrella negra.png" alt="">
