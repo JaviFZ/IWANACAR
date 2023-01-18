@@ -25,11 +25,11 @@ export class RegistroComponent {
           this.usuarioService.register(nuevoUsuario).subscribe((respuesta) => {
           this.router.navigateByUrl("login")
           console.log(respuesta);
-          if(respuesta = {message:"Este email ya está registrado"}){
-            this.toast.error("Este email ya está registrado");
-          }else{
-            this.toast.success("Usuario registrado correctamente");
-          }
+          // if(respuesta = {message:"Este email ya está registrado"}){
+          //   this.toast.error("Este email ya está registrado");
+          // }else{
+          //   this.toast.success("Usuario registrado correctamente");
+          // }
         })
         
       }
