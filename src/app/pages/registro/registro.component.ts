@@ -25,11 +25,7 @@ export class RegistroComponent {
           this.usuarioService.register(nuevoUsuario).subscribe((respuesta) => {
           this.router.navigateByUrl("login")
           console.log(respuesta);
-          if (respuesta == Error){
-            this.toast.warning("Este email ya está registrado")
-          }else{
-            this.toast.success("Usuario registrado correctamente")
-          }
+          this.toast.error("error")
         })
       }
     }
