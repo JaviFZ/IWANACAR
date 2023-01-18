@@ -20,8 +20,9 @@ export class BuscarViajeComponent {
   buscarViaje(origen:string,destino:string,fecha:string,pasajeros:number){
     if(this.button == 0){
       if(this.mapaService.codPostalOr == undefined || this.mapaService.codPostalDes == undefined){
-        this.toast.show("Introduce el número de la calle en la dirección correspondiente, por favor");
-      }else{
+        this.toast.warning('Introduce el número de la calle en la dirección correspondiente, por favor',{
+          position: 'top-center'
+      })}else{
       this.viajes.viaje.origen = origen;
       this.viajes.viaje.destino = destino;
       this.viajes.viaje.codigoPostalOrigen = this.mapaService.codPostalOr;
