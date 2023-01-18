@@ -126,7 +126,9 @@
     left: -7%;
     top: -17%;
 }
-
+.tarjetasviajes1{
+    translate: translate3d(0,0,0);
+}
 .titulo{
     box-sizing: border-box;
     position: absolute;

@@ -5,7 +5,7 @@
     </div>
     <section class="tarjeta" *ngFor="let car of coches?.reverse();let i= index"> 
         <div class="cruz">
-            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="deleteCoche(car.id_coche)">
+            <img class="ci" src="../../../assets/img/cruzeta.png" (click)="abrirConfirmacion(car)">
             <div class="title">
                 <h1>{{car.nombreCoche}}</h1>
             </div>

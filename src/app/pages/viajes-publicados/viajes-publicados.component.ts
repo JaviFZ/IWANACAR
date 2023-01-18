@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DialogService } from '@ngneat/dialog';
+import { ModalConfirmacionComponent } from 'src/app/components/modal-confirmacion/modal-confirmacion.component';
 import { TarjetaViajesPublicados } from 'src/app/models/tarjeta-viajes-publicados';
 import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/shared/usuario.service';
@@ -12,6 +14,7 @@ import { ViajeService } from 'src/shared/viaje.service';
   styleUrls: ['./viajes-publicados.component.css']
 })
 export class ViajesPublicadosComponent implements OnInit{
+  private dialog = inject(DialogService);
   public viajes_publicados: any[];
   public pasajeros: any[];
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, public viajeService: ViajeService, private router:Router){
@@ -20,7 +23,7 @@ export class ViajesPublicadosComponent implements OnInit{
   public ngOnInit(): void {
     this.viajeService.viajesPublicados(this.usuarioService.usuario.id_usuario).subscribe((data:any[])=>{
       console.log(data);
-      this.viajes_publicados = data
+      this.viajes_publicados = data.reverse()
     })
     this.anadirPasajeros();
   }
@@ -51,6 +54,17 @@ export class ViajesPublicadosComponent implements OnInit{
       this.viajes_publicados = this.viajes_publicados.filter( pasajero => pasajero.id_viaje !=id_viaje)
    });
   }
-
+  abrirConfirmacion(viaje:any){
+    const dialogRef = this.dialog.open(ModalConfirmacionComponent, {
+      data: {
+        texto: `¿Desea eliminar el viaje publicado con origen: ${viaje.origen} y destino: ${viaje.destino}?`
+      },
+    });
+    dialogRef.afterClosed$.subscribe(result => {
+      if (result === true) {
+        this.deleteViajePublicado(viaje.id_viaje);
+      }
+    })
+  }
 }
 

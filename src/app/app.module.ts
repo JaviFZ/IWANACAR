@@ -66,7 +66,7 @@ import { Perfil2Component } from './pages/perfil2/perfil2.component';
         SobreNosotrosComponent,
         ContactoComponent,
         EscribirOpinionComponent,
-        Perfil2Component
+        Perfil2Component,
     ],
     providers: [],
     bootstrap: [AppComponent],
