@@ -24,7 +24,7 @@ export class UsuarioService {
   // **********metodo para register**************
 
   public register(usuario: Usuario) {
-    return this.http.post(this.url + "registro", usuario)
+    return this.http.post(this.url + "registro?email="+usuario.email, usuario)
   }
 
   // **********metodo para login**************
