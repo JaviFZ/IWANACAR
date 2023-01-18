@@ -23,3 +23,7 @@ p{
     box-shadow: none !important;
     background: transparent !important;
 }
+
+.ngneat-close-dialog {
+    color: rgb(187, 215, 146) !important;
+}

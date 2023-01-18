@@ -29,7 +29,7 @@ export class ViajeService {
   public buscarViaje(viaje: Viaje){
     console.log(viaje);
     
-    return this.http.get(this.url + `viajes?codigoPostalOrigen=${this.viaje.codigoPostalOrigen}&codigoPostalDestino=${this.viaje.codigoPostalDestino}&fecha=${this.viaje.fecha}`)
+    return this.http.get(this.url + `viajes?codigoPostalOrigen=${this.viaje.codigoPostalOrigen}&codigoPostalDestino=${this.viaje.codigoPostalDestino}&fecha=${this.viaje.fecha}&pasajeros=${this.viaje.pasajeros}`)
   }
 
   public datosUsuarioViaje(id_viaje:number){

@@ -1,9 +1,9 @@
 <div class="modal">
-<div class="texto">
-{{ ref.data.texto }}
-</div>
+
+<p class="texto"><b>{{ ref.data.texto }}</b></p>
+
 <div class="botones">
-    <button [dialogClose]="false" class="">Cancelar</button>
-    <button [dialogClose]="true" class="">Confirmar</button>
+    <button [dialogClose]="false" class="cancel">Cancelar</button>
+    <button [dialogClose]="true" class="confirm">Confirmar</button>
 </div>
 </div>

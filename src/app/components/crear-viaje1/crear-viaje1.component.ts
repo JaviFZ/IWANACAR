@@ -35,9 +35,7 @@ export class CrearViaje1Component {
   }
   public guardarDatos(origen:string,destino:string){
     if(this.mapaService.codPostalOr == undefined || this.mapaService.codPostalDes == undefined){
-      this.toast.warning('Introduce el número de la calle en la dirección correspondiente, por favor',{
-          position: 'top-center'
-      });
+      this.toast.warning('Introduce el número de la calle en la dirección correspondiente, por favor');
     }else{
       this.viajes.viaje.origen = origen;
       this.viajes.viaje.destino = destino;
