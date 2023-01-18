@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalConfirmacionComponent } from 'src/app/components/modal-confirmacion/modal-confirmacion.component';
 import { UsuarioService } from 'src/shared/usuario.service';
 import { ViajeService } from 'src/shared/viaje.service';
+import { DialogService } from '@ngneat/dialog';
 
 @Component({
   selector: 'app-historico-viajes',
@@ -11,6 +13,7 @@ import { ViajeService } from 'src/shared/viaje.service';
 })
 export class HistoricoViajesComponent {
   public tarjetas_viaje = [];
+  private dialog = inject(DialogService);
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, private viajeService: ViajeService, private router: Router){
     this.viajeService.historicoViajes(this.usuarioService.usuario.id_usuario)
     .subscribe((result:any[])=>{
@@ -29,5 +32,18 @@ export class HistoricoViajesComponent {
     this.viajeService.deletePasajero(id_chat).subscribe(()=>{
       this.tarjetas_viaje = this.tarjetas_viaje.filter( pasajero => pasajero.id_chat !=id_chat)
    });
+  }
+
+  abrirConfirmacion(chat:any){
+    const dialogRef = this.dialog.open(ModalConfirmacionComponent, {
+      data: {
+        texto: `¿Deseas darte de baja de este viaje?`
+      },
+    });
+    dialogRef.afterClosed$.subscribe(result => {
+      if (result === true) {
+        this.deleteViajePasajero(chat.id_chat);
+      }
+    })
   }
 }

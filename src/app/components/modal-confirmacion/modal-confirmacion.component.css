@@ -8,8 +8,37 @@
     width: 100%;
     padding: 4%;
     background: rgb(187, 215, 146);
-    border: 1px solid #0E9A5F;
+    border: 2px solid #0E9A5F;
     border-radius: 0px 20px 20px 20px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+}
+
+.texto{
+    margin-top: 1vh;
+    font-size: large;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vh;
+}
+
+.cancel{
+    height: 7vh ;
+    width: 30vw;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgb(190, 2, 2);
+    color: aliceblue;
+    border: none;
+}
+
+.confirm{
+    height: 7vh ;
+    width: 30vw;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #0E9A5F;
+    color: aliceblue;
+    border: none;
 }

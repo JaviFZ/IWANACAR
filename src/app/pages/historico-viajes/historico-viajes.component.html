@@ -19,7 +19,7 @@
             <div class="hora">
                 <p>{{miViaje.hora}}</p>
             </div>
-            <img class="ci" src="../../../assets/img/cruzeta.png" *ngIf=" miViaje.activo===1" (click)="deleteViajePasajero(miViaje.id_chat)">
+            <img class="ci" src="../../../assets/img/cruzeta.png" *ngIf=" miViaje.activo===1" (click)="abrirConfirmacion(miViaje)">
       
         </div>
             <div class="imagen2">
