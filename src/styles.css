@@ -18,3 +18,8 @@ h1{
 p{
     font-family: 'Montserrat', sans-serif;
 }
+
+.ngneat-dialog-content {
+    box-shadow: none !important;
+    background: transparent !important;
+}

@@ -35,6 +35,7 @@ import { EditarPerfilComponent } from './pages/editar-perfil/editar-perfil.compo
 import { SolicitarViajeComponent } from './pages/solicitar-viaje/solicitar-viaje.component';
 import { Perfil2Component } from './pages/perfil2/perfil2.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+// import { HotToastModule } from '@ngneat/hot-toast';
 @NgModule({
     declarations: [
         MenuBurguerComponent,
@@ -67,7 +68,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
         SobreNosotrosComponent,
         ContactoComponent,
         EscribirOpinionComponent,
-        Perfil2Component
+        Perfil2Component,
     ],
     providers: [],
     bootstrap: [AppComponent],
