@@ -132,15 +132,17 @@
    
    .mensaje{
     padding: 10px;
-    border-radius: 0px 20px 20px 20px;
+ 
    }
 
    .mensajeUsuario1{
     color: #FFFAEF;
+    border-radius: 0px 20px 20px 20px;
     background-color: #3a8f43bf;
    }
 
    .mensajeUsuario2{
     color: #000000;
+    border-radius: 20px 0px 20px 20px;
     background: rgb(187 215 146);
    }

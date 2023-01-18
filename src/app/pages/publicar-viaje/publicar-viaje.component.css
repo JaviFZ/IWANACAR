@@ -21,7 +21,6 @@ main{
 }
 img{
     width: 100%;
-    border-radius: 20px;
 }
 
 @media (max-width: 330px){
@@ -54,8 +53,9 @@ section{
     border-radius: 0px 20px 20px 20px;
 }
 .cuadro{
+    padding: 5%;
     position: relative;
-    height: 180px;
+    /* height: 180px; */
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 20px 20px 20px;
@@ -66,23 +66,23 @@ section{
     gap: 15px;
 }
 .hora{
-    position: absolute;
+    /* position: absolute; */
     right: 8%;
     top: 7%;
 }
 .coche{
-    position: absolute;
+    /* position: absolute; */
     left: 5%;
     bottom: 5%;
     font-weight: bold;
 }
 
 .destino{
-    margin-left: 20px;
+    /* margin-left: 20px; */
     border-bottom: 1px dashed #3A8F43;
 }
 .precio{
-    position: absolute;
+    /* position: absolute; */
     width: 60px;
     height: 40px;
     right: 25%;
@@ -104,11 +104,10 @@ section{
 }
 .imagen{
     display: flex;
-    position: absolute;
-    width: 30px;
-    height: 27px;
-    right: 7%;
-    bottom: 8%;
+    width: 35px;
+    height: 35px;
+    align-items: flex-end;
+
 }
 .imagen2{
     position: absolute;
@@ -118,8 +117,8 @@ section{
 
 .titulo{
     box-sizing: border-box;
-    position: absolute;
-    width: 275px;
+    /* position: absolute; */
+    width: 100%;
     left: 5%;
     top: 3%;
     background: #FFFAEF;
@@ -130,9 +129,11 @@ section{
     justify-content: space-around;
     
     align-items: center;
-    padding: 2%;
+    padding: 3%;
 }
 .perfil{
+    object-fit: cover;
+    background-color: white;
     border: solid 2px #BBD792;
     width: 80px;
     height: 90px;
@@ -150,6 +151,15 @@ section{
     box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
     transform: scale(1.05) ;
    }
+
+   .tarjetaFooter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .buttons{
     /* border: 1px solid white; */
     /* width: 100vw; */
