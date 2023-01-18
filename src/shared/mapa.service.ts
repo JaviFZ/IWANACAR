@@ -28,6 +28,7 @@ export class MapaService {
       console.log(this.codPostalOr);
       
     });
+    this.codPostalOr= undefined;
   }
 
   public autocompletar1(id:HTMLInputElement){
@@ -45,7 +46,7 @@ export class MapaService {
       this.codPostalDes = near_place.address_components[6].long_name;
       console.log(this.codPostalDes);
     });
-    
+    this.codPostalDes = undefined;
   }
   iniciarMapResult(id:HTMLElement){
     let coord = this.origen_coord;
