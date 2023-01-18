@@ -25,8 +25,8 @@ export class RegistroComponent {
           this.usuarioService.register(nuevoUsuario).subscribe((respuesta) => {
           this.router.navigateByUrl("login")
           console.log(respuesta);
-          this.toast.error("error")
         })
+        this.toast.error("error")
       }
     }
 }
