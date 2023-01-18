@@ -57,14 +57,7 @@ export class ViajesPublicadosComponent implements OnInit{
   abrirConfirmacion(viaje:any){
     const dialogRef = this.dialog.open(ModalConfirmacionComponent, {
       data: {
-<<<<<<< HEAD
-        texto: `¿Desea eliminar el viaje publicado con origen:
-         ${viaje.origen}
-          y destino:
-           ${viaje.destino}?`
-=======
         texto: `¿Desea eliminar el viaje publicado?`
->>>>>>> e150b3c1696a26450435a1756a80ded06113da1f
       },
     });
     dialogRef.afterClosed$.subscribe(result => {
