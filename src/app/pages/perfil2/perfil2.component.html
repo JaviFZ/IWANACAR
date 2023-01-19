@@ -85,8 +85,20 @@
                 <div class="huevo-name">
                     <img class="perfil" src="{{opinion.foto}}" alt="imagen padre">
                 </div>
-                <div class="input-opi">
-                    <p class="marginOpi">{{opinion.opinion}}</p>
+                <div class="opinionEstrellas">
+                    <div class="estrellas2">
+                        <div class="contenedorEstrellas2" *ngFor="let estrella of arrayEstrella">
+                            <div *ngIf="opinion.puntuacion >= estrella ; else emptyStar"><img class="img4"
+                                    src="../../../assets/img/estrella_rana.png" alt=""></div>
+                            <ng-template #emptyStar>
+                                <img class="img3" src="../../../assets/img/estrella negra.png" alt="">
+                            </ng-template>
+                        </div>
+                    </div>
+                  
+                    <div class="input-opi">
+                        <p class="marginOpi">{{opinion.opinion}}</p>
+                    </div>
                 </div>
             </div>
 

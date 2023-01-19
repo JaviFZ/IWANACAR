@@ -17,6 +17,7 @@
     top: -8%;
 }
 .body{
+    min-height: calc(100vh - 110px);
     display: flex;
     flex-direction: column;
     background-color: #FFFAEF;

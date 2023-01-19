@@ -22,7 +22,7 @@ export class MapaService {
     google.maps.event.addListener(autocomplete, 'place_changed', () => {
       let near_place = autocomplete.getPlace();
       console.log(near_place);
-      this.origen_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
+      this.origen_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ja.lo}
       this.codPostalOr = near_place.address_components[6].long_name;
       console.log(this.origen_coord);
       console.log(this.codPostalOr);
@@ -42,7 +42,7 @@ export class MapaService {
     google.maps.event.addListener(autocomplete, 'place_changed',  () => {
       let near_place = autocomplete.getPlace();
       console.log(near_place)
-      this.destino_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ia.lo}
+      this.destino_coord = {lat:near_place.geometry.viewport.Wa.lo,lng:near_place.geometry.viewport.Ja.lo}
       this.codPostalDes = near_place.address_components[6].long_name;
       console.log(this.codPostalDes);
     });

@@ -17,7 +17,7 @@ export class HistoricoViajesComponent {
   constructor(private httpClient: HttpClient, private usuarioService: UsuarioService, private viajeService: ViajeService, private router: Router){
     this.viajeService.historicoViajes(this.usuarioService.usuario.id_usuario)
     .subscribe((result:any[])=>{
-      this.tarjetas_viaje=result
+      this.tarjetas_viaje=result.reverse()
       console.log(result);
     })
   }

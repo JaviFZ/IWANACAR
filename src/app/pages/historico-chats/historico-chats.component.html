@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <main class="container">
-    <section class="section" *ngFor="let chat of (chats | async)" [routerLink]="'/ChatsAbiertos'" [queryParams]="{id_usuario1: chat.id_usuario1, id_usuario2: chat.id_usuario2, id_viaje: chat.id_viaje}"
+    <section [class.section]="chat.id_usuario1 === miUsuario.id_usuario" [class.section2]="chat.id_usuario2 === miUsuario.id_usuario" *ngFor="let chat of (chats | async)" [routerLink]="'/ChatsAbiertos'" [queryParams]="{id_usuario1: chat.id_usuario1, id_usuario2: chat.id_usuario2, id_viaje: chat.id_viaje}"
     [class.usuario1]="chat.id_usuario1 === miUsuario.id_usuario" [class.usuario2]="chat.id_usuario2 === miUsuario.id_usuario">
 
         <div class="titulo"  [class.tituloUsuario1]="chat.id_usuario1 === miUsuario.id_usuario" [class.tituloUsuario2]="chat.id_usuario2 === miUsuario.id_usuario">
